@@ -2,6 +2,21 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/projects/dalore-co-il/app/views/pages/_crm.html.erb</file>
+            <file>file:/C:/projects/dalore-co-il/app/views/pages/backoffice.html.erb</file>
+            <file>file:/C:/projects/dalore-co-il/app/models/page_view.rb</file>
+            <file>file:/C:/projects/dalore-co-il/Gemfile</file>
+            <file>file:/C:/projects/dalore-co-il/app/views/pages/crm.html.erb</file>
+            <file>file:/C:/projects/dalore-co-il/app/views/pages/_trader.html.erb</file>
+            <file>file:/C:/projects/dalore-co-il/app/views/pages/tradingmachine.erb</file>
+            <file>file:/C:/projects/dalore-co-il/app/views/pages/_server.html.erb</file>
+            <file>file:/C:/projects/dalore-co-il/app/models/inquiry.rb</file>
+            <file>file:/C:/projects/dalore-co-il/app/views/pages/_archive.html.erb</file>
+            <file>file:/C:/projects/dalore-co-il/app/views/pages/_trading_machine.html.erb</file>
+            <file>file:/C:/projects/dalore-co-il/app/views/pages/index.html.erb</file>
+            <file>file:/C:/projects/dalore-co-il/app/views/pages/archive.erb</file>
+            <file>file:/C:/projects/dalore-co-il/app/assets/javascripts/site.js</file>
+        </group>
     </open-files>
 </project-private>
