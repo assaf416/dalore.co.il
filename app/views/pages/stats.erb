@@ -1,0 +1,120 @@
+<section>
+    <br/>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <table class="table table-condensed table-stripped">
+                <tbody>
+                    <tr> 
+                        <td>
+                            <a><i class="fa fa-user"></i> צפיות </a>
+                            <br/>
+                            <%= PageView.count %>
+                        </td>
+                        <td>
+                            <a><i class="fa fa-user"></i> צפיות </a>
+                            <br/>
+                            <%= PageView.count %>
+                        </td>
+                        <td>
+                            <a><i class="fa fa-user"></i> צפיות </a>
+                            <br/>
+                            <%= PageView.count %>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <br/>
+
+    <div class="panel panel-info">
+        <div class="panel-footer">
+            <h3>
+                צפיות אחרונות
+            </h3>
+        </div>
+        <div class="panel-body">
+            <% for item in PageView.order("created_at DESC").limit(5) do %>
+                <table class="table table-condensed table-stripped">
+                    <tbody>
+                        <tr> 
+                            <td width="130px">תאריך</td>
+                            <td><%= item.created_at.strftime("%Y-%m-%d %H:%M") %></td>
+                        </tr>
+                        <tr> 
+                            <td width="130px">דף</td>
+                            <td><%= item.page %></td>
+                        </tr>
+                        <tr> 
+                            <td width="130px">IP</td>
+                            <td><%= item.ip %></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br/>
+              <% end %>
+          </div>
+      </div>
+
+      <br/>
+
+      <div class="panel panel-info">
+          <div class="panel-footer">
+              <h3>
+                  צפיות פר יום בחודש הנוכחי
+              </h3>
+          </div>
+          <div class="panel-body">
+              <%= area_chart PageView.current_month.group_by_day(:created_at).count  %>
+          </div>
+      </div>
+
+      <div class="panel panel-info">
+          <div class="panel-footer">
+              <h3>
+                  צפיות פר יום בחודש הנוכחי
+              </h3>
+          </div>
+          <div class="panel-body">
+              <%= pie_chart PageView.current_month.group(:page).count  %>
+          </div>
+      </div>
+
+      <div class="panel panel-info">
+          <div class="panel-footer">
+              <h3>
+                  לידים חדשים
+              </h3>
+          </div>
+          <div class="panel-body">
+              <% for item in Inquiry.order("created_at DESC") do %>
+                  <table class="table table-condensed table-stripped">
+                      <tbody>
+                          <tr> 
+                              <td width="130px">התקבל</td>
+                              <td><%= item.created_at.strftime("%Y-%m-%d %H:%M") %></td>
+                          </tr>
+                          <tr> 
+                              <td width="130px">שם</td>
+                              <td><%= item.name %></td>
+                          </tr>
+                          <tr> 
+                              <td width="130px">דוא"ל</td>
+                              <td><%= item.email %></td>
+                          </tr>
+                          <tr> 
+                              <td width="130px">הודעה</td>
+                              <td><%= item.message %></td>
+                          </tr>
+                      </tbody>
+                  </table>
+                <% end %>
+            </div>
+        </div>
+
+    </section>
+
+    <style>
+        body{ font-size:14px;}
+    </style>

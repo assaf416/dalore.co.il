@@ -1,0 +1,838 @@
+<% content_for :head do %>
+
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-rtl/3.4.0/css/bootstrap-rtl.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-rtl/3.4.0/css/bootstrap-flipped.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+  <link rel="shortcut icon" href="https://www.bithemes.com/demo/futura//assets/img/favicon.ico">
+  <style type="text/css">
+      .gm-style {
+          font: 400 11px Roboto, Arial, sans-serif;
+          text-decoration: none;
+      }
+
+      .gm-style img {
+          max-width: none;
+      }
+      .text-large{
+          font-size:36px;
+
+      }
+
+      .feature-content h3{
+          padding-top:1em;
+          font-weight: bold;
+      }
+      .feature-big-ico i {
+          border-radius: 50%;
+          background: #1d8cf3;
+          color: #fff;
+          width: 100px;
+          height: 100px; 
+          line-height: 100px; 
+          font-size: 44px; 
+          display: inline-block;
+          margin-right: 10px;
+          text-align: center;
+      }
+
+  </style>
+
+<% end %>
+
+
+<div class="main-container">
+    <header>
+        <div class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="row">
+                    <div class="navbar-header">
+                        <a class="navbar-brand pull-right" href="">
+                            <span style="font-size:18px"> Dalore Financial</span>
+                            <span class="logo-small" style="top:10px"><img src="/assets/dalor-logo-square.png" width="70px" alt="logo"></span>
+
+                        </a>
+                    </div>
+                    <div class="navbar-collapse collapse" id="web-nav">
+
+                        <ul class="nav navbar-nav navbar-left">
+                            <li><a href="#services">מוצרים</a></li>
+                            <li><a href="#contact">אודות</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+
+        <section class="banner">
+            <div class="each-slide third-slide" style="background-image:url(https://s-i.huffpost.com/gen/1828108/images/o-WALL-STREET-facebook.jpg);">
+                <div class="center-container animated fadeInDown" data-animation="fadeInDown">
+                    <h4>Dalore Financial</h4>
+                </div>
+                <h2 class="text-center animated fadeInDown" data-animation="fadeInDown">פתרונות תוכנה לשוק ההון</h2>
+                <br/>
+                <br/>
+                <br/>
+                <div class="container animated fadeInUp" data-animation="fadeInUp">
+                    <div class="row">
+                        <div class="col-xs-4 text-center"><i class="fa fa-html5"></i> <p>API למסחר וניהול פוזיציות</p></div>
+                        <div class="col-xs-4 text-center"><i class="fa fa-star-o"></i> <p>פיתוח פתרונות ללקוחות</p></div>
+                        <div class="col-xs-4 text-center"><i class="fa fa-mobile"></i> <p> תמיכה בניידים</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+
+                <div class="row">
+                    <h2 class="text-center">מוצרים ושרותים</h2>
+                    <div class="heading-line"><span></span></div>
+                </div>
+                <br/>
+                <br/>
+                <br/>
+                <div class="row">
+
+                    <div class="col-md-4 col-xs-6  text-center">
+                        <div class="feature-big-ico"><img src="<%= "/assets/website/019-handshake.svg" %>" width="100px"/> </div>
+                        <div class="feature-content">
+                            <h3><a href="#crm">  The Brokers CRM</a></h3>
+                            <p class="text-left">
+                                מערכת לניהול ושימור לקוחות החל משלב השיווק ועד פתיחת החשבון. כולל דוחו"ת והתראות דיווחים לפי הרגולציה בשוק ההון
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-xs-6  text-center">
+                        <div class="feature-big-ico "><img src="<%= "/assets/website/009-briefcase.svg" %>" width="100px"/> </div>
+                        <div class="feature-content">
+                            <h3> <a href="#workspace">מערכות מסחר יעודיות</a></h3>
+                            <p class="text-left">
+                                מערכת מסחר המשלבת את כל תחנות המסחר לבנקים וספקי מידע
+                                מותאמת לסוג המסחר והבנקים
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-xs-6 text-center">
+                        <div class="feature-big-ico "><img src="<%= "/assets/website/hierarchical-structure-1.svg" %>" width="100px"/> </div>
+                        <div class="feature-content">
+                            <h3> <a href="#thebrokersdashboard">דשבורד למנהלים</a></h3>
+                            <p class="text-left">
+                                קבל תמונה עדכנית של מצב החשבון והפוציזיות לנייד או למחשב
+                                פרוט מצב כל החשבונות המנוהלים מכל תחנות המסחר והבנקים.
+
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <br/><br/>
+                <div class="row">
+                    <div class="col-md-4 col-xs-6 text-center">
+                        <div class="feature-big-ico "><img src="<%= "/assets/website/customer-service.svg" %>" width="100px"/> </div>
+                        <div class="feature-content">
+                            <h3> <a href="#thetradingroom">ניהול חדר מסחר</a></h3>
+                            <p class="text-left">
+                                מערכת לניהול חדר מסחר
+                                העברת פקודות מכירה וקניה וניהול כרטיסי שרות ללקוחות
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-4 col-xs-6  text-center">
+                        <div class="feature-big-ico "><img src="<%= "/assets/website/stats2.svg" %>" width="100px"/> </div>
+                        <div class="feature-content">
+                            <h3> <a href="#tradingmachine"> רובטים למסחר</a></h3>
+                            <p class="text-left">
+                                מערכת לפיתוח ובדיקת אסטרטגיות מסחר אוטומטיות ורובטים למסחר אוטומטי, כולל בדיקות מול נתונים הסטוריים
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xs-6  text-center">
+                        <div class="feature-big-ico "><img src="<%= "/assets/website/101-archives.svg" %>" width="100px"/> </div>
+                        <div class="feature-content">
+                            <h3> <a href="#thearchive"> הארכיון</a></h3>
+                            <p class="text-left">
+                                שמירת נתונים הסטוריים על השוק , פוזיציות ומצב חשבון
+                                יצירת נכסים סינטטיים
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <br/> <br/><br/>
+
+                <div class="row">
+                    <div class="col-md-4 col-xs-6  text-center">
+                    </div>
+                    <div class="col-md-4 col-xs-6  text-center">
+                        <div class="feature-big-ico "><img src="<%= "/assets/website/server.svg" %>" width="100px"/> </div>
+                        <div class="feature-content">
+                            <h3> <a href="#server">שרת המסחר</a></h3>
+                            <p class="text-left">
+                                שרת המסחר המרכז את כל נתוני השוק וחשבונות בזמן אמת.
+                                שימוש ב API מאפשר לך להזרים מידע ישירות לגליון האקסל שלך או לבנות אפליקציה יעודית לצרכים שלך
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-xs-6  text-center">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+
+
+        <section class="company bg-gray" id="crm">
+            <div class="container">
+                <div class="row">
+
+
+                    <h2 class="text-center">
+                        The Brokers CRM
+                    </h2>
+
+                    <div class="heading-line"><span></span></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-xs-12">
+                        <strong>
+                            מערכת לניהול לקוחות עבור בתי השקעות וקרנות גידור
+                        </strong>
+                        <br><br>
+                        <p>
+                            DALORE-CRM היא מערכת ניהול לקוחות המותאמת לשוק ההון. המערכת כוללת מודולים לשיווק ומכירות, מעקב אחר לידים ופתיחת חשבונות מסחר או הפקדות לקרנות
+                        </p>
+
+
+                        <ul class="no-padding">
+                            <li data-aos="fade-right" class="aos-init">
+                                <div class="service-ico"><i class="fa fa-bullhorn"></i></div>
+                                <div class="service-content">
+                                    <h3>שיווק ומכירות</h3>
+                                    <p class="">
+                                        ריכוז השיווק מפרסומות בגוגל ופייסבוק פוסטים ברשתות חברתיות ודפי נחיתה
+                                    </p>
+                                </div>
+                            </li>
+                            <li data-aos="fade-right" class="aos-init">
+                                <div class="service-ico"><i class="fa fa-id-card"></i></div>
+                                <div class="service-content">
+                                    <h3>פתיחה וניהול של תיק השקעות</h3>
+                                    <p class="">
+                                        ניהול פתיחת התיק כולל שימור אמצעי זיהוי ומעקב אחר הפקדות לפתיחת החשבון.
+                                    </p>
+                                </div>
+                            </li>
+
+                            <li data-aos="fade-right" class="aos-init">
+                                <div class="service-ico"><i class="fa fa-envelope-o"></i></div>
+                                <div class="service-content">
+                                    <h3>הסטורית התקשרות</h3>
+                                    <p class="">
+                                        תעוד מפורט של ההקשרות דרך מייל וטלפון ללקוח
+                                    </p>
+                                </div>
+                            </li>
+                            <li data-aos="fade-right" class="aos-init">
+                                <div class="service-ico"><i class="fa fa-image"></i></div>
+                                <div class="service-content">
+                                    <h3>ניהול מסמכים עבור כל חשבון</h3>
+                                    <p class="">
+                                        מסמכי זיהוי דוחות הלבנת הון ועוד
+                                    </p>
+                                </div>
+                            </li>
+                            <li data-aos="fade-right" class="aos-init">
+                                <div class="service-ico"><i class="fa fa-money"></i></div>
+                                <div class="service-content">
+                                    <h3>מעקב הפקדות ומשיכות</h3>
+                                    <p class="">
+                                        מעקב אחר משיכות והפקדות של לקוחות לחשבונות ולקרנות
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-6 col-xs-12 no-padding text-center aos-init aos-animate" data-aos="fade-right">
+                        <div class="outer">
+                            <img src="/assets/website/leads.png" class="xximg-responsive img-centered inner-image" alt="">
+                            <img src="https://s3-us-west-2.amazonaws.com/thebuildmachine/background_images/empty-screen.png" class="outer-image" alt="" />
+                        </div>
+
+                        <div class="col-sm-6">
+                            <ul class="text-left no-padding">
+                                <li><i class="fa fa-check-square-o"></i>חיבור למרכזית VOIP</li>
+                                <li><i class="fa fa-check-square-o"></i> חיבור ל  Gmail , Outlook365</li>
+                                <li><i class="fa fa-check-square-o"></i> 10+ Custom widgets</li>
+                                <li><i class="fa fa-check-square-o"></i> 50+ Visual shortcodes</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6">
+                            <ul class="text-left no-padding">
+                                <li><i class="fa fa-check-square-o"></i> Multiple header layouts</li>
+                                <li><i class="fa fa-check-square-o"></i> Professional ready-made skins</li>
+                                <li><i class="fa fa-check-square-o"></i> 10+ Custom widgets</li>
+                                <li><i class="fa fa-check-square-o"></i> 50+ Visual shortcodes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <img src="<%= "/assets/website/crm-integration.png" %>" />
+            </div>
+        </section>
+
+
+
+        <section class="company bg-white" id="workspace">
+            <div class="container">
+                <div class="row">
+                    <br/>
+                    <h2 class="text-center">מערכות מסחר יעודיות  </h2>
+                    <div class="heading-line"><span></span></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-xs-12 no-padding text-center aos-init aos-animate" data-aos="fade-right">
+                        <div class="text-left">
+                            <strong>ניהול מסחר של כל החשבונות ממקום אחד</strong>
+                            <br><br>
+                            <p>
+                               מי שנכנס לחדר של סוחר מקצועי נדהם לראות את כמות המחשבים על השולחן. מערכות מסחר מגיעות מהבנק ולכן אם ישנם מספר בנקים אתם עובד הסוחר הוא יעבוד מול מספר מערכות בנפרד. בנוסף ספקי המידע גם הם מגיעים במחשב נפרד. 
+                               <br/>
+                               <br/>
+מערכות המסחר שלנו מתחברות לכל תחנת מסחר של הבנקים ואל ספקי המידע דרך ה API של כל ספק וספק. ומציגות את המידע לסוחר במקום אחד. כל החשבונות, כל הפוזיציות ונתוני השוק הרולוונטים. 
+כך שאתה יכול לבנות את החשובונות לפי החלוקה של התיקים שלך ולא לפי הבנקים. מערכת המסחר  מנתבת את ההוראות שנשלחות דרכה אל תחנת המסחר הנכונה ומעבירה את ההוראות.
+                            </p>
+
+                        </div>
+                        <div class="outer">
+                            <img src="/assets/dark-trading.png" class="xximg-responsive img-centered inner-image" alt="">
+                            <img src="https://s3-us-west-2.amazonaws.com/thebuildmachine/background_images/empty-screen.png" class="outer-image" alt="" />
+                        </div>
+                        <br/>
+                            <p>
+                          מערכות המסחר שלנו מותאמות לצרכי הלקוח. מאפשרת  ללקוחת להכניס את הלוגיקה של המסחר שלהם לתוך המערכת. לקבוע איזה סוג פקודות לשלוח, לבנות חשבונות מסטר לאיחוד תיקים וכו.
+                        </p>
+                    </div>
+
+                    <div class="col-md-6 col-xs-12">
+
+
+                        <ul class="no-padding">
+                            <li data-aos="fade-right" class="aos-init">
+                                <div class="service-ico"><i class="fa fa-clock-o"></i></div>
+                                <div class="service-content">
+                                    <h3>מצב כל החשבונות בזמן אמת</h3>
+                                    <p class="">אין צורך לקפץ ממחשב למחשב לביצוע הוראות. שלוט על כל תחנות המסחר שלך ממקום אחד</p>
+                                </div>
+                            </li>
+                            <li data-aos="fade-right" class="aos-init">
+                                <div class="service-ico"><i class="fa fa-desktop"></i></div>
+                                <div class="service-content">
+                                    <h3>מסכים מודולרים והתאמה אישית של נתוני שוק וחשבונות</h3>
+                                    <p class="">
+                                        כל סוחר בונה לעצמו את מסכי המסחר ונתוני השוק 
+                                        המערכת כוללת מגוון רחב של תבניות מסכים המותאמות למסכים גדולים, מספר מסכים ואפילו לטבלטים ומכשירים ניידם
+                                    </p>
+                                </div>
+                            </li>
+                            <li data-aos="fade-right" class="aos-init">
+                                <div class="service-ico"><i class="fa fa-random"></i></div>
+                                <div class="service-content">
+                                    <h3>ביצוע פוזיציות בין חשבונות</h3>
+                                    <p class="">
+                                        מערכת המסחר מאפשרת לך להגדיר חשבון על הכולל מספר חשבונות מבנקים שונים ולהתייחס אליהם כחשבון בודד.
+                                        ולנהל פוזיציות בין החשבונות
+                                    </p>
+                                </div>
+                            </li>
+                            <li data-aos="fade-right" class="aos-init">
+                                <div class="service-ico"><i class="fa fa-rss"></i></div>
+                                <div class="service-content">
+                                    <h3>ריכוז הודעות מהבורסה וממאיה</h3>
+                                    <p class="">
+                                        חיבור בזמן אמת למערכת מאיה כולל  תשקיפים ודוחו"ת כספיים
+                                        חיבור דומה לבורסאות בארופה אסיה ואמריקה
+                                    </p>
+                                </div>
+                            </li>
+                            <li data-aos="fade-right" class="aos-init">
+                                <div class="service-ico"><i class="fa fa-bell"></i></div>
+                                <div class="service-content">
+                                    <h3>ניהול סיכונים ומסכי תרחישים</h3>
+                                    <p class="">
+                                        המערכת מאפשרת לסוחר לבנות חוקים ליצירה התראות ולהציג  את מצב התיקים בתרחישים שונים
+                                    </p>
+                                </div>
+                            </li>
+                            <li data-aos="fade-right" class="aos-init">
+                                <div class="service-ico"><i class="fa fa-money"></i></div>
+                                <div class="service-content">
+                                    <h3>שיגור הוראות לתוכנת המסחר</h3>
+                                    <p class="">
+                                        שיגור הוראות לחשבון המסחר המתאים באופן אוטומטי. 
+                                        שליחת הוראות מורכבות לכל בנק.
+                                    </p>
+                                </div>
+                            </li>
+                            <li data-aos="fade-right" class="aos-init">
+                                <div class="service-ico"><i class="fa fa-comments"></i></div>
+                                <div class="service-content">
+                                    <h3>הודעות בין סוחרים</h3>
+                                    <p class="">
+                                        הסוחרים יכולים להתכבת בצ'אט בזמן אמת 
+                                        נתוני ההתכתבות מוצפנים כך שאינך חשוף לדליפת מידע
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="company bg-gray" id="thearchive">
+            <div class="container">
+                <div class="row">
+                    <h2 class="text-center">הארכיון</h2>
+                    <div class="heading-line"><span></span></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-xs-12">
+                        <strong>
+                            ניהול מדיע הסטורי של מדדים וחשבונות
+                        </strong>
+                        <br><br>
+                        <p>
+                            הארכיון מאפשר שמירה וניתוח של נתוני שוק והחשבונות. נתוני מסחר נחוצים לבדיקת אסטרטגיות וניתן לקבלם דרך API. 
+                            המערכת מעדכנת נתונים בסיסיים על הנכסים ממגוון ספקי מידע ומרכזת עבור הסוחר את כל נתוני השוק בצורה נגישה
+                        </p>
+
+
+                        <ul class="no-padding">
+                            <li data-aos="fade-right" class="aos-init">
+                                <div class="service-ico"><i class="fa fa-globe"></i></div>
+                                <div class="service-content">
+                                    <h3>
+                                        הקלטת נתוני שוק
+                                    </h3>
+                                    <p class="">
+                                        Maecenas sit amet tincidunt elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames egestas.
+                                    </p>
+                                </div>
+                            </li>
+                            <li data-aos="fade-right" class="aos-init">
+                                <div class="service-ico"><i class="fa fa-briefcase"></i></div>
+                                <div class="service-content">
+                                    <h3>
+                                        פוזיציות ומצב חשבון יומי
+                                    </h3>
+                                    <p class="">
+                                        Maecenas sit amet tincidunt elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames egestas.
+                                    </p>
+                                </div>
+                            </li>
+                            <li data-aos="fade-right" class="aos-init">
+                                <div class="service-ico"><i class="fa fa-line-chart"></i></div>
+                                <div class="service-content">
+                                    <h3>יצירת נכסים וירטואלים</h3>
+                                    <p class="">
+                                        Maecenas sit amet tincidunt elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames egestas.
+                                    </p>
+                                </div>
+                            </li>
+                            <li data-aos="fade-right" class="aos-init">
+                                <div class="service-ico"><i class="fa fa-file-excel-o"></i></div>
+                                <div class="service-content">
+                                    <h3>ייבוא קבצי נרות </h3>
+                                    <p class="">
+                                        Maecenas sit amet tincidunt elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames egestas.
+                                    </p>
+                                </div>
+                            </li>
+                            <li data-aos="fade-right" class="aos-init">
+                                <div class="service-ico"><i class="fa fa-bank"></i></div>
+                                <div class="service-content">
+                                    <h3>נתוני חברות ונכסים</h3>
+                                    <p class="">
+                                        Maecenas sit amet tincidunt elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames egestas.
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="col-md-6 col-xs-12 no-padding text-center aos-init aos-animate" data-aos="fade-right">
+                        <div class="outer">
+                            <img src="/assets/trader-view.png" class="xximg-responsive img-centered inner-image" alt="">
+                            <img src="https://s3-us-west-2.amazonaws.com/thebuildmachine/background_images/empty-screen.png" class="outer-image" alt="" />
+                        </div>
+                        <br/>
+                        <br/>
+                        <br/>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="company bg-white" id="thetradingroom">
+            <div class="container">
+                <div class="row">
+                    <br/>
+                    <h2 class="text-center">חדר המסחר</h2>
+                    <div class="heading-line"><span></span></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-xs-12 no-padding text-center aos-init aos-animate" data-aos="fade-right">
+                        <div class="text-left">
+                            <strong>ניהול חדר מסחר </strong>
+                            <br><br>
+                            <p>
+                                מערכת לניהול חדר מסחר מאפשרת לנהל את הפעילות מול הלקחות המשקיעים. 
+                            </p>
+
+                        </div>
+                        <div class="outer">
+                            <img src="/assets/website/tradingroom.png" class="xximg-responsive img-centered inner-image" alt="">
+                            <img src="https://s3-us-west-2.amazonaws.com/thebuildmachine/background_images/empty-screen.png" class="outer-image" alt="" />
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 col-xs-12">
+
+
+                        <ul class="no-padding">
+                            <li data-aos="fade-right" class="aos-init">
+                                <div class="service-ico"><i class="fa fa-clock-o"></i></div>
+                                <div class="service-content">
+                                    <h3>מצב כל החשבונות בזמן אמת</h3>
+                                    <p class="">אין צורך לקפץ ממחשב למחשב לביצוע הוראות. שלוט על כל תחנות המסחר שלך ממקום אחד</p>
+                                </div>
+                            </li>
+                            <li data-aos="fade-right" class="aos-init">
+                                <div class="service-ico"><i class="fa fa-money"></i></div>
+                                <div class="service-content">
+                                    <h3>שיגור הוראות לתוכנת המסחר</h3>
+                                    <p class="">
+                                        שיגור הוראות לחשבון המסחר המתאים באופן אוטומטי. 
+                                        שליחת הוראות מורכבות לכל בנק.
+                                    </p>
+                                </div>
+                            </li>
+                            <li data-aos="fade-right" class="aos-init">
+                                <div class="service-ico"><i class="fa fa-ticket"></i></div>
+                                <div class="service-content">
+                                    <h3>ניהול כרטיסי שרות לקוחות</h3>
+                                    <p class="">
+                                        פתיחה וניהול של כרטיסי שרות ללקוחות
+                                        כולל הפנייות ומעקב התכתבויות
+                                    </p>
+                                </div>
+                            </li>
+                            <li data-aos="fade-right" class="aos-init">
+                                <div class="service-ico"><i class="fa fa-bank"></i></div>
+                                <div class="service-content">
+                                    <h3>עדכון ושליחה של קבצי חשבונות לבנקים</h3>
+                                    <p class="">
+                                        כל סוחר בונה לעצמו את מסכי המסחר ונתוני השוק 
+                                        המערכת כוללת מגוון רחב של תבניות מסכים המותאמות למסכים גדולים, מספר מסכים ואפילו לטבלטים ומכשירים ניידם
+                                    </p>
+                                </div>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="company bg-gray" id="tradingmachine">
+            <div class="container">
+                <div class="row">
+                    <h2 class="text-center">מכונת המסחר</h2>
+                    <div class="heading-line"><span></span></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-xs-12">
+                        <strong>
+                            פיתוח אסטרטגיות מסחר אוטומטיות
+                        </strong>
+                        <br><br>
+                        <p>
+                            כלי פיתוח אסטרגיות מסחר , סורקים ורובוטים למסחר אוטומטי. שפת הפיתוח קלה פשוטה וכוללת את כל המידע הנדרש לפיתוח כולל נתוני שוק , אינדיקטורים ומצב חשבון. 
+                        </p>
+
+
+                        <ul class="no-padding">
+                            <li data-aos="fade-right" class="aos-init">
+                                <div class="service-ico"><i class="fa fa-bullhorn"></i></div>
+                                <div class="service-content">
+                                    פיתוח אסטרטגיות מסחר אוטומטיות</h3>
+                                    <p class="">פיתוח אלגוריתמים למסחר בשפה פשוטה ללא ידע בתכנות</p>
+                                </div>
+                            </li>
+                            <li data-aos="fade-right" class="aos-init">
+                                <div class="service-ico"><i class="fa fa-line-chart"></i></div>
+                                <div class="service-content">
+                                    <h3>אינדיקטורים למסחר טכני</h3>
+                                    <p class="">שפת הפיתוח כוללת תמיכה באינדיקטורים וזיהוי נרות</p>
+                                </div>
+                            </li>
+                            <li data-aos="fade-right" class="aos-init">
+                                <div class="service-ico"><i class="fa fa-history"></i></div>
+                                <div class="service-content">
+                                    <h3>בדיקות מול נתוני היסטורים</h3>
+                                    <p class="">בדוק את האסטרטגיה שלך מול נתוני שוק ונתונים הסטוריים</p>
+                                </div>
+                            </li>
+                            <li data-aos="fade-right" class="aos-init">
+                                <div class="service-ico"><i class="fa fa-random"></i></div>
+                                <div class="service-content">
+                                    <h3>אופטימיזציה</h3>
+                                    <p class="">כלים לבדיקת ושיפור ביצועי האסטרטגיה</p>
+                                </div>
+                            </li>
+                        </ul>
+
+
+                    </div>
+                    <div class="col-md-6 col-xs-12 no-padding text-center aos-init aos-animate" data-aos="fade-right">
+                        <div class="outer">
+                            <img src="/assets/website/strategy-ide.png" class="xximg-responsive img-centered inner-image" alt="">
+                            <img src="https://s3-us-west-2.amazonaws.com/thebuildmachine/background_images/empty-screen.png" class="outer-image" alt="" />
+                        </div>
+                        <br/>
+                        <br/>
+                        <br/>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="company bg-white" id="thebrokersdashboard">
+            <div class="container">
+                <div class="row">
+                    <br/>
+                    <h2 class="text-center">דשבורד למנהלים</h2>
+                    <div class="heading-line"><span></span></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-xs-12 no-padding text-center aos-init aos-animate" data-aos="fade-right">
+                        <div class="text-left">
+                            <strong>התמונה המלאה בזמן אמת</strong>
+                            <br><br>
+                            <p>
+                                המשרד האחורי מחובר בזמן אמת לכל תחנות הסוחרים כך שבכל רגע נתון ניתן לקבל תמונה עדכנית של כל החשבונות ממקום אחד.
+                            </p>
+                        </div>
+                        <div class="outer">
+                            <img src="/assets/website/dashboard.png" class="xximg-responsive img-centered inner-image" alt="">
+                            <img src="https://s3-us-west-2.amazonaws.com/thebuildmachine/background_images/empty-screen.png" class="outer-image" alt="" />
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 col-xs-12">
+
+
+                        <ul class="no-padding">
+
+                            <li data-aos="fade-right" class="aos-init">
+                                <div class="service-ico"><i class="fa fa-heartbeat"></i></div>
+                                <div class="service-content">
+                                    <h3>מעקב אחר כל שינוי בכל חשבון</h3>
+                                    <p class="">חיבור לכל תחנות המסחר לקבלת תמונה שלמה ועדכנית על מצב החשבונות ושינויים בתיקים או בשוק</p>
+                                </div>
+                            </li>
+
+                            <li data-aos="fade-right" class="aos-init">
+                                <div class="service-ico"><i class="fa fa-users"></i></div>
+                                <div class="service-content">
+                                    <h3>פעילות יומית של כל הסוחרים</h3>
+                                    <p class="">מעקב אחר כל ההוראות שנשלחו במהלך יום המסמחר</p>
+                                </div>
+                            </li>
+
+                            <li data-aos="fade-right" class="aos-init">
+                                <div class="service-ico"><i class="fa fa-briefcase  "></i></div>
+                                <div class="service-content">
+                                    <h3>מעקב חשבונות</h3>
+                                    <p class="">Lorem usce volutpat lectus justo, ut suscipit felis congue ut. Vivamus ut ultricies ante dictum.</p>
+                                </div>
+                            </li>
+                            <li data-aos="fade-right" class="aos-init">
+                                <div class="service-ico"><i class="fa fa-ticket  "></i></div>
+                                <div class="service-content">
+                                    <h3 class="">שרות לקוחות</h3>
+                                    <p class="">Lorem usce volutpat lectus justo, ut suscipit felis congue ut. Vivamus ut ultricies ante dictum.</p>
+                                </div>
+                            </li>
+                            <li data-aos="fade-right" class="aos-init">
+                                <div class="service-ico"><i class="fa fa-user-plus  "></i></div>
+                                <div class="service-content">
+                                    <h3 class="">לידים ומכירות</h3>
+                                    <p class="">Lorem usce volutpat lectus justo, ut suscipit felis congue ut. Vivamus ut ultricies ante dictum.</p>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="server bg-gray">
+            <br/>
+            <br/>
+            <h2 class="text-center"> שרת המסחר</h2>
+            <div class="heading-line"><span></span></div>
+
+            <div class="row">
+                <div class="col-lg-2">
+                </div>
+                <div class="col-lg-4">
+                    <h3 class="text-center">טעינת נתוני חשבונות</h3>
+                    <p> 
+                        חיבור בזמן אמת לכל חשבונות המסחר. מאפשר לך לקבל תמונה בזמן אמת של כל התיקים.
+                    </p>
+                      <img src="/assets/all-platforms.png" width="90%" />
+                    <h3 class="text-center">נתוני שוק</h3>
+                    <p>  <%= lorem(40) %> </p>
+                    <h3 class="text-center">חדשות והודעות מתפרצות</h3>
+                    <p>
+  שרת המסחר מחובר למערכת מאיה ולמערכות דומות בבורסות בעולם. בנוסף כל חדשות  הפיננסים בארץ ומחו"ל מתעדכנות כל מספר שניות.
+  
+                    </p>
+                    <h3 class="text-center">נתונים פנדמנטלים</h3>
+                    <p>  
+                    בנוסף לנתונים המגיעים ממערכות המסחר, השרת מעדכן את נתוני הבסיס בסיום המסחר 
+                    ומעדכן נתונים על החברות כמו דוחות כספיים ממגוון שרתים בארץ ובעולם.
+                    </p>
+                    <img src="<%= "/assets/website/market-info-panel.png" %>" />
+                </div>
+                <div class="col-lg-4">
+                    <h3 class="text-center">RESFTULL API</h3>
+                    <p> 
+                    
+                        שרת המסחר מאפשר ללקוח לבצע אינטגרציות בקלות למערכות חיצוניות ולהקטין משמעותית את זמן הפיתוח ורמת הסיבוכיות.
+                        <br/>
+                        ה API שלנו מבוסס על קריאות HTTP ו JSON שהם הבסיס לפיתוח מודרני ומתאימות לכל שפה ומוצר .
+                        
+                        <br/>
+                        לקבלת מבנה מפורט של הקריאות , צור קשר למטה.
+                    </p>
+                    <br/>
+                    <h3 class="text-center">חיבור לגליונות אקסל</h3>
+                    <p>  
+                    שרת המסחר מאפשר לגיליונות אקסל לקבל נתונים חיים. 
+                    <br/>
+                    קריאות ה API שלנו מפשטות את החיבור ויודעות להחזיר נתונים על החשבונות , הפוזיציות והשוק בהתאם להרשאות המערכת 
+                    <br/>
+                    החיבור מתבצע דרך WIZARD של אקסל. 
+                    </p>
+                    <br/>
+                     <h3 class="text-center">OAUTH TOKENS</h3>
+                    <p> 
+האבטחה במערכת מתבצעת על ידי רישום הקליינטים לשרת. בצורה זו אתה יכול לשלוט על איזה קליינטים - אסקל או אפליקציות  יכולות להתחבר
+                    </p>
+                </div>
+                <div class="col-lg-2">
+                </div>
+            </div>
+            <br/>
+            <br/>
+        </section>
+
+        <!-- Clients Aside -->
+        <section class="clients bg-white">
+
+            <div class="container  bg-white">
+
+                <div class="row">
+                    <h1 class="text-center">הלקוחות שלנו</h1>
+                    <div class="heading-line"><span></span></div>
+                </div>
+                <div class="row">
+
+                    <div class="col-md-4 col-sm-6">
+                        <a href="http://www.inter-il.com">
+                            <img src="/assets/website/inter-il-logo.png" class="img-responsive img-centered" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-2 col-sm-6">
+                        <a href="http://www.quantum-inv.co.il">
+                            <img src="/assets/website/dbm-logo.jpeg" class="img-responsive img-centered" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <a href="http://www.inter-il.com">
+                            <img src="/assets/website/betrader-logo.png" class="img-responsive img-centered" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-2 col-sm-6">
+                        <a href="http://www.quantum-inv.co.il">
+                            <img src="/assets/website/dbm-logo.jpeg" class="img-responsive img-centered" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="newsletter">
+            <h2 class="text-center">השאר פרטים לקבלת מידע</h2>
+            <div class="heading-line"><span></span></div>
+            <div class="container">
+                <div class="row text-center">
+                    <form action="https://www.bithemes.com/demo/futura/index_staticbg.html#" method="post">
+                        <input type="name" placeholder="Name" class="form-control newsletter-email aos-init" data-aos="fade">
+                        <input type="phone" placeholder="Phone" class="form-control newsletter-email aos-init" data-aos="fade">
+                        <input type="email" placeholder="Enter email" class="form-control newsletter-email aos-init" data-aos="fade">
+                        <button class="btn btn-blue btn-lightblue aos-init" data-aos="fade" data-aos-delay="300">שלח</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <br><br>
+
+        <div class="container-fluid copyright text-center">
+            <div class="row">
+                <p>Copyright © 2016 <a href="https://www.bithemes.com/">bithemes</a>. All rights reserved.
+                </p>
+            </div>
+            <a class="go_top" href="https://www.bithemes.com/demo/futura/index_staticbg.html#home"><i class="fa fa-angle-double-up"></i></a>
+        </div>
+    </footer>
+
+</div>

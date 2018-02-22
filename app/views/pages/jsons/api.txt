@@ -1,0 +1,98 @@
+
+
+Registration 
+-----------------
+/api/market/stocks/:symbols/register
+/api/market/options/:symbols/register
+/api/market/bonds/:symbols/register
+/api/market/:symbols/unregister
+/api/market/registered
+
+
+Market info
+-----------------------------
+/api/market/:symbols/quotes/recent
+/api/market/:symbols/quotes/recent?after=2018-02-12 13:31:00
+/api/market/:symbol/book 
+/api/market/:symbol/quotes/intraday
+/api/market/:symbol/candles/intraday # 1 minute candles
+
+Fundamental info
+-----------------------------
+/api/fundamental/:symbol/request
+/api/fundamental/:symbol/request?callback=10.40.40.32/api/fundamental_callback
+/api/fundamental/:symbol/info
+/api/fundamental/:symbol/ratios
+/api/fundamental/:symbol/officers
+/api/fundamental/:symbol/forecast
+/api/fundamental/:symbol/financial_summary
+/api/fundamental/:symbol/news
+/api/fundamental/:symbol/events
+
+Account api
+--------------------------------
+/api/account/list                                                   # {broker-id:3 account-id: U34543,U23444}
+/api/account/:account-id/info
+/api/account/:account-id/positions
+/api/account/:account-id/orders
+/api/account/:account-id/trades
+
+
+Historic Candles api
+-------------------------------
+/api/history/symbols/:symbols/minutes/request
+/api/history/symbols/:symbols/daily/request
+/api/history/symbols/:symbols/minutes/recent
+/api/history/symbols/:symbols/daily/recent
+
+
+Realtime callbacks Market  and Account calls
+-----------------------------------------
+/api/realtime/registrations
+/api/realtime/candles/:symbols/register?callback=:callback-url
+/api/realtime/quotes/:symbols/register?callback=10.40.40.30/api/candles
+/api/realtime/account/:account-id/register?callback=10.40.40.30/api/candles
+/api/realtime/candles/:symbols/unregister?callback=10.40.40.30/api/candles
+/api/realtime/quotes/:symbols/unregister?callback=10.40.40.30/api/candles
+/api/realtime/account/:account-id/unregister?callback=10.40.40.30/api/candles
+
+
+Orders api
+-----------------------------
+/api/account/:account-id/buy/:symbol?&qty=4&limit=983.21
+/api/account/:account-id/sell/:symbol?&qty=4&limit=983.21
+/api/account/:account-id/buy/:symbol?&qty=4&limit=983.21
+/api/account/:account-id/bracket/buy/:symbol?&qty=4&limit=983.21
+/api/account/:account-id/bracket/sell/:symbol?&qty=4&limit=983.21
+/api/accounts/:account-id/order/:order-id/status
+/api/accounts/:account-id/order/:order-id/update?qty=34&limit=873.3
+/api/accounts/:account-id/order/:order-id/cancel
+
+
+
+Admin API
+-----------------------------------------
+/api/stations/list
+/api/stations/:station-name/accounts
+/api/stations/:station-name/symbols
+
+
+
+JSON OUTPUT
+============================================
+
+Error
+---------------------------------
+    status: { errorid: 34 , message: no credentials }
+
+Account info
+
+{
+    status: ok
+    
+
+}
+
+Portfolio Item
+
+
