@@ -12,6 +12,19 @@ class PagesController < ApplicationController
   def crm
     PageView.create(:page => "CRM" , :ip => request.remote_ip , :referer => request.referer , :user_agent => request.user_agent)
   end
+  
+  def tradingmachine
+    PageView.create(:page => "Trading Machine" , :ip => request.remote_ip , :referer => request.referer , :user_agent => request.user_agent)
+  end
+  def archive
+    PageView.create(:page => "Trading Archive" , :ip => request.remote_ip , :referer => request.referer , :user_agent => request.user_agent)
+  end
+  def api_tase_bridge
+    PageView.create(:page => "api_tase_bridge" , :ip => request.remote_ip , :referer => request.referer , :user_agent => request.user_agent)
+  end
+  def api_ib_bridge
+    PageView.create(:page => "api_ib_bridge" , :ip => request.remote_ip , :referer => request.referer , :user_agent => request.user_agent)
+  end
 
   def backoffice
     PageView.create(:page => "BackOffice" , :ip => request.remote_ip , :referer => request.referer , :user_agent => request.user_agent)
