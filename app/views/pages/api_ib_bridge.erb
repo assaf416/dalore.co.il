@@ -84,7 +84,7 @@
                     <div class="feature-content">
                         <h3> <a href="#thebrokersdashboard">שיגור הוראות קניה ומכירה</a></h3>
                         <p class="text-left">
-                        שיגור הוראות קניה ומכירה דרך API פשוט .וניהול הזמנות פתוחות וביצועים בזמן אמת.
+                            שיגור הוראות קניה ומכירה דרך API פשוט .וניהול הזמנות פתוחות וביצועים בזמן אמת.
                         </p>
                     </div>
                 </div>
@@ -99,296 +99,379 @@
                     </div>
                 </div>
             </div>
-            </section>
-
-
-            <section class="company bg-white" id="server">
-                <div class="container">
-                    <div class="row">
-                        <h2 class="text-center">
-                            נתוני שוק
-                        </h2>
-                        <div class="heading-line"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-3 col-xs-12 text-left " >
-                            <ul class="no-padding">
-                                <li data-aos="fade-right" class="">
-                                    <div class="service-content">
-                                        <h3>מצב כל החשבונות בזמן אמת</h3>
-                                        <p class="">אין צורך לקפץ ממחשב למחשב לביצוע הוראות. שלוט על כל תחנות המסחר שלך ממקום אחד</p>
-                                    </div>
-                                </li>
-                                <li data-aos="fade-right" class="">
-                                    <div class="service-content">
-                                        <h3>ביצוע פוזיציות בין חשבונות</h3>
-                                        <p class="">
-                                            מערכת המסחר מאפשרת לך להגדיר חשבון על הכולל מספר חשבונות מבנקים שונים ולהתייחס אליהם כחשבון בודד.
-                                            ולנהל פוזיציות בין החשבונות
-                                        </p>
-                                    </div>
-                                </li>
-                                <li data-aos="fade-right" class="">
-                                    <div class="service-content">
-                                        <h3>קישור לגליונות אקסל</h3>
-                                        <p class="">
-                                            חיבור לגליונות אקסל לקבלת נתוני שוק , מצב חשבון ופוציזיות
-                                        </p>
-                                    </div>
-                                </li>
-                                <li data-aos="fade-right" class="">
-                                    <div class="service-content">
-                                        <h3>ריכוז הודעות מהבורסה וממאיה</h3>
-                                        <p class="">
-                                            חיבור בזמן אמת למערכת מאיה כולל  תשקיפים ודוחו"ת כספיים
-                                            חיבור דומה לבורסאות בארופה אסיה ואמריקה
-                                        </p>
-                                    </div>
-                                </li>
-                                <li data-aos="fade-right" class="">
-                                    <div class="service-content">
-                                        <h3>שיגור הוראות לתוכנת המסחר</h3>
-                                        <p class="">
-                                            שיגור הוראות לחשבון המסחר המתאים באופן אוטומטי. 
-                                            שליחת הוראות מורכבות לכל בנק.
-                                        </p>
-                                    </div>
-                                </li>
-
-                            </ul>
-
-                        </div>
-
-                        <div class="col-md-9 col-xs-12 no-padding text-center  " data-aos="fade-right">
-                            <div class="text-left text-english text-small">
-
-                                <br/><b> Getting Market data </b>
-                                <ul >
-                                    <li class="text-small">  <span class="label label-info">GET</span> /api/market/:symbols/quotes/recent    </li>
-                                    <li class="text-small">  <span class="label label-info">GET</span> /api/market/:symbols/quotes/recent?after=2018-02-12 13:31:00    </li>
-                                    <li class="text-small">  <span class="label label-info">GET</span>/api/market/:symbol/quotes/intraday  </li>
-                                    <li class="text-small">  <span class="label label-info">GET</span> /api/market/:symbol/candles/intraday # 1 minute candles    </li>
-                                    <li class="text-small">  <span class="label label-info">GET</span> /api/market/:symbol/book    </li>
-                                    <li class="text-small">  <span class="label label-info">GET</span> /api/market/:symbol/quotes/intraday   </li>
-                                    <li class="text-small">  <span class="label label-info">GET</span> /api/market/:symbol/candles/intraday # 1 minute candles  </li>
-                                </ul>
-
-                                <br/><b> Registering for real time updates </b>
-                                <ul >
-                                    <li class="text-small">  <span class="label label-info">GET</span> /api/realtime/candles/:symbols/register?callback=:callback-url    </li>
-                                    <li class="text-small">  <span class="label label-info">GET</span> /api/realtime/quotes/:symbols/register?callback=:callback-url   </li>
-                                    <li class="text-small">  <span class="label label-info">GET</span> /api/realtime/quotes/:symbols/register?callback=:callback-url   </li>
-                                </ul>
-
-                                <br/><b> Unregistering from real time updates </b>
-                                <ul >
-                                    <li class="text-small">  <span class="label label-info">GET</span> /api/realtime/candles/:symbols/unregister?callback=:callback-url    </li>
-                                    <li class="text-small">  <span class="label label-info">GET</span> /api/realtime/quotes/:symbols/unregister?callback=:callback-url   </li>
-                                </ul>
-
-                                <br/><b> Historical Candles  </b>
-                                <ul >
-                                    <li class="text-small">  <span class="label label-info">GET</span> /api/history/symbols/:symbols/minutes/recent    </li>
-                                    <li class="text-small">  <span class="label label-info">GET</span> /api/history/symbols/:symbols/minutes/request   </li>
-                                    <li class="text-small">  <span class="label label-info">GET</span> /api/history/symbols/:symbols/daily/request   </li>
-                                    <li class="text-small">  <span class="label label-info">GET</span> /api/history/symbols/:symbols/daily/recent   </li>
-                                </ul>
-
-
-
-
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-
-            <section class="company bg-gray" id="server">
-                <div class="container">
-                    <div class="row">
-                        <h2 class="text-center">
-                            פרטי חשבון ופוזיציות
-                        </h2>
-                        <div class="heading-line"></div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-3 col-xs-12 text-left " >
-                            <ul class="no-padding">
-                                <li data-aos="fade-right" class="">
-                                    <div class="service-content">
-                                        <h3>מצב כל החשבונות בזמן אמת</h3>
-                                        <p class="">אין צורך לקפץ ממחשב למחשב לביצוע הוראות. שלוט על כל תחנות המסחר שלך ממקום אחד</p>
-                                    </div>
-                                </li>
-                                <li data-aos="fade-right" class="">
-                                    <div class="service-content">
-                                        <h3>ביצוע פוזיציות בין חשבונות</h3>
-                                        <p class="">
-                                            מערכת המסחר מאפשרת לך להגדיר חשבון על הכולל מספר חשבונות מבנקים שונים ולהתייחס אליהם כחשבון בודד.
-                                            ולנהל פוזיציות בין החשבונות
-                                        </p>
-                                    </div>
-                                </li>
-                                <li data-aos="fade-right" class="">
-                                    <div class="service-content">
-                                        <h3>קישור לגליונות אקסל</h3>
-                                        <p class="">
-                                            חיבור לגליונות אקסל לקבלת נתוני שוק , מצב חשבון ופוציזיות
-                                        </p>
-                                    </div>
-                                </li>
-                                <li data-aos="fade-right" class="">
-                                    <div class="service-content">
-                                        <h3>ריכוז הודעות מהבורסה וממאיה</h3>
-                                        <p class="">
-                                            חיבור בזמן אמת למערכת מאיה כולל  תשקיפים ודוחו"ת כספיים
-                                            חיבור דומה לבורסאות בארופה אסיה ואמריקה
-                                        </p>
-                                    </div>
-                                </li>
-                                <li data-aos="fade-right" class="">
-                                    <div class="service-content">
-                                        <h3>שיגור הוראות לתוכנת המסחר</h3>
-                                        <p class="">
-                                            שיגור הוראות לחשבון המסחר המתאים באופן אוטומטי. 
-                                            שליחת הוראות מורכבות לכל בנק.
-                                        </p>
-                                    </div>
-                                </li>
-
-                            </ul>
-
-                        </div>
-
-                        <div class="col-md-9 col-xs-12 no-padding text-center  " data-aos="fade-right">
-                            <div class="text-left text-english text-small">
-
-
-                                <br/><b> Account and Positions </b>
-                                <ul>
-                                    <li class="text-small">  <span class="label label-info">GET</span> /api/account/list      </li>
-                                    <li class="text-small">  <span class="label label-info">GET</span> /api/accounts/:account/info    </li>
-                                    <li class="text-small">  <span class="label label-info">GET</span> /api/accounts/:account/positions    </li>
-                                    <li class="text-small">  <span class="label label-info">GET</span> /api/accounts/:account/orders    </li>
-                                    <li class="text-small">  <span class="label label-info">GET</span> /api/accounts/:account/trades    </li>
-                                </ul>
-
-
-
-                                <br/><b> Orders </b>
-                                <ul>
-                                    <li class="text-small">  <span class="label label-info">GET</span> /api/account/:account-id/buy/:symbol?&qty=4&limit=983.21      </li>
-                                    <li class="text-small">  <span class="label label-info">GET</span> /api/account/:account-id/sell/:symbol?&qty=4&limit=983.21    </li>
-                                    <li class="text-small">  <span class="label label-info">GET</span> /api/account/:account-id/buy/:symbol?&qty=4&limit=983.21    </li>
-                                    <li class="text-small">  <span class="label label-info">GET</span> /api/account/:account-id/bracket/buy/:symbol?&qty=4&limit=983.21    </li>
-                                    <li class="text-small">  <span class="label label-info">GET</span> /api/account/:account-id/bracket/sell/:symbol?&qty=4&limit=983.21    </li>
-                                    <li class="text-small">  <span class="label label-info">GET</span> /api/accounts/:account-id/order/:order-id/status    </li>
-                                    <li class="text-small">  <span class="label label-info">GET</span> /api/accounts/:account-id/order/:order-id/update?qty=34&limit=873.3    </li>
-                                    <li class="text-small">  <span class="label label-info">GET</span> /api/accounts/:account-id/order/:order-id/cancel    </li>
-                                </ul>
-                            </div>
-
-                        </div>
-
-                    </div>
-            </section>
-
-
-            <section class="company bg-white" id="fundamentals">
-                <div class="container">
-                    <div class="row">
-                        <h2 class="text-center">
-                            נתוני חברות
-                        </h2>
-                        <div class="heading-line"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-3 col-xs-12 text-left " >
-                            <ul class="no-padding">
-                                <li data-aos="fade-right" class="">
-                                    <div class="service-content">
-                                        <h3>ריכוז הודעות מהבורסה וממאיה</h3>
-                                        <p class="">
-                                            חיבור בזמן אמת למערכת מאיה כולל  תשקיפים ודוחו"ת כספיים
-                                            חיבור דומה לבורסאות בארופה אסיה ואמריקה
-                                        </p>
-                                    </div>
-                                </li>
-                                <li data-aos="fade-right" class="">
-                                    <div class="service-content">
-                                        <h3>שיגור הוראות לתוכנת המסחר</h3>
-                                        <p class="">
-                                            שיגור הוראות לחשבון המסחר המתאים באופן אוטומטי. 
-                                            שליחת הוראות מורכבות לכל בנק.
-                                        </p>
-                                    </div>
-                                </li>
-
-                            </ul>
-
-                        </div>
-
-                        <div class="col-md-9 col-xs-12 no-padding text-center  " data-aos="fade-right">
-                            <div class="text-left text-english text-small">
-
-                                <br/><b> Getting Fundamental data </b>
-                                <ul>
-                                    <li class="text-small">  <span class="label label-info">GET</span> /api/fundamental/:symbol/request      </li>
-                                    <li class="text-small">  <span class="label label-info">GET</span> /api/fundamental/:symbol/info    </li>
-                                    <li class="text-small">  <span class="label label-info">GET</span> /api/fundamental/:symbol/officers    </li>
-                                    <li class="text-small">  <span class="label label-info">GET</span> /api/fundamental/:symbol/dividends    </li>
-                                    <li class="text-small">  <span class="label label-info">GET</span> /api/fundamental/:symbol/pnl    </li>
-                                    <li class="text-small">  <span class="label label-info">GET</span> /api/fundamental/:symbol/news    </li>
-                                    <li class="text-small">  <span class="label label-info">GET</span> /api/fundamental/:symbol/events    </li>
-                                </ul>
-
-
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-            <section class="company bg-gray" id="admin">
-                <div class="container">
-                    <div class="row">
-                        <h2 class="text-center">
-                            Admin
-                        </h2>
-                        <div class="heading-line"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-3 col-xs-12 text-left " >
-                            <ul class="no-padding">
-                                <li data-aos="fade-right" class="">
-                                    <div class="service-content">
-                                        <h3>שיגור הוראות לתוכנת המסחר</h3>
-                                        <p class="">
-                                            שיגור הוראות לחשבון המסחר המתאים באופן אוטומטי. 
-                                            שליחת הוראות מורכבות לכל בנק.
-                                        </p>
-                                    </div>
-                                </li>
-
-                            </ul>
-
-                        </div>
-
-                        <div class="col-md-9 col-xs-12 no-padding text-right  " data-aos="fade-right">
-                            <br/><b> חיבור למספר חשבונות </b>
-                            <ul>
-                                <li class="text-small">  <span class="label label-info">GET</span> /api/stations/list</li>
-                                <li class="text-small">  <span class="label label-info">GET</span> /api/stations/:station-name/accounts</li>
-                                <li class="text-small">  <span class="label label-info">GET</span> /api/stations/:station-name/symbols</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
         </div>
+    </div>
+</section>
+
+<section class="company bg-gray" id="server">
+    <div class="container">
+        <div class="row">
+            <h2 class="text-center">
+                יתרונות השימוש
+            </h2>
+            <div class="heading-line"></div>
+        </div>
+        <div class="col-lg-6">
+            <img src="<%= "/assets/website/http-bridge-tws.svg" %>" width="500px;" />
+        </div>
+        <div class="col-lg-6">
+            <ul class="no-padding">
+                <li data-aos="fade-right" class="">
+                    <div class="service-content">
+                        <h3>חיבור למערכת מסחר ו CRM</h3>
+                        <p class="">אין צורך לקפץ ממחשב למחשב לביצוע הוראות. שלוט על כל תחנות המסחר שלך ממקום אחד</p>
+                    </div>
+                </li>
+                <li data-aos="fade-right" class="">
+                    <div class="service-content">
+                        <h3>חיבור לאקסלים במשרד</h3>
+                        <p class="">
+                            חיבור נתוני חשבון ונתוני שוק ישירות לכל הגליונות אקסל במשרד
+                        </p>
+                    </div>
+                </li>
+                <li data-aos="fade-right" class="">
+                    <div class="service-content">
+                        <h3>אין צורך בידע ב C++ JAVA או  .NET</h3>
+                        <p class="">
+                            פרוטוקול HTTP REST מאפשר חיבור לכל שפת תכנות בצורה קלה ומהירה
+                        </p>
+                    </div>
+                </li>
+                <li data-aos="fade-right" class="">
+                    <div class="service-content">
+                        <h3>חיבור למספר תוכנות במקביל</h3>
+                        <p class="">
+                            שימוש בפרוטוקול HTTP מאפשר למספר מערכות להתחבר במקביל
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+<section class="company bg-white" id="server">
+    <div class="container">
+        <div class="row">
+            <h2 class="text-center">
+                נתוני שוק
+            </h2>
+            <div class="heading-line"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-xs-12 text-left " >
+                <ul class="no-padding">
+                    <li data-aos="fade-right" class="">
+                        <div class="service-content">
+                            <h3>מצב כל החשבונות בזמן אמת</h3>
+                            <p class="">אין צורך לקפץ ממחשב למחשב לביצוע הוראות. שלוט על כל תחנות המסחר שלך ממקום אחד</p>
+                        </div>
+                    </li>
+                    <li data-aos="fade-right" class="">
+                        <div class="service-content">
+                            <h3>ביצוע פוזיציות בין חשבונות</h3>
+                            <p class="">
+                                מערכת המסחר מאפשרת לך להגדיר חשבון על הכולל מספר חשבונות מבנקים שונים ולהתייחס אליהם כחשבון בודד.
+                                ולנהל פוזיציות בין החשבונות
+                            </p>
+                        </div>
+                    </li>
+                    <li data-aos="fade-right" class="">
+                        <div class="service-content">
+                            <h3>קישור לגליונות אקסל</h3>
+                            <p class="">
+                                חיבור לגליונות אקסל לקבלת נתוני שוק , מצב חשבון ופוציזיות
+                            </p>
+                        </div>
+                    </li>
+                    <li data-aos="fade-right" class="">
+                        <div class="service-content">
+                            <h3>ריכוז הודעות מהבורסה וממאיה</h3>
+                            <p class="">
+                                חיבור בזמן אמת למערכת מאיה כולל  תשקיפים ודוחו"ת כספיים
+                                חיבור דומה לבורסאות בארופה אסיה ואמריקה
+                            </p>
+                        </div>
+                    </li>
+                    <li data-aos="fade-right" class="">
+                        <div class="service-content">
+                            <h3>שיגור הוראות לתוכנת המסחר</h3>
+                            <p class="">
+                                שיגור הוראות לחשבון המסחר המתאים באופן אוטומטי. 
+                                שליחת הוראות מורכבות לכל בנק.
+                            </p>
+                        </div>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div class="col-md-9 col-xs-12 no-padding text-center  " data-aos="fade-right">
+                <div class="text-left text-english text-small">
+
+                    <br/><b> Getting Market data </b>
+  <ul >
+                                        <li class="text-small">  <span class="label label-info">GET</span> /api/market/:symbols/quotes/recent    </li>
+                                        <li class="text-small">  <span class="label label-info">GET</span> /api/market/:symbols/quotes/recent?after=2018-02-12 13:31:00    </li>
+                                        <li class="text-small">  <span class="label label-info">GET</span>/api/market/:symbol/quotes/intraday  </li>
+                                        <li class="text-small">  <span class="label label-info">GET</span> /api/market/:symbol/candles/intraday # 1 minute candles    </li>
+                                        <li class="text-small">  <span class="label label-info">GET</span> /api/market/:symbol/book    </li>
+                                        <li class="text-small">  <span class="label label-info">GET</span> /api/market/:symbol/quotes/intraday   </li>
+                                        <li class="text-small">  <span class="label label-info">GET</span> /api/market/:symbol/candles/intraday # 1 minute candles  </li>
+                                    </ul>
+                   
+
+
+
+                    <br/><b> Registering for real time updates </b>
+                    <ul >
+                        <li class="text-small">  <span class="label label-info">GET</span> /api/realtime/candles/:symbols/register?callback=:callback-url    </li>
+                        <li class="text-small">  <span class="label label-info">GET</span> /api/realtime/quotes/:symbols/register?callback=:callback-url   </li>
+                        <li class="text-small">  <span class="label label-info">GET</span> /api/realtime/quotes/:symbols/register?callback=:callback-url   </li>
+                    </ul>
+
+                    <br/><b> Unregistering from real time updates </b>
+                    <ul >
+                        <li class="text-small">  <span class="label label-info">GET</span> /api/realtime/candles/:symbols/unregister?callback=:callback-url    </li>
+                        <li class="text-small">  <span class="label label-info">GET</span> /api/realtime/quotes/:symbols/unregister?callback=:callback-url   </li>
+                    </ul>
+
+                    <br/><b> Historical Candles  </b>
+                    <ul >
+                        <li class="text-small">  <span class="label label-info">GET</span> /api/history/symbols/:symbols/minutes/recent    </li>
+                        <li class="text-small">  <span class="label label-info">GET</span> /api/history/symbols/:symbols/minutes/request   </li>
+                        <li class="text-small">  <span class="label label-info">GET</span> /api/history/symbols/:symbols/daily/request   </li>
+                        <li class="text-small">  <span class="label label-info">GET</span> /api/history/symbols/:symbols/daily/recent   </li>
+                    </ul>
+
+
+
+
+                </div>
+            </div>
+ <div class="row">
+                        <div class="col-lg-12 well scode-panel">
+
+                            <ul class="nav nav-tabs text-left">
+                                <li class="active">
+                                    <a  href="#1" data-toggle="tab">Request</a>
+                                </li>
+                                <li><a href="#2" data-toggle="tab">Qutes</a>
+                                </li>
+                                <li><a href="#3" data-toggle="tab">Book</a>
+                                </li>
+                                <li><a href="#3" data-toggle="tab">Error</a>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content ">
+                                <div class="tab-pane active" id="1">
+                                  
+                                </div>
+                                <div class="tab-pane" id="2">
+                                    <pre class="code-panel">
+                                    <%= render "/pages/jsons/tase-market.json" %>
+                                    </pre>
+                                </div>
+                                <div class="tab-pane" id="3">
+                                    <h3>add clearfix to tab-content (see the css)</h3>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="company bg-gray" id="server">
+    <div class="container">
+        <div class="row">
+            <h2 class="text-center">
+                פרטי חשבון ופוזיציות
+            </h2>
+            <div class="heading-line"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3 col-xs-12 text-left " >
+                <ul class="no-padding">
+                    <li data-aos="fade-right" class="">
+                        <div class="service-content">
+                            <h3>מצב כל החשבונות בזמן אמת</h3>
+                            <p class="">אין צורך לקפץ ממחשב למחשב לביצוע הוראות. שלוט על כל תחנות המסחר שלך ממקום אחד</p>
+                        </div>
+                    </li>
+                    <li data-aos="fade-right" class="">
+                        <div class="service-content">
+                            <h3>ביצוע פוזיציות בין חשבונות</h3>
+                            <p class="">
+                                מערכת המסחר מאפשרת לך להגדיר חשבון על הכולל מספר חשבונות מבנקים שונים ולהתייחס אליהם כחשבון בודד.
+                                ולנהל פוזיציות בין החשבונות
+                            </p>
+                        </div>
+                    </li>
+                    <li data-aos="fade-right" class="">
+                        <div class="service-content">
+                            <h3>קישור לגליונות אקסל</h3>
+                            <p class="">
+                                חיבור לגליונות אקסל לקבלת נתוני שוק , מצב חשבון ופוציזיות
+                            </p>
+                        </div>
+                    </li>
+                    <li data-aos="fade-right" class="">
+                        <div class="service-content">
+                            <h3>ריכוז הודעות מהבורסה וממאיה</h3>
+                            <p class="">
+                                חיבור בזמן אמת למערכת מאיה כולל  תשקיפים ודוחו"ת כספיים
+                                חיבור דומה לבורסאות בארופה אסיה ואמריקה
+                            </p>
+                        </div>
+                    </li>
+                    <li data-aos="fade-right" class="">
+                        <div class="service-content">
+                            <h3>שיגור הוראות לתוכנת המסחר</h3>
+                            <p class="">
+                                שיגור הוראות לחשבון המסחר המתאים באופן אוטומטי. 
+                                שליחת הוראות מורכבות לכל בנק.
+                            </p>
+                        </div>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div class="col-md-9 col-xs-12 no-padding text-center  " data-aos="fade-right">
+                <div class="text-left text-english text-small">
+
+
+                    <br/><b> Account and Positions </b>
+                    <ul>
+                        <li class="text-small">  <span class="label label-info">GET</span> /api/account/list      </li>
+                        <li class="text-small">  <span class="label label-info">GET</span> /api/accounts/:account/info    </li>
+                        <li class="text-small">  <span class="label label-info">GET</span> /api/accounts/:account/positions    </li>
+                        <li class="text-small">  <span class="label label-info">GET</span> /api/accounts/:account/orders    </li>
+                        <li class="text-small">  <span class="label label-info">GET</span> /api/accounts/:account/trades    </li>
+                    </ul>
+
+
+
+                    <br/><b> Orders </b>
+                    <ul>
+                        <li class="text-small">  <span class="label label-info">GET</span> /api/account/:account-id/buy/:symbol?&qty=4&limit=983.21      </li>
+                        <li class="text-small">  <span class="label label-info">GET</span> /api/account/:account-id/sell/:symbol?&qty=4&limit=983.21    </li>
+                        <li class="text-small">  <span class="label label-info">GET</span> /api/account/:account-id/buy/:symbol?&qty=4&limit=983.21    </li>
+                        <li class="text-small">  <span class="label label-info">GET</span> /api/account/:account-id/bracket/buy/:symbol?&qty=4&limit=983.21    </li>
+                        <li class="text-small">  <span class="label label-info">GET</span> /api/account/:account-id/bracket/sell/:symbol?&qty=4&limit=983.21    </li>
+                        <li class="text-small">  <span class="label label-info">GET</span> /api/accounts/:account-id/order/:order-id/status    </li>
+                        <li class="text-small">  <span class="label label-info">GET</span> /api/accounts/:account-id/order/:order-id/update?qty=34&limit=873.3    </li>
+                        <li class="text-small">  <span class="label label-info">GET</span> /api/accounts/:account-id/order/:order-id/cancel    </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+</section>
+
+
+<section class="company bg-white" id="fundamentals">
+    <div class="container">
+        <div class="row">
+            <h2 class="text-center">
+                נתוני חברות
+            </h2>
+            <div class="heading-line"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-xs-12 text-left " >
+                <ul class="no-padding">
+                    <li data-aos="fade-right" class="">
+                        <div class="service-content">
+                            <h3>ריכוז הודעות מהבורסה וממאיה</h3>
+                            <p class="">
+                                חיבור בזמן אמת למערכת מאיה כולל  תשקיפים ודוחו"ת כספיים
+                                חיבור דומה לבורסאות בארופה אסיה ואמריקה
+                            </p>
+                        </div>
+                    </li>
+                    <li data-aos="fade-right" class="">
+                        <div class="service-content">
+                            <h3>שיגור הוראות לתוכנת המסחר</h3>
+                            <p class="">
+                                שיגור הוראות לחשבון המסחר המתאים באופן אוטומטי. 
+                                שליחת הוראות מורכבות לכל בנק.
+                            </p>
+                        </div>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div class="col-md-9 col-xs-12 no-padding text-center  " data-aos="fade-right">
+                <div class="text-left text-english text-small">
+
+                    <br/><b> Getting Fundamental data </b>
+                    <ul>
+                        <li class="text-small">  <span class="label label-info">GET</span> /api/fundamental/:symbol/request      </li>
+                        <li class="text-small">  <span class="label label-info">GET</span> /api/fundamental/:symbol/info    </li>
+                        <li class="text-small">  <span class="label label-info">GET</span> /api/fundamental/:symbol/officers    </li>
+                        <li class="text-small">  <span class="label label-info">GET</span> /api/fundamental/:symbol/dividends    </li>
+                        <li class="text-small">  <span class="label label-info">GET</span> /api/fundamental/:symbol/pnl    </li>
+                        <li class="text-small">  <span class="label label-info">GET</span> /api/fundamental/:symbol/news    </li>
+                        <li class="text-small">  <span class="label label-info">GET</span> /api/fundamental/:symbol/events    </li>
+                    </ul>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="company bg-gray" id="admin">
+    <div class="container">
+        <div class="row">
+            <h2 class="text-center">
+                Admin
+            </h2>
+            <div class="heading-line"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-xs-12 text-left " >
+                <ul class="no-padding">
+                    <li data-aos="fade-right" class="">
+                        <div class="service-content">
+                            <h3>שיגור הוראות לתוכנת המסחר</h3>
+                            <p class="">
+                                שיגור הוראות לחשבון המסחר המתאים באופן אוטומטי. 
+                                שליחת הוראות מורכבות לכל בנק.
+                            </p>
+                        </div>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div class="col-md-9 col-xs-12 no-padding text-right  " data-aos="fade-right">
+                <br/><b> חיבור למספר חשבונות </b>
+                <ul>
+                    <li class="text-small">  <span class="label label-info">GET</span> /api/stations/list</li>
+                    <li class="text-small">  <span class="label label-info">GET</span> /api/stations/:station-name/accounts</li>
+                    <li class="text-small">  <span class="label label-info">GET</span> /api/stations/:station-name/symbols</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
 </section>
 
 
@@ -491,5 +574,10 @@
     }
     .text-white{
         color#fff;
+    }
+    .code-panel{
+        background-color:#333;
+        color:#fff;
+
     }
 </style>

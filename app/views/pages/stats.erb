@@ -7,19 +7,19 @@
                 <tbody>
                     <tr> 
                         <td>
-                            <a><i class="fa fa-user"></i> צפיות </a>
+                            <a><i class="fa fa-eye"></i> צפיות </a>
                             <br/>
                             <%= PageView.count %>
                         </td>
                         <td>
-                            <a><i class="fa fa-user"></i> צפיות </a>
+                            <a><i class="fa fa-user"></i>משתמשים</a>
                             <br/>
                             <%= PageView.count %>
                         </td>
                         <td>
-                            <a><i class="fa fa-user"></i> צפיות </a>
+                            <a><i class="fa fa-user"></i> לידים</a>
                             <br/>
-                            <%= PageView.count %>
+                            <%= Inquiry.count %>
                         </td>
                     </tr>
                 </tbody>
@@ -81,6 +81,17 @@
           </div>
       </div>
 
+      <div class="panel panel-info">
+          <div class="panel-footer">
+              <h3>
+משתמשים פר יום בחודש האחרון
+              </h3>
+          </div>
+          <div class="panel-body">
+              <%= area_chart PageView.current_month.group(:page).count  %>
+          </div>
+      </div>
+      
       <div class="panel panel-info">
           <div class="panel-footer">
               <h3>
