@@ -18,49 +18,87 @@
     </div>
 </section>
 
-<section class="features">
+<section class="features" >
     <div class="container">
         <div class="row">
-            <h2 class="text-center">פתרונות API</h2>
+            <h2 class="text-center">DALORE HTTP API REFERENCE</h2>
             <div class="heading-line"><span></span></div>
         </div>
         <br/>  <br/>  <br/>
-        <div class="row">
-            <div class="col-md-4 col-xs-6  text-center">
-                <div class="feature-big-ico"><img src="<%= "/assets/website/sivron-logo.png" %>" width="200px" height="100px"/> </div>
-                <div class="feature-content">
-                    <p class="text-left">
-                        קבל תמונה עדכנית של מצב החשבון והפוציזיות לנייד או למחשב
-                        פרוט מצב כל החשבונות המנוהלים מכל תחנות המסחר והבנקים.
-                    </p>
-                </div>
+        <div class="row text-right " style="direction:ltr;">
+
+            <div class="col-lg-10">
+                <b> Getting Market data </b>
+                <ul >
+                    <li class="text-small">  <span class="label label-info">GET</span> /api/market/:symbols/quotes/recent    </li>
+                    <li class="text-small">  <span class="label label-info">GET</span> /api/market/:symbols/quotes/recent?after=2018-02-12 13:31:00    </li>
+                    <li class="text-small">  <span class="label label-info">GET</span>/api/market/:symbol/quotes/intraday  </li>
+                    <li class="text-small">  <span class="label label-info">GET</span> /api/market/:symbol/candles/intraday # 1 minute candles    </li>
+                    <li class="text-small">  <span class="label label-info">GET</span> /api/market/:symbol/book    </li>
+                    <li class="text-small">  <span class="label label-info">GET</span> /api/market/:symbol/quotes/intraday   </li>
+                    <li class="text-small">  <span class="label label-info">GET</span> /api/market/:symbol/candles/intraday # 1 minute candles  </li>
+                </ul>
+
+                <b> Respond Example </b><br/>
+                <pre>
+                    <%= render "/pages/jsons/tase-market.json" %>
+                </pre>
+
+
+
+
+                <br/><b> Registering for real time updates </b>
+                <ul >
+                    <li class="text-small">  <span class="label label-info">GET</span> /api/realtime/candles/:symbols/register?callback=:callback-url    </li>
+                    <li class="text-small">  <span class="label label-info">GET</span> /api/realtime/quotes/:symbols/register?callback=:callback-url   </li>
+                    <li class="text-small">  <span class="label label-info">GET</span> /api/realtime/quotes/:symbols/register?callback=:callback-url   </li>
+                </ul>
+
+                <br/><b> Unregistering from real time updates </b>
+                <ul >
+                    <li class="text-small">  <span class="label label-info">GET</span> /api/realtime/candles/:symbols/unregister?callback=:callback-url    </li>
+                    <li class="text-small">  <span class="label label-info">GET</span> /api/realtime/quotes/:symbols/unregister?callback=:callback-url   </li>
+                </ul>
+
+                <br/><b> Historical Candles  </b>
+                <ul >
+                    <li class="text-small">  <span class="label label-info">GET</span> /api/history/symbols/:symbols/minutes/recent    </li>
+                    <li class="text-small">  <span class="label label-info">GET</span> /api/history/symbols/:symbols/minutes/request   </li>
+                    <li class="text-small">  <span class="label label-info">GET</span> /api/history/symbols/:symbols/daily/request   </li>
+                    <li class="text-small">  <span class="label label-info">GET</span> /api/history/symbols/:symbols/daily/recent   </li>
+                </ul>
+
             </div>
-
-            <div class="col-md-4 col-xs-6 text-center">
-                <div class="feature-big-ico "><img src="<%= "/assets/website/fmr-logo.png" %>" width="200px" height="100px"/> </div>
-                <div class="feature-content">
-                    <p class="text-left">
-                        קבל תמונה עדכנית של מצב החשבון והפוציזיות לנייד או למחשב
-                        פרוט מצב כל החשבונות המנוהלים מכל תחנות המסחר והבנקים.
-
-                    </p>
-                </div>
+            <div class="col-lg-2">
+                <h4>Models</h4>
+                <ul class="navigation">
+                    <li><a href="">Account</a></li>
+                    <li><a href="">Quote</a></li>
+                    <li><a href="">Candle</a></li>
+                    <li><a href="">Position</a></li>
+                    <li><a href="">Order</a></li>
+                    <li><a href="">Trade</a></li>
+                </ul>
+                <br/>
+                <h4>Params Data</h4>
+                <ul>
+                    <li><a href="">:accounts</a></li>
+                    <li><a href="">:account</a></li>
+                    <li><a href="">:symbols</a></li>
+                    <li><a href="">:symbol</a></li>
+                    <li><a href="">:after_time</a></li>
+                </ul>
+                <br/>
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="">Getting Market Data</a></li>
+                    <li><a href="">Getting Account and Positions </a></li>
+                    <li><a href="">Managing Orders</a></li>
+                </ul>
             </div>
-
-            <div class="col-md-4 col-xs-6  text-center">
-                <div class="feature-big-ico "><img src="<%= "/assets/website/ib-logo.png" %>" width="200px" height="100px"/> </div>
-                <div class="feature-content">
-                    <p class="text-left">
-                        קבל תמונה עדכנית של מצב החשבון והפוציזיות לנייד או למחשב
-                        פרוט מצב כל החשבונות המנוהלים מכל תחנות המסחר והבנקים.
-                    </p>
-                </div>
-            </div>
-
-
         </div>
 </section>
 
-<%= render :partial => "pages/ib_bridge" %>
-<%= render :partial => "pages/fmr_bridge" %>
-<%= render :partial => "pages/sivron_bridge" %>
+<style>
+    li{list-style-type: none;}
+</style>

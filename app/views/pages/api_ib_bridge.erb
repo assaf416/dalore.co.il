@@ -112,6 +112,13 @@
             <div class="heading-line"></div>
         </div>
         <div class="col-lg-6">
+            <h3>כיצד זה עובד?</h3>
+            <p>
+                שרת ה HTTP מתבר לתוכנת TWS אחת או יותר  וחושף קריאות  REST עבור כל הפקודות הקיימות במערכת המסחר 
+                התוצאה היא חיבור מהיר ופשוט לפערכות מודרניות התומכות בפרוטוקל HTTP 
+                בנוסף ניתן להתחבר לשרת דרך גליונות אקסל
+            </p>
+            
             <img src="<%= "/assets/website/http-bridge-tws.svg" %>" width="500px;" />
         </div>
         <div class="col-lg-6">
@@ -119,7 +126,10 @@
                 <li data-aos="fade-right" class="">
                     <div class="service-content">
                         <h3>חיבור למערכת מסחר ו CRM</h3>
-                        <p class="">אין צורך לקפץ ממחשב למחשב לביצוע הוראות. שלוט על כל תחנות המסחר שלך ממקום אחד</p>
+                        <p class="">
+                        פרוטוקול סטנדרטי ומודרני הנתמך על ידי כל מערכות הCRM בשוק
+                        מאפשר לך להחבר את נתוני החשבון למערכות קיימות בקלות יחסית
+                        </p>
                     </div>
                 </li>
                 <li data-aos="fade-right" class="">
@@ -212,77 +222,40 @@
             <div class="col-md-9 col-xs-12 no-padding text-center  " data-aos="fade-right">
                 <div class="text-left text-english text-small">
 
-                    <br/><b> Getting Market data </b>
-  <ul >
-                                        <li class="text-small">  <span class="label label-info">GET</span> /api/market/:symbols/quotes/recent    </li>
-                                        <li class="text-small">  <span class="label label-info">GET</span> /api/market/:symbols/quotes/recent?after=2018-02-12 13:31:00    </li>
-                                        <li class="text-small">  <span class="label label-info">GET</span>/api/market/:symbol/quotes/intraday  </li>
-                                        <li class="text-small">  <span class="label label-info">GET</span> /api/market/:symbol/candles/intraday # 1 minute candles    </li>
-                                        <li class="text-small">  <span class="label label-info">GET</span> /api/market/:symbol/book    </li>
-                                        <li class="text-small">  <span class="label label-info">GET</span> /api/market/:symbol/quotes/intraday   </li>
-                                        <li class="text-small">  <span class="label label-info">GET</span> /api/market/:symbol/candles/intraday # 1 minute candles  </li>
-                                    </ul>
                    
-
-
-
-                    <br/><b> Registering for real time updates </b>
-                    <ul >
-                        <li class="text-small">  <span class="label label-info">GET</span> /api/realtime/candles/:symbols/register?callback=:callback-url    </li>
-                        <li class="text-small">  <span class="label label-info">GET</span> /api/realtime/quotes/:symbols/register?callback=:callback-url   </li>
-                        <li class="text-small">  <span class="label label-info">GET</span> /api/realtime/quotes/:symbols/register?callback=:callback-url   </li>
-                    </ul>
-
-                    <br/><b> Unregistering from real time updates </b>
-                    <ul >
-                        <li class="text-small">  <span class="label label-info">GET</span> /api/realtime/candles/:symbols/unregister?callback=:callback-url    </li>
-                        <li class="text-small">  <span class="label label-info">GET</span> /api/realtime/quotes/:symbols/unregister?callback=:callback-url   </li>
-                    </ul>
-
-                    <br/><b> Historical Candles  </b>
-                    <ul >
-                        <li class="text-small">  <span class="label label-info">GET</span> /api/history/symbols/:symbols/minutes/recent    </li>
-                        <li class="text-small">  <span class="label label-info">GET</span> /api/history/symbols/:symbols/minutes/request   </li>
-                        <li class="text-small">  <span class="label label-info">GET</span> /api/history/symbols/:symbols/daily/request   </li>
-                        <li class="text-small">  <span class="label label-info">GET</span> /api/history/symbols/:symbols/daily/recent   </li>
-                    </ul>
-
 
 
 
                 </div>
             </div>
- <div class="row">
-                        <div class="col-lg-12 well scode-panel">
+            <div class="row">
+                
+                <div class="col-lg-12 well code-panel">
+                    <h3>דוגמאות לתגובת השרת</h3><hr/>
+                    <ul class="nav nav-tabs text-left">
+                        <li><a href="#2" data-toggle="tab">Qutes</a>
+                        </li>
+                        <li><a href="#3" data-toggle="tab">Book</a>
+                        </li>
+                        <li><a href="#3" data-toggle="tab">Error</a>
+                        </li>
+                    </ul>
 
-                            <ul class="nav nav-tabs text-left">
-                                <li class="active">
-                                    <a  href="#1" data-toggle="tab">Request</a>
-                                </li>
-                                <li><a href="#2" data-toggle="tab">Qutes</a>
-                                </li>
-                                <li><a href="#3" data-toggle="tab">Book</a>
-                                </li>
-                                <li><a href="#3" data-toggle="tab">Error</a>
-                                </li>
-                            </ul>
-
-                            <div class="tab-content ">
-                                <div class="tab-pane active" id="1">
-                                  
-                                </div>
-                                <div class="tab-pane" id="2">
-                                    <pre class="code-panel">
-                                    <%= render "/pages/jsons/tase-market.json" %>
-                                    </pre>
-                                </div>
-                                <div class="tab-pane" id="3">
-                                    <h3>add clearfix to tab-content (see the css)</h3>
-                                </div>
-                            </div>
+                    <div class="tab-content text-english">
+                        <div class="tab-pane active" id="1">
 
                         </div>
+                        <div class="tab-pane" id="2">
+                            <pre class="code-panel">
+                                <%= render "/pages/jsons/tase-market.json" %>
+                            </pre>
+                        </div>
+                        <div class="tab-pane" id="3">
+                            <h3>add clearfix to tab-content (see the css)</h3>
+                        </div>
                     </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -377,6 +350,33 @@
             </div>
 
         </div>
+        <div class="row">
+            <h3>דוגמאות לתגובת השרת</h3><hr/>
+            <div class="col-lg-12 well scode-panel">
+                <ul class="nav nav-tabs text-left">
+                    <li><a href="#2" data-toggle="tab">Quotes</a>
+                    </li>
+                    <li><a href="#3" data-toggle="tab">Book</a>
+                    </li>
+                    <li><a href="#3" data-toggle="tab">Error</a>
+                    </li>
+                </ul>
+
+                <div class="tab-content text-english">
+                    <div class="tab-pane active" id="1">
+
+                    </div>
+                    <div class="tab-pane" id="2">
+                        <pre class="code-panel">
+                            <%= render "/pages/jsons/tase-market.json" %>
+                        </pre>
+                    </div>
+                    <div class="tab-pane" id="3">
+                        <h3>add clearfix to tab-content (see the css)</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
 </section>
 
 
@@ -433,6 +433,34 @@
             </div>
 
         </div>
+        <div class="row">
+                
+                <div class="col-lg-12 well code-panel">
+                    <h3>דוגמאות לתגובת השרת</h3><hr/>
+                    <ul class="nav nav-tabs text-left">
+                        <li><a href="#2" data-toggle="tab">Qutes</a>
+                        </li>
+                        <li><a href="#3" data-toggle="tab">Book</a>
+                        </li>
+                        <li><a href="#3" data-toggle="tab">Error</a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content text-english">
+                        <div class="tab-pane active" id="1">
+
+                        </div>
+                        <div class="tab-pane" id="2">
+                            <pre class="code-panel">
+                                <%= render "/pages/jsons/tase-market.json" %>
+                            </pre>
+                        </div>
+                        <div class="tab-pane" id="3">
+                            <h3>add clearfix to tab-content (see the css)</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </div>
 </section>
 
@@ -470,7 +498,37 @@
                 </ul>
             </div>
         </div>
+        <div class="row">
+                
+                <div class="col-lg-12 well code-panel">
+                    <h3>דוגמאות לתגובת השרת</h3><hr/>
+                    <ul class="nav nav-tabs text-left">
+                        <li><a href="#2" data-toggle="tab">Qutes</a>
+                        </li>
+                        <li><a href="#3" data-toggle="tab">Book</a>
+                        </li>
+                        <li><a href="#3" data-toggle="tab">Error</a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content text-english">
+                        <div class="tab-pane active" id="1">
+
+                        </div>
+                        <div class="tab-pane" id="2">
+                            <pre class="code-panel">
+                                <%= render "/pages/jsons/tase-market.json" %>
+                            </pre>
+                        </div>
+                        <div class="tab-pane" id="3">
+                            <h3>add clearfix to tab-content (see the css)</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </div>
+    
+    
 </div>
 </section>
 

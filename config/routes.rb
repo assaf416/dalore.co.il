@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get 'pages/api_fmr_bridge'
   get 'pages/api_tase_bridge'
   get 'pages/tradingmachine'
+  get 'pages/strategies_api'
   get 'pages/terms'
   get 'pages/privacy'
   root 'pages#index'
