@@ -29,46 +29,50 @@
 
             <div class="col-lg-9">
                <%= render :partial => "/pages/api/strategy_overview" %>
+               <%= render :partial => "/pages/api/strategy_events" %>
                <%= render :partial => "/pages/api/strategy_getting_quotes" %>
+               <%= render :partial => "/pages/api/strategy_indicators" %>
                <%= render :partial => "/pages/api/strategy_account_class" %>
+               <%= render :partial => "/pages/api/strategy_quote_class" %>
+               <%= render :partial => "/pages/api/strategy_candle_class" %>
                 
             </div>
             <div class="col-lg-3">
                 <h4>User Guide</h4>
                 <ul class="navigation">
-                    <li><a href="">Strat Here</a></li>
-                    <li><a href="">Writing First Strategy</a></li>
-                    <li><a href="">Testing Strategy</a></li>
-                    <li><a href="">Analysing running restuls</a></li>
-                    <li><a href="">Working with list of candles◘</a></li>
-                    <li><a href="">Adding Indicators</a></li>
-                    <li><a href="">Candles Pattern matching</a></li>
-                    <li><a href="">Buying ans Selling</a></li>
-                    <li><a href="">Account and Position info</a></li>
+                    <li class="menu"><a href="">Strat Here</a></li>
+                    <li class="menu"><a href="">Writing First Strategy</a></li>
+                    <li class="menu"><a href="">Testing Strategy</a></li>
+                    <li class="menu"><a href="">Analysing running restuls</a></li>
+                    <li class="menu"><a href="">Working with list of candles</a></li>
+                    <li class="menu"><a href="">Adding Indicators</a></li>
+                    <li class="menu"><a href="">Candles Pattern matching</a></li>
+                    <li class="menu"><a href="">Buying ans Selling</a></li>
+                    <li class="menu"><a href="">Account and Position info</a></li>
                 </ul>
                 <br/>
                 <h4>Main Models</h4>
                 <ul>
-                    <li><a href="">Account</a></li>
-                    <li><a href="">Position</a></li>
-                    <li><a href="">Quote</a></li>
-                    <li><a href="">Candle</a></li>
-                    <li><a href="">Order</a></li>
-                    <li><a href="">Trade</a></li>
+                    <li class="menu"><a href="">Account</a></li>
+                    <li class="menu"><a href="">Position</a></li>
+                    <li class="menu"><a href="">Quote</a></li>
+                    <li class="menu"><a href="">Candle</a></li>
+                    <li class="menu"><a href="">Order</a></li>
+                    <li class="menu"><a href="">Trade</a></li>
                 </ul>
                 <br/>
                 <h4>Categories</h4>
                 <ul>
-                    <li><a href="">Getting Market Data</a></li>
-                    <li><a href="">Getting Account and Positions </a></li>
-                    <li><a href="">Managing Orders</a></li>
+                    <li class="menu"><a href="">Getting Market Data</a></li>
+                    <li class="menu"><a href="">Getting Account and Positions </a></li>
+                    <li class="menu"><a href="">Managing Orders</a></li>
                 </ul>
             </div>
         </div>
 </section>
 
 <style>
-    li{list-style-type: none;}
+li.menu{ list-style-type: none;margin-left:-30px;}
     .text-english {
         direction:ltr;
         text-align: left;

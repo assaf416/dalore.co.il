@@ -1,0 +1,41 @@
+<h3>Strategies Events</h3><hr/>
+<p>
+   When a strategy is running it will receive other events too. here are the full list of events
+</p>
+
+<b>Example Code </b><br/>
+<pre class="code-panel">
+def on_start
+  log "Hello World!"
+end 
+
+def on_candle(candle)
+  log "Hello World!"
+end 
+
+def on_quote(quote)
+  log "Hello World!"
+end 
+
+def on_order_udpate(order)
+  log "Hello World!"
+end 
+
+def on_order_completed(order)
+  log "Hello World!"
+end 
+
+def on_order_cancelled(order)
+  log "Hello World!"
+end 
+
+</pre>
+
+<b>Running Results </b><br/>
+<pre class="code-panel">
+[DaloreBackTester] 2016-21-4 18:33:12 LOG : Hello World
+[DaloreBackTester] 2016-21-4 18:33:12 LOG : Hello World
+</pre>
+
+
+<br/><br/><br/><br/>

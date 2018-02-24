@@ -1,6 +1,4 @@
-<br/>
-<br/>
-<b>Getting Quotes </b><br/>
+<h3>Getting Quotes and Candles</h3><hr/>
 <p>
     some data goes here  skdjfsdfj sdkjf sdkjflkjfa;ldjflsdkjflskjf j lj  lkdjf ljf sdf
     kdsjfoiweor poewkr d fof-043j sfsdkf ok fowek frwe
@@ -18,3 +16,29 @@ end
 <pre class="code-panel">
 [DaloreBackTester] 2016-21-4 18:33:12 LOG : Quote Symbol AAPL
 </pre>
+
+
+<br/>
+<br/>
+<b>Adding Candles </b><br/>
+<p>
+    Now lets listen to Candles 
+</p>
+
+<b>Example Code </b><br/>
+<pre class="code-panel">
+def on_quote(quote)
+  log "Quote Symbol #{quote.symbol}"
+end 
+
+def on_candle(candle)
+  log "Candle Symbol #{candle.symbol}"
+end 
+</pre>
+
+<b>Running Results </b><br/>
+<pre class="code-panel">
+[DaloreBackTester] 2016-21-4 18:33:12 LOG : Quote Symbol AAPL
+</pre>
+
+<br/><br/><br/><br/>
