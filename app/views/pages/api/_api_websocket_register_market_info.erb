@@ -1,0 +1,29 @@
+<br/><h3>Register for market info</h3><hr/>
+<p>
+    The Websocket API is an extension of the Dalore Restful API. The Websocket API allow developers to get realtime 
+    data from our Trading Servers via socket, so changes are sent imidiatly. 
+</p>
+
+<b>Request Messages</b><hr/>
+<pre class="code-panel">
+    { client: "CRM", request:"REGISTER_MARKET_DATA", symbols:"AAPL,TSLA..."}
+</pre>
+
+<b>Reply OK</b><hr/>
+<pre class="code-panel">
+    { client: "CRM", request:"REGISTER_MARKET_DATA", status:"OK"}
+</pre>
+
+<b>Reply ERROR</b><hr/>
+<pre class="code-panel">
+    { client: "CRM", request:"REGISTER_MARKET_DATA", status:"ERROR" , message:"ERROR MESSAGE HERE" , code:"302"}
+</pre>
+
+
+<p>
+    Once Registered, the data will be pushed to the client in the following format:
+</p>
+<b>Symbol Update</b><hr/>
+<pre class="code-panel">
+    { client: "CRM", msg-kind:"SYMBOL-UPDATE", symbol:"AAPL" , last_price:887.23 , close_price:881.23}
+</pre>

@@ -21,7 +21,7 @@
 <section class="features" >
     <div class="container">
         <div class="row">
-            <h2 class="text-center">DALORE HTTP API REFERENCE</h2>
+            <h2 class="text-center">DALORE WEB SOCKET API </h2>
             <div class="heading-line"><span></span></div>
         </div>
         <br/>  <br/>  <br/>
@@ -29,57 +29,53 @@
         <div class="row text-right " style="direction:ltr;">
 
             <div class="col-lg-9">
-                <%= render "/pages/api/api_market_data" %>
-                <%= render "/pages/api/api_market_data" %>
+                <%= render "/pages/api/api_websocket_intro" %>
+                <%= render "/pages/api/api_websocket_register_market_info" %>
             </div>
             <div class="col-lg-3">
                 <h4>Market Info</h4>
                 <ul class="navigation">
-                    <li class="menu"><a href="">Market Info</a></li>
-                    <li class="menu"><a href="">Fundamental Data</a></li>
-                    <li class="menu"><a href="">Historic Quotes and Candles</a></li>
+                    <li class="menu"><a href="">Register for Market Info</a></li>
+                    <li class="menu"><a href="">Request Fundamental Data</a></li>
+                    <li class="menu"><a href="">Request Historic Quotes</a></li>
+                    <li class="menu"><a href="">Request Historic Candles</a></li>
                 </ul>
                 <br/>
                 <h4>Account and Positions</h4>
                 <ul class="navigation">
-                    <li class="menu"><a href="">Account Info</a></li>
-                    <li class="menu"><a href="">Account Positions</a></li>
-                    <li class="menu"><a href="">Account Open Orders</a></li>
-                    <li class="menu"><a href="">Account Trades</a></li>
+                    <li class="menu"><a href="">Register for Account Info changes</a></li>
+                    <li class="menu"><a href="">Request  Positions</a></li>
+                    <li class="menu"><a href="">Request  Open Orders</a></li>
+                    <li class="menu"><a href="">Request Trades</a></li>
                 </ul>
                 <br/>
-                <h4>Account and Positions</h4>
-                <ul class="navigation">
-                    <li class="menu"><a href="">Managing Orders</a></li>
-                    <li class="menu"><a href="">Buying and Selling</a></li>
-                </ul>
-                <br/>
-                <h4>Strategies</h4>
-                <ul class="navigation">
-                    <li class="menu"><a href="">Strategy list</a></li>
-                    <li class="menu"><a href="">Starting and Stopping</a></li>
-                    <li class="menu"><a href="">Update Parameters</a></li>
-                    <li class="menu"><a href="">Backtest</a></li>
-                </ul>
-                <br/>
-                <h4>Admin</h4>
-                <ul class="navigation">
-                    <li class="menu"><a href="">Managing Orders</a></li>
-                    <li class="menu"><a href="">Buying ans Selling</a></li>
-                </ul>
-                <br/>
-
                 <h4>Parameters</h4>
                 <ul class="navigation">
-
-                    <li class="menu"><a href="">:account</a></li>
                     <li class="menu"><a href="">:accounts</a></li>
                     <li class="menu"><a href="">:symbol</a></li>
                     <li class="menu"><a href="">:symbols</a></li>
-                    <li class="menu"><a href="">:callback</a></li>
                 </ul>
                 <br/>
             </div>
         </div>
     </div>
 </section>
+
+
+<style>
+    li{ list-style-type: none;}
+    li.menu{ list-style-type: none;margin-left:-30px;}
+    .text-english {
+        direction:ltr;
+        text-align: left;
+    }
+
+    .text-white{
+        color:#fff;
+    }
+    .code-panel{
+        background-color:#333;
+        color:#fff;
+
+    }
+</style>

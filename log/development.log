@@ -41311,3 +41311,571 @@ Processing by PagesController#api as HTML
 Completed 200 OK in 82ms (Views: 78.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-02-25 08:20:27 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.2ms)[0m  [1m[32mINSERT INTO "page_views" ("page", "ip", "user_agent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["page", "Index"], ["ip", "127.0.0.1"], ["user_agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36"], ["created_at", "2018-02-25 06:20:27.842028"], ["updated_at", "2018-02-25 06:20:27.842028"]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  Rendering pages/index.html.erb within layouts/site
+  Rendered pages/_server.html.erb (1.5ms)
+  Rendered pages/_crm.html.erb (1.2ms)
+  Rendered pages/_dashboard.html.erb (0.7ms)
+  Rendered pages/_trading_machine.html.erb (1.4ms)
+  Rendered pages/_archive.html.erb (0.9ms)
+  Rendered pages/_trader.html.erb (1.9ms)
+  Rendered pages/index.html.erb within layouts/site (31.0ms)
+Completed 200 OK in 5124ms (Views: 5080.8ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/pages/api_ib_bridge" for 127.0.0.1 at 2018-02-25 08:45:09 +0200
+Processing by PagesController#api_ib_bridge as HTML
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.9ms)[0m  [1m[32mINSERT INTO "page_views" ("page", "ip", "referer", "user_agent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["page", "api_ib_bridge"], ["ip", "127.0.0.1"], ["referer", "http://localhost:3000/"], ["user_agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36"], ["created_at", "2018-02-25 06:45:09.608187"], ["updated_at", "2018-02-25 06:45:09.608187"]]
+  [1m[35m (8.3ms)[0m  [1m[36mcommit transaction[0m
+  Rendering pages/api_ib_bridge.erb within layouts/site
+  Rendered pages/jsons/_tase-market.json.erb (0.6ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.1ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.1ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.1ms)
+  Rendered pages/api_ib_bridge.erb within layouts/site (24.2ms)
+Completed 200 OK in 270ms (Views: 239.7ms | ActiveRecord: 13.6ms)
+
+
+Started GET "/pages/api" for 127.0.0.1 at 2018-02-25 08:45:44 +0200
+Processing by PagesController#api as HTML
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/jsons/_tase-market.json.erb (0.5ms)
+  Rendered pages/api.erb within layouts/site (3.8ms)
+Completed 200 OK in 84ms (Views: 81.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/strategies_api" for 127.0.0.1 at 2018-02-25 08:46:21 +0200
+Processing by PagesController#strategies_api as HTML
+  Rendering pages/strategies_api.erb within layouts/site
+  Rendered pages/api/_strategy_overview.erb (0.5ms)
+  Rendered pages/api/_strategy_events.erb (0.6ms)
+  Rendered pages/api/_strategy_getting_quotes.erb (0.6ms)
+  Rendered pages/api/_strategy_indicators.erb (0.6ms)
+  Rendered pages/api/_strategy_account_class.erb (0.7ms)
+  Rendered pages/api/_strategy_quote_class.erb (0.5ms)
+  Rendered pages/api/_strategy_candle_class.erb (1.0ms)
+  Rendered pages/strategies_api.erb within layouts/site (35.3ms)
+Completed 200 OK in 133ms (Views: 130.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api" for 127.0.0.1 at 2018-02-25 08:49:18 +0200
+Processing by PagesController#api as HTML
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/jsons/_tase-market.json.erb (0.5ms)
+  Rendered pages/api.erb within layouts/site (4.9ms)
+Completed 200 OK in 88ms (Views: 85.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api" for 127.0.0.1 at 2018-02-25 08:50:25 +0200
+Processing by PagesController#api as HTML
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/jsons/_tase-market.json.erb (0.4ms)
+  Rendered pages/api.erb within layouts/site (3.9ms)
+Completed 200 OK in 73ms (Views: 71.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api" for 127.0.0.1 at 2018-02-25 08:54:48 +0200
+Processing by PagesController#api as HTML
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/jsons/_tase-market.json.erb (0.7ms)
+  Rendered pages/api.erb within layouts/site (4.3ms)
+Completed 200 OK in 90ms (Views: 87.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api" for 127.0.0.1 at 2018-02-25 08:56:10 +0200
+Processing by PagesController#api as HTML
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/jsons/_tase-market.json.erb (0.6ms)
+  Rendered pages/api.erb within layouts/site (9.1ms)
+Completed 200 OK in 96ms (Views: 93.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api" for 127.0.0.1 at 2018-02-25 08:57:35 +0200
+Processing by PagesController#api as HTML
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/jsons/_tase-market.json.erb (0.9ms)
+  Rendered pages/api.erb within layouts/site (10.2ms)
+Completed 200 OK in 98ms (Views: 95.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api" for 127.0.0.1 at 2018-02-25 09:06:12 +0200
+Processing by PagesController#api as HTML
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/jsons/_tase-market.json.erb (0.7ms)
+  Rendered pages/api.erb within layouts/site (5.8ms)
+Completed 200 OK in 100ms (Views: 97.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api" for 127.0.0.1 at 2018-02-25 09:06:55 +0200
+Processing by PagesController#api as HTML
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/jsons/_tase-market.json.erb (0.4ms)
+  Rendered pages/api.erb within layouts/site (3.9ms)
+Completed 200 OK in 93ms (Views: 91.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api" for 127.0.0.1 at 2018-02-25 09:07:36 +0200
+Processing by PagesController#api as HTML
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/jsons/_tase-market.json.erb (0.3ms)
+  Rendered pages/api.erb within layouts/site (3.5ms)
+Completed 200 OK in 86ms (Views: 81.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api" for 127.0.0.1 at 2018-02-25 09:28:55 +0200
+Processing by PagesController#api as HTML
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/jsons/_tase-market.json.erb (0.4ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.1ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.1ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/api.erb within layouts/site (16.2ms)
+Completed 200 OK in 93ms (Views: 90.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api" for 127.0.0.1 at 2018-02-25 09:37:51 +0200
+Processing by PagesController#api as HTML
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/jsons/_tase-market.json.erb (0.4ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.1ms)
+  Rendered pages/api.erb within layouts/site (15.9ms)
+Completed 200 OK in 103ms (Views: 100.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api" for 127.0.0.1 at 2018-02-25 09:38:14 +0200
+Processing by PagesController#api as HTML
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/jsons/_tase-market.json.erb (0.4ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.2ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.1ms)
+  Rendered pages/api.erb within layouts/site (16.4ms)
+Completed 200 OK in 101ms (Views: 96.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api" for 127.0.0.1 at 2018-02-25 09:56:59 +0200
+Processing by PagesController#api as HTML
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/jsons/_tase-market.json.erb (0.6ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.1ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.1ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/api.erb within layouts/site (17.8ms)
+Completed 200 OK in 104ms (Views: 101.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api" for 127.0.0.1 at 2018-02-25 09:57:14 +0200
+Processing by PagesController#api as HTML
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/jsons/_tase-market.json.erb (0.4ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.1ms)
+  Rendered pages/api.erb within layouts/site (12.9ms)
+Completed 200 OK in 90ms (Views: 85.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api" for 127.0.0.1 at 2018-02-25 10:00:25 +0200
+Processing by PagesController#api as HTML
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/jsons/_tase-market.json.erb (0.5ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.1ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/api/_api_market_data.erb (14.9ms)
+  Rendered pages/api.erb within layouts/site (18.3ms)
+Completed 200 OK in 116ms (Views: 112.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api" for 127.0.0.1 at 2018-02-25 10:00:35 +0200
+Processing by PagesController#api as HTML
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/jsons/_tase-market.json.erb (0.3ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.1ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.1ms)
+  Rendered pages/api/_api_market_data.erb (11.0ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.1ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/api/_api_market_data.erb (10.5ms)
+  Rendered pages/api.erb within layouts/site (31.0ms)
+Completed 200 OK in 108ms (Views: 105.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api" for 127.0.0.1 at 2018-02-25 10:01:24 +0200
+Processing by PagesController#api as HTML
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/jsons/_tase-market.json.erb (0.4ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.1ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/api/_api_market_data.erb (14.5ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.1ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/api/_api_market_data.erb (12.0ms)
+  Rendered pages/api.erb within layouts/site (31.5ms)
+Completed 200 OK in 104ms (Views: 101.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api" for 127.0.0.1 at 2018-02-25 10:02:37 +0200
+Processing by PagesController#api as HTML
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/jsons/_tase-market.json.erb (0.4ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.1ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.1ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/api/_api_market_data.erb (15.9ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.2ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/api/_api_market_data.erb (14.0ms)
+  Rendered pages/api.erb within layouts/site (35.3ms)
+Completed 200 OK in 116ms (Views: 106.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api" for 127.0.0.1 at 2018-02-25 10:25:04 +0200
+Processing by PagesController#api as HTML
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/jsons/_tase-market.json.erb (0.4ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.1ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.1ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/api/_api_market_data.erb (16.2ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.1ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.1ms)
+  Rendered pages/api/_api_market_data.erb (17.7ms)
+  Rendered pages/api.erb within layouts/site (40.2ms)
+Completed 200 OK in 140ms (Views: 137.1ms)
+
+
+Started GET "/pages/api" for 127.0.0.1 at 2018-02-25 10:25:23 +0200
+Processing by PagesController#api as HTML
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/jsons/_tase-market.json.erb (0.6ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.1ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.1ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/api/_api_market_data.erb (14.5ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.1ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.1ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.1ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.1ms)
+  Rendered pages/api/_api_market_data.erb (15.5ms)
+  Rendered pages/api.erb within layouts/site (35.7ms)
+Completed 200 OK in 121ms (Views: 119.2ms)
+
+
+Started GET "/pages/websociek_api" for 127.0.0.1 at 2018-02-25 10:25:28 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/pages/websociek_api"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/pages/websociek_api" for 127.0.0.1 at 2018-02-25 10:26:18 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/pages/websociek_api"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/pages/api" for 127.0.0.1 at 2018-02-25 10:26:24 +0200
+Processing by PagesController#api as HTML
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/jsons/_tase-market.json.erb (0.5ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.1ms)
+  Rendered pages/api/_api_market_data.erb (12.1ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.1ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.1ms)
+  Rendered pages/api/_api_market_data.erb (12.7ms)
+  Rendered pages/api.erb within layouts/site (34.2ms)
+Completed 200 OK in 123ms (Views: 120.9ms)
+
+
+Started GET "/pages/websocket_api" for 127.0.0.1 at 2018-02-25 10:26:30 +0200
+Processing by PagesController#websocket_api as HTML
+  Rendering pages/websocket_api.erb within layouts/site
+  Rendered pages/jsons/_tase-market.json.erb (0.4ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.1ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/api/_api_market_data.erb (15.2ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.1ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.1ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/api/_api_market_data.erb (17.4ms)
+  Rendered pages/websocket_api.erb within layouts/site (38.0ms)
+Completed 200 OK in 120ms (Views: 114.4ms)
+
+
+Started GET "/pages/websocket_api" for 127.0.0.1 at 2018-02-25 10:27:52 +0200
+Processing by PagesController#websocket_api as HTML
+  Rendering pages/websocket_api.erb within layouts/site
+  Rendered pages/api/_api_websocket_intro.erb (0.7ms)
+  Rendered pages/websocket_api.erb within layouts/site (7.7ms)
+Completed 200 OK in 116ms (Views: 111.3ms)
+
+
+Started GET "/pages/websocket_api" for 127.0.0.1 at 2018-02-25 10:30:17 +0200
+Processing by PagesController#websocket_api as HTML
+  Rendering pages/websocket_api.erb within layouts/site
+  Rendered pages/api/_api_websocket_intro.erb (0.5ms)
+  Rendered pages/websocket_api.erb within layouts/site (5.2ms)
+Completed 200 OK in 87ms (Views: 85.2ms)
+
+
+Started GET "/pages/websocket_api" for 127.0.0.1 at 2018-02-25 10:35:48 +0200
+Processing by PagesController#websocket_api as HTML
+  Rendering pages/websocket_api.erb within layouts/site
+  Rendered pages/api/_api_websocket_intro.erb (0.4ms)
+  Rendered pages/websocket_api.erb within layouts/site (4.8ms)
+Completed 200 OK in 73ms (Views: 71.0ms)
+
+
+Started GET "/pages/websocket_api" for 127.0.0.1 at 2018-02-25 10:36:07 +0200
+Processing by PagesController#websocket_api as HTML
+  Rendering pages/websocket_api.erb within layouts/site
+  Rendered pages/api/_api_websocket_intro.erb (0.5ms)
+  Rendered pages/websocket_api.erb within layouts/site (4.4ms)
+Completed 200 OK in 95ms (Views: 92.8ms)
+
+
+Started GET "/pages/websocket_api" for 127.0.0.1 at 2018-02-25 10:37:07 +0200
+Processing by PagesController#websocket_api as HTML
+  Rendering pages/websocket_api.erb within layouts/site
+  Rendered pages/api/_api_websocket_intro.erb (0.4ms)
+  Rendered pages/websocket_api.erb within layouts/site (3.7ms)
+Completed 200 OK in 77ms (Views: 75.3ms)
+
+
+Started GET "/pages/websocket_api" for 127.0.0.1 at 2018-02-25 10:37:25 +0200
+Processing by PagesController#websocket_api as HTML
+  Rendering pages/websocket_api.erb within layouts/site
+  Rendered pages/api/_api_websocket_intro.erb (0.4ms)
+  Rendered pages/websocket_api.erb within layouts/site (4.3ms)
+Completed 200 OK in 76ms (Views: 73.6ms)
+
+
+Started GET "/pages/websocket_api" for 127.0.0.1 at 2018-02-25 10:37:43 +0200
+Processing by PagesController#websocket_api as HTML
+  Rendering pages/websocket_api.erb within layouts/site
+  Rendered pages/api/_api_websocket_intro.erb (0.4ms)
+  Rendered pages/websocket_api.erb within layouts/site (3.3ms)
+Completed 200 OK in 90ms (Views: 84.1ms)
+
+
+Started GET "/pages/websocket_api" for 127.0.0.1 at 2018-02-25 10:38:02 +0200
+Processing by PagesController#websocket_api as HTML
+  Rendering pages/websocket_api.erb within layouts/site
+  Rendered pages/api/_api_websocket_intro.erb (0.7ms)
+  Rendered pages/websocket_api.erb within layouts/site (7.5ms)
+Completed 200 OK in 106ms (Views: 102.5ms)
+
+
+Started GET "/pages/websocket_api" for 127.0.0.1 at 2018-02-25 10:40:23 +0200
+Processing by PagesController#websocket_api as HTML
+  Rendering pages/websocket_api.erb within layouts/site
+  Rendered pages/api/_api_websocket_intro.erb (0.5ms)
+  Rendered pages/websocket_api.erb within layouts/site (4.0ms)
+Completed 200 OK in 74ms (Views: 71.8ms)
+
+
+Started GET "/pages/websocket_api" for 127.0.0.1 at 2018-02-25 11:09:24 +0200
+Processing by PagesController#websocket_api as HTML
+  Rendering pages/websocket_api.erb within layouts/site
+  Rendered pages/api/_api_websocket_intro.erb (0.5ms)
+  Rendered pages/websocket_api.erb within layouts/site (4.4ms)
+Completed 200 OK in 102ms (Views: 98.0ms)
+
+
+Started GET "/pages/websocket_api" for 127.0.0.1 at 2018-02-25 11:25:17 +0200
+Processing by PagesController#websocket_api as HTML
+  Rendering pages/websocket_api.erb within layouts/site
+  Rendered pages/api/_api_websocket_intro.erb (0.6ms)
+  Rendered pages/websocket_api.erb within layouts/site (8.9ms)
+Completed 200 OK in 108ms (Views: 103.7ms)
+
+
+Started GET "/pages/websocket_api" for 127.0.0.1 at 2018-02-25 11:34:48 +0200
+Processing by PagesController#websocket_api as HTML
+  Rendering pages/websocket_api.erb within layouts/site
+  Rendered pages/api/_api_websocket_intro.erb (0.4ms)
+  Rendered pages/api/_api_websocket_register_market_info.erb (0.3ms)
+  Rendered pages/websocket_api.erb within layouts/site (7.2ms)
+Completed 200 OK in 88ms (Views: 84.9ms)
+
+
+Started GET "/pages/websocket_api" for 127.0.0.1 at 2018-02-25 11:35:32 +0200
+Processing by PagesController#websocket_api as HTML
+  Rendering pages/websocket_api.erb within layouts/site
+  Rendered pages/api/_api_websocket_intro.erb (0.4ms)
+  Rendered pages/api/_api_websocket_register_market_info.erb (0.3ms)
+  Rendered pages/websocket_api.erb within layouts/site (6.6ms)
+Completed 200 OK in 85ms (Views: 82.1ms)
+
+
+Started GET "/pages/websocket_api" for 127.0.0.1 at 2018-02-25 11:35:55 +0200
+Processing by PagesController#websocket_api as HTML
+  Rendering pages/websocket_api.erb within layouts/site
+  Rendered pages/api/_api_websocket_intro.erb (0.5ms)
+  Rendered pages/api/_api_websocket_register_market_info.erb (0.6ms)
+  Rendered pages/websocket_api.erb within layouts/site (11.7ms)
+Completed 200 OK in 83ms (Views: 80.9ms)
+
+
+Started GET "/pages/websocket_api" for 127.0.0.1 at 2018-02-25 13:00:27 +0200
+Processing by PagesController#websocket_api as HTML
+  Rendering pages/websocket_api.erb within layouts/site
+  Rendered pages/api/_api_websocket_intro.erb (3.1ms)
+  Rendered pages/api/_api_websocket_register_market_info.erb (0.3ms)
+  Rendered pages/websocket_api.erb within layouts/site (9.5ms)
+Completed 200 OK in 76ms (Views: 74.0ms)
+
+
+Started GET "/pages/websocket_api" for 127.0.0.1 at 2018-02-25 13:03:52 +0200
+Processing by PagesController#websocket_api as HTML
+  Rendering pages/websocket_api.erb within layouts/site
+  Rendered pages/api/_api_websocket_intro.erb (0.6ms)
+  Rendered pages/api/_api_websocket_register_market_info.erb (0.4ms)
+  Rendered pages/websocket_api.erb within layouts/site (8.7ms)
+Completed 200 OK in 83ms (Views: 81.3ms)
+
+
+Started GET "/pages/websocket_api" for 127.0.0.1 at 2018-02-25 13:05:29 +0200
+Processing by PagesController#websocket_api as HTML
+  Rendering pages/websocket_api.erb within layouts/site
+  Rendered pages/api/_api_websocket_intro.erb (1.0ms)
+  Rendered pages/api/_api_websocket_register_market_info.erb (0.4ms)
+  Rendered pages/websocket_api.erb within layouts/site (9.7ms)
+Completed 200 OK in 78ms (Views: 76.2ms)
+
+
+Started GET "/pages/websocket_api" for 127.0.0.1 at 2018-02-25 13:05:44 +0200
+Processing by PagesController#websocket_api as HTML
+  Rendering pages/websocket_api.erb within layouts/site
+  Rendered pages/api/_api_websocket_intro.erb (0.7ms)
+  Rendered pages/api/_api_websocket_register_market_info.erb (0.4ms)
+  Rendered pages/websocket_api.erb within layouts/site (8.3ms)
+Completed 200 OK in 99ms (Views: 96.5ms)
+
+
+Started GET "/pages/websocket_api" for 127.0.0.1 at 2018-02-25 13:07:12 +0200
+Processing by PagesController#websocket_api as HTML
+  Rendering pages/websocket_api.erb within layouts/site
+  Rendered pages/api/_api_websocket_intro.erb (0.3ms)
+  Rendered pages/api/_api_websocket_register_market_info.erb (0.3ms)
+  Rendered pages/websocket_api.erb within layouts/site (6.0ms)
+Completed 200 OK in 95ms (Views: 92.6ms)
+
+
+Started GET "/pages/websocket_api" for 127.0.0.1 at 2018-02-25 13:08:02 +0200
+Processing by PagesController#websocket_api as HTML
+  Rendering pages/websocket_api.erb within layouts/site
+  Rendered pages/api/_api_websocket_intro.erb (0.5ms)
+  Rendered pages/api/_api_websocket_register_market_info.erb (0.4ms)
+  Rendered pages/websocket_api.erb within layouts/site (7.5ms)
+Completed 200 OK in 93ms (Views: 89.1ms)
+
+
+Started GET "/pages/websocket_api" for 127.0.0.1 at 2018-02-25 13:10:27 +0200
+Processing by PagesController#websocket_api as HTML
+  Rendering pages/websocket_api.erb within layouts/site
+  Rendered pages/api/_api_websocket_intro.erb (0.5ms)
+  Rendered pages/api/_api_websocket_register_market_info.erb (0.3ms)
+  Rendered pages/websocket_api.erb within layouts/site (6.9ms)
+Completed 200 OK in 82ms (Views: 79.8ms)
+
+
+Started GET "/pages/websocket_api" for 127.0.0.1 at 2018-02-25 13:13:01 +0200
+Processing by PagesController#websocket_api as HTML
+  Rendering pages/websocket_api.erb within layouts/site
+  Rendered pages/api/_api_websocket_intro.erb (0.5ms)
+  Rendered pages/api/_api_websocket_register_market_info.erb (0.4ms)
+  Rendered pages/websocket_api.erb within layouts/site (9.1ms)
+Completed 200 OK in 77ms (Views: 74.6ms)
+
+
+Started GET "/pages/index" for 127.0.0.1 at 2018-02-25 19:24:55 +0200
+Processing by PagesController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.2ms)[0m  [1m[32mINSERT INTO "page_views" ("page", "ip", "referer", "user_agent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["page", "Index"], ["ip", "127.0.0.1"], ["referer", "http://localhost:3000/pages/websocket_api"], ["user_agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36"], ["created_at", "2018-02-25 17:24:55.965809"], ["updated_at", "2018-02-25 17:24:55.965809"]]
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  Rendering pages/index.html.erb within layouts/site
+  Rendered pages/_server.html.erb (0.8ms)
+  Rendered pages/_crm.html.erb (1.8ms)
+  Rendered pages/_dashboard.html.erb (0.6ms)
+  Rendered pages/_trading_machine.html.erb (0.6ms)
+  Rendered pages/_archive.html.erb (1.1ms)
+  Rendered pages/_trader.html.erb (1.3ms)
+  Rendered pages/index.html.erb within layouts/site (28.5ms)
+Completed 200 OK in 139ms (Views: 105.8ms | ActiveRecord: 11.0ms)
+
+

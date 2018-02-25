@@ -1,0 +1,59 @@
+<b> Getting Market data </b><hr/>
+<ul >
+    <li class="">  <span class="label label-info">GET</span> /api/market/:symbols/quotes/recent    </li>
+    <li class="">  <span class="label label-info">GET</span> /api/market/:symbols/quotes/recent?after=2018-02-12 13:31:00    </li>
+</ul>
+
+<b> Respond Example </b><br/>
+<pre>
+    <%= render "/pages/jsons/tase-market.json" %>
+</pre>
+
+
+<b> Getting Symbol info </b><hr/>
+<ul >
+    <li class="">  <span class="label label-info">GET</span>/api/market/:symbol/quotes/intraday  </li>
+    <li class="">  <span class="label label-info">GET</span> /api/market/:symbol/candles/intraday # 1 minute candles    </li>
+    <li class="">  <span class="label label-info">GET</span> /api/market/:symbol/book    </li>
+</ul>
+
+<b> Intraday Quotes </b><br/>
+<pre>
+    <%= render "/pages/jsons/tase-market.json" %>
+</pre>
+
+<b> Intraday Candles </b><br/>
+<pre>
+    <%= render "/pages/jsons/tase-market.json" %>
+</pre>
+
+<b> Book </b><br/>
+<pre>
+    <%= render "/pages/jsons/tase-market.json" %>
+</pre>
+
+
+
+<br/><b> Registering for real time updates </b><hr/>
+<ul >
+    <li class="">  <span class="label label-info">GET</span> /api/realtime/candles/:symbols/register?callback=:callback-url    </li>
+    <li class="">  <span class="label label-info">GET</span> /api/realtime/quotes/:symbols/register?callback=:callback-url   </li>
+    <li class="">  <span class="label label-info">GET</span> /api/realtime/quotes/:symbols/register?callback=:callback-url   </li>
+</ul>
+
+<br/><b> Unregistering from real time updates </b>
+<ul >
+    <li class="">  <span class="label label-info">GET</span> /api/realtime/candles/:symbols/unregister?callback=:callback-url    </li>
+    <li class="">  <span class="label label-info">GET</span> /api/realtime/quotes/:symbols/unregister?callback=:callback-url   </li>
+</ul>
+
+<br/><b> Historical Candles  </b>
+<ul >
+    <li class="">  <span class="label label-info">GET</span> /api/history/symbols/:symbols/minutes/recent    </li>
+    <li class="">  <span class="label label-info">GET</span> /api/history/symbols/:symbols/minutes/request   </li>
+    <li class="">  <span class="label label-info">GET</span> /api/history/symbols/:symbols/daily/request   </li>
+    <li class="">  <span class="label label-info">GET</span> /api/history/symbols/:symbols/daily/recent   </li>
+</ul>
+
+
+
