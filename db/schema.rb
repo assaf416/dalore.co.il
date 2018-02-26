@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171224120351) do
+ActiveRecord::Schema.define(version: 20180226185316) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -59,6 +59,7 @@ ActiveRecord::Schema.define(version: 20171224120351) do
     t.text "user_agent"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "location"
     t.index ["ip"], name: "index_page_views_on_ip"
     t.index ["page"], name: "index_page_views_on_page"
     t.index ["user_agent"], name: "index_page_views_on_user_agent"
