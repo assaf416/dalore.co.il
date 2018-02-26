@@ -6,19 +6,22 @@
             <table class="table table-condensed table-stripped">
                 <tbody>
                     <tr> 
-                        <td>
-                            <a><i class="fa fa-eye"></i> צפיות </a>
+                        <td class="text-center text-big">
+                            <a> צפיות </a>
                             <br/>
+                            <i class="fa fa-eye"></i>
                             <%= PageView.count %>
                         </td>
-                        <td>
-                            <a><i class="fa fa-user"></i>משתמשים</a>
+                        <td class="text-center text-big">
+                            <a>משתמשים</a>
                             <br/>
-                            <%= PageView.count %>
+                            <i class="fa fa-user"></i>
+                            <%= PageView.group(:ip).count.count %>
                         </td>
-                        <td>
-                            <a><i class="fa fa-user"></i> לידים</a>
+                        <td class="text-center text-big">
+                            <a> לידים</a>
                             <br/>
+                            <i class="fa fa-user"></i>
                             <%= Inquiry.count %>
                         </td>
                     </tr>
@@ -27,6 +30,19 @@
         </div>
     </div>
     <br/>
+    
+    <div class="panel panel-info">
+        <div class="panel-footer">
+            <h3>
+                משתמשים אחרונים
+            </h3>
+        </div>
+        <div class="panel-body">
+            <%= bar_chart(PageView.group(:ip).count) %>
+          </div>
+      </div>
+
+      <br/>
 
     <div class="panel panel-info">
         <div class="panel-footer">
@@ -128,4 +144,5 @@
 
     <style>
         body{ font-size:14px;}
+        .text-big{font-size:26px; line-height: 30px;}
     </style>

@@ -43097,3 +43097,246 @@ Processing by PagesController#index as HTML
 Completed 200 OK in 121ms (Views: 103.3ms | ActiveRecord: 9.4ms)
 
 
+Started GET "/stats" for 127.0.0.1 at 2018-02-26 13:02:57 +0200
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/stats"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/pages/stats" for 127.0.0.1 at 2018-02-26 13:03:03 +0200
+Processing by PagesController#stats as HTML
+  Rendering pages/stats.erb within layouts/site
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "page_views"[0m
+  [1m[35mCACHE  (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "page_views"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "inquiries"[0m
+  [1m[36mPageView Load (7.0ms)[0m  [1m[34mSELECT  "page_views".* FROM "page_views" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "page_views" WHERE (created_at > '2018-01-31 22:00:00') AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "page_views"."page" AS page_views_page FROM "page_views" WHERE (created_at > '2018-01-31 22:00:00') GROUP BY "page_views"."page"[0m
+  [1m[35mCACHE  (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "page_views"."page" AS page_views_page FROM "page_views" WHERE (created_at > '2018-01-31 22:00:00') GROUP BY "page_views"."page"[0m
+  [1m[36mInquiry Load (1.1ms)[0m  [1m[34mSELECT "inquiries".* FROM "inquiries" ORDER BY created_at DESC[0m
+  Rendered pages/stats.erb within layouts/site (69.4ms)
+Completed 200 OK in 4641ms (Views: 4623.6ms | ActiveRecord: 15.2ms)
+
+
+Started GET "/pages/stats" for 127.0.0.1 at 2018-02-26 13:03:17 +0200
+Processing by PagesController#stats as HTML
+  Rendering pages/stats.erb within layouts/site
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "page_views"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "page_views"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "inquiries"[0m
+  [1m[36mPageView Load (10.5ms)[0m  [1m[34mSELECT  "page_views".* FROM "page_views" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "page_views" WHERE (created_at > '2018-01-31 22:00:00') AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "page_views"."page" AS page_views_page FROM "page_views" WHERE (created_at > '2018-01-31 22:00:00') GROUP BY "page_views"."page"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "page_views"."page" AS page_views_page FROM "page_views" WHERE (created_at > '2018-01-31 22:00:00') GROUP BY "page_views"."page"[0m
+  [1m[36mInquiry Load (0.6ms)[0m  [1m[34mSELECT "inquiries".* FROM "inquiries" ORDER BY created_at DESC[0m
+  Rendered pages/stats.erb within layouts/site (51.8ms)
+Completed 200 OK in 187ms (Views: 170.2ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/pages/stats" for 127.0.0.1 at 2018-02-26 13:04:59 +0200
+Processing by PagesController#stats as HTML
+  Rendering pages/stats.erb within layouts/site
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "page_views"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "page_views"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "inquiries"[0m
+  [1m[36mPageView Load (1.5ms)[0m  [1m[34mSELECT  "page_views".* FROM "page_views" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "page_views" WHERE (created_at > '2018-01-31 22:00:00') AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "page_views"."page" AS page_views_page FROM "page_views" WHERE (created_at > '2018-01-31 22:00:00') GROUP BY "page_views"."page"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "page_views"."page" AS page_views_page FROM "page_views" WHERE (created_at > '2018-01-31 22:00:00') GROUP BY "page_views"."page"[0m
+  [1m[36mInquiry Load (0.6ms)[0m  [1m[34mSELECT "inquiries".* FROM "inquiries" ORDER BY created_at DESC[0m
+  Rendered pages/stats.erb within layouts/site (26.1ms)
+Completed 200 OK in 92ms (Views: 85.3ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/pages/stats" for 127.0.0.1 at 2018-02-26 13:05:42 +0200
+Processing by PagesController#stats as HTML
+  Rendering pages/stats.erb within layouts/site
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "page_views"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "page_views"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "inquiries"[0m
+  [1m[36mPageView Load (1.7ms)[0m  [1m[34mSELECT  "page_views".* FROM "page_views" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "page_views" WHERE (created_at > '2018-01-31 22:00:00') AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "page_views"."page" AS page_views_page FROM "page_views" WHERE (created_at > '2018-01-31 22:00:00') GROUP BY "page_views"."page"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "page_views"."page" AS page_views_page FROM "page_views" WHERE (created_at > '2018-01-31 22:00:00') GROUP BY "page_views"."page"[0m
+  [1m[36mInquiry Load (0.4ms)[0m  [1m[34mSELECT "inquiries".* FROM "inquiries" ORDER BY created_at DESC[0m
+  Rendered pages/stats.erb within layouts/site (23.5ms)
+Completed 200 OK in 105ms (Views: 98.1ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/pages/stats" for 127.0.0.1 at 2018-02-26 13:06:01 +0200
+Processing by PagesController#stats as HTML
+  Rendering pages/stats.erb within layouts/site
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "page_views"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "page_views"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "inquiries"[0m
+  [1m[36mPageView Load (1.7ms)[0m  [1m[34mSELECT  "page_views".* FROM "page_views" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "page_views" WHERE (created_at > '2018-01-31 22:00:00') AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "page_views"."page" AS page_views_page FROM "page_views" WHERE (created_at > '2018-01-31 22:00:00') GROUP BY "page_views"."page"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "page_views"."page" AS page_views_page FROM "page_views" WHERE (created_at > '2018-01-31 22:00:00') GROUP BY "page_views"."page"[0m
+  [1m[36mInquiry Load (1.0ms)[0m  [1m[34mSELECT "inquiries".* FROM "inquiries" ORDER BY created_at DESC[0m
+  Rendered pages/stats.erb within layouts/site (26.9ms)
+Completed 200 OK in 103ms (Views: 96.1ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/pages/stats" for 127.0.0.1 at 2018-02-26 13:06:21 +0200
+Processing by PagesController#stats as HTML
+  Rendering pages/stats.erb within layouts/site
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "page_views"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "page_views"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "inquiries"[0m
+  [1m[36mPageView Load (1.6ms)[0m  [1m[34mSELECT  "page_views".* FROM "page_views" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "page_views" WHERE (created_at > '2018-01-31 22:00:00') AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "page_views"."page" AS page_views_page FROM "page_views" WHERE (created_at > '2018-01-31 22:00:00') GROUP BY "page_views"."page"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "page_views"."page" AS page_views_page FROM "page_views" WHERE (created_at > '2018-01-31 22:00:00') GROUP BY "page_views"."page"[0m
+  [1m[36mInquiry Load (0.4ms)[0m  [1m[34mSELECT "inquiries".* FROM "inquiries" ORDER BY created_at DESC[0m
+  Rendered pages/stats.erb within layouts/site (23.5ms)
+Completed 200 OK in 88ms (Views: 81.6ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/pages/stats" for 127.0.0.1 at 2018-02-26 13:06:43 +0200
+Processing by PagesController#stats as HTML
+  Rendering pages/stats.erb within layouts/site
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "page_views"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "page_views"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "inquiries"[0m
+  [1m[36mPageView Load (1.7ms)[0m  [1m[34mSELECT  "page_views".* FROM "page_views" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "page_views" WHERE (created_at > '2018-01-31 22:00:00') AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "page_views"."page" AS page_views_page FROM "page_views" WHERE (created_at > '2018-01-31 22:00:00') GROUP BY "page_views"."page"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "page_views"."page" AS page_views_page FROM "page_views" WHERE (created_at > '2018-01-31 22:00:00') GROUP BY "page_views"."page"[0m
+  [1m[36mInquiry Load (0.4ms)[0m  [1m[34mSELECT "inquiries".* FROM "inquiries" ORDER BY created_at DESC[0m
+  Rendered pages/stats.erb within layouts/site (20.0ms)
+Completed 200 OK in 121ms (Views: 115.3ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/pages/stats" for 127.0.0.1 at 2018-02-26 13:07:49 +0200
+Processing by PagesController#stats as HTML
+  Rendering pages/stats.erb within layouts/site
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "page_views"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "page_views"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "inquiries"[0m
+  [1m[36mPageView Load (1.7ms)[0m  [1m[34mSELECT  "page_views".* FROM "page_views" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "page_views" WHERE (created_at > '2018-01-31 22:00:00') AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "page_views"."page" AS page_views_page FROM "page_views" WHERE (created_at > '2018-01-31 22:00:00') GROUP BY "page_views"."page"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "page_views"."page" AS page_views_page FROM "page_views" WHERE (created_at > '2018-01-31 22:00:00') GROUP BY "page_views"."page"[0m
+  [1m[36mInquiry Load (0.3ms)[0m  [1m[34mSELECT "inquiries".* FROM "inquiries" ORDER BY created_at DESC[0m
+  Rendered pages/stats.erb within layouts/site (19.1ms)
+Completed 200 OK in 86ms (Views: 80.5ms | ActiveRecord: 4.1ms)
+
+
+  [1m[36mPageView Load (0.4ms)[0m  [1m[34mSELECT  "page_views".* FROM "page_views" ORDER BY "page_views"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "page_views"."ip" AS page_views_ip FROM "page_views" GROUP BY "page_views"."ip"[0m
+  [1m[36mPageView Load (1.5ms)[0m  [1m[34mSELECT  "page_views".* FROM "page_views" GROUP BY "page_views"."ip" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPageView Load (0.6ms)[0m  [1m[34mSELECT  "page_views".* FROM "page_views" GROUP BY "page_views"."ip" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPageView Load (0.9ms)[0m  [1m[34mSELECT  "page_views".* FROM "page_views" GROUP BY "page_views"."ip" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "page_views"."ip" AS page_views_ip FROM "page_views" GROUP BY "page_views"."ip"[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(DISTINCT "page_views"."id") FROM "page_views"[0m
+  [1m[36mPageView Load (0.5ms)[0m  [1m[34mSELECT  DISTINCT "page_views".* FROM "page_views" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPageView Load (0.5ms)[0m  [1m[34mSELECT  "page_views"."ip" FROM "page_views" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT("page_views"."ip") FROM "page_views"[0m
+  [1m[36mPageView Load (0.5ms)[0m  [1m[34mSELECT  DISTINCT "page_views"."ip" FROM "page_views" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(DISTINCT "page_views"."ip") FROM "page_views"[0m
+  [1m[36mPageView Load (0.4ms)[0m  [1m[34mSELECT  "page_views".* FROM "page_views" ORDER BY "page_views"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPageView Load (0.5ms)[0m  [1m[34mSELECT  "page_views".* FROM "page_views" ORDER BY "page_views"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(DISTINCT "page_views"."ip") FROM "page_views"[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(DISTINCT "page_views"."ip") FROM "page_views"[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "page_views"."ip" AS page_views_ip FROM "page_views" GROUP BY "page_views"."ip"[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "page_views"."ip" AS page_views_ip FROM "page_views" GROUP BY "page_views"."ip"[0m
+  [1m[36mPageView Load (0.5ms)[0m  [1m[34mSELECT  "page_views".* FROM "page_views" ORDER BY "page_views"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (166.4ms)[0m  [1m[33mUPDATE "page_views" SET "ip" = ?, "updated_at" = ? WHERE "page_views"."id" = ?[0m  [["ip", "10.0.0.12"], ["updated_at", "2018-02-26 11:13:42.843417"], ["id", 688]]
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "page_views"."ip" AS page_views_ip FROM "page_views" GROUP BY "page_views"."ip"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "page_views"."ip" AS page_views_ip FROM "page_views" GROUP BY "page_views"."ip"[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "page_views"."ip" AS page_views_ip FROM "page_views" GROUP BY "page_views"."ip"[0m
+Started GET "/pages/stats" for 127.0.0.1 at 2018-02-26 13:14:27 +0200
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#stats as HTML
+  Rendering pages/stats.erb within layouts/site
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "page_views"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "page_views"."ip" AS page_views_ip FROM "page_views" GROUP BY "page_views"."ip"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "inquiries"[0m
+  [1m[36mPageView Load (3.8ms)[0m  [1m[34mSELECT  "page_views".* FROM "page_views" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "page_views" WHERE (created_at > '2018-01-31 22:00:00') AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "page_views"."page" AS page_views_page FROM "page_views" WHERE (created_at > '2018-01-31 22:00:00') GROUP BY "page_views"."page"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "page_views"."page" AS page_views_page FROM "page_views" WHERE (created_at > '2018-01-31 22:00:00') GROUP BY "page_views"."page"[0m
+  [1m[36mInquiry Load (0.3ms)[0m  [1m[34mSELECT "inquiries".* FROM "inquiries" ORDER BY created_at DESC[0m
+  Rendered pages/stats.erb within layouts/site (60.0ms)
+Started GET "/pages/stats" for 127.0.0.1 at 2018-02-26 13:14:31 +0200
+Processing by PagesController#stats as HTML
+  Rendering pages/stats.erb within layouts/site
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "page_views"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "page_views"."ip" AS page_views_ip FROM "page_views" GROUP BY "page_views"."ip"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "inquiries"[0m
+  [1m[36mPageView Load (3.3ms)[0m  [1m[34mSELECT  "page_views".* FROM "page_views" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "page_views" WHERE (created_at > '2018-01-31 22:00:00') AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "page_views"."page" AS page_views_page FROM "page_views" WHERE (created_at > '2018-01-31 22:00:00') GROUP BY "page_views"."page"[0m
+  [1m[35mCACHE  (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "page_views"."page" AS page_views_page FROM "page_views" WHERE (created_at > '2018-01-31 22:00:00') GROUP BY "page_views"."page"[0m
+  [1m[36mInquiry Load (0.4ms)[0m  [1m[34mSELECT "inquiries".* FROM "inquiries" ORDER BY created_at DESC[0m
+  Rendered pages/stats.erb within layouts/site (27.5ms)
+Completed 200 OK in 4709ms (Views: 4689.4ms | ActiveRecord: 9.8ms)
+
+
+Completed 200 OK in 4351ms (Views: 4340.8ms | ActiveRecord: 7.7ms)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "page_views"."ip" AS page_views_ip FROM "page_views" GROUP BY "page_views"."ip"[0m
+Started GET "/pages/stats" for 127.0.0.1 at 2018-02-26 13:20:55 +0200
+Processing by PagesController#stats as HTML
+  Rendering pages/stats.erb within layouts/site
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "page_views"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "page_views"."ip" AS page_views_ip FROM "page_views" GROUP BY "page_views"."ip"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "inquiries"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "page_views"."ip" AS page_views_ip FROM "page_views" GROUP BY "page_views"."ip"[0m
+  [1m[36mPageView Load (1.6ms)[0m  [1m[34mSELECT  "page_views".* FROM "page_views" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "page_views" WHERE (created_at > '2018-01-31 22:00:00') AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "page_views"."page" AS page_views_page FROM "page_views" WHERE (created_at > '2018-01-31 22:00:00') GROUP BY "page_views"."page"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "page_views"."page" AS page_views_page FROM "page_views" WHERE (created_at > '2018-01-31 22:00:00') GROUP BY "page_views"."page"[0m
+  [1m[36mInquiry Load (0.3ms)[0m  [1m[34mSELECT "inquiries".* FROM "inquiries" ORDER BY created_at DESC[0m
+  Rendered pages/stats.erb within layouts/site (17.9ms)
+Completed 200 OK in 86ms (Views: 79.8ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/pages/stats" for 127.0.0.1 at 2018-02-26 13:21:05 +0200
+Processing by PagesController#stats as HTML
+  Rendering pages/stats.erb within layouts/site
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "page_views"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "page_views"."ip" AS page_views_ip FROM "page_views" GROUP BY "page_views"."ip"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "inquiries"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "page_views"."ip" AS page_views_ip FROM "page_views" GROUP BY "page_views"."ip"[0m
+  [1m[36mPageView Load (1.6ms)[0m  [1m[34mSELECT  "page_views".* FROM "page_views" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "page_views" WHERE (created_at > '2018-01-31 22:00:00') AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "page_views"."page" AS page_views_page FROM "page_views" WHERE (created_at > '2018-01-31 22:00:00') GROUP BY "page_views"."page"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "page_views"."page" AS page_views_page FROM "page_views" WHERE (created_at > '2018-01-31 22:00:00') GROUP BY "page_views"."page"[0m
+  [1m[36mInquiry Load (0.6ms)[0m  [1m[34mSELECT "inquiries".* FROM "inquiries" ORDER BY created_at DESC[0m
+  Rendered pages/stats.erb within layouts/site (20.4ms)
+Completed 200 OK in 107ms (Views: 100.5ms | ActiveRecord: 4.6ms)
+
+
