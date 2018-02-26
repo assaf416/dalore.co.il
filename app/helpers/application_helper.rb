@@ -20,5 +20,20 @@ module ApplicationHelper
         s
       end
       
+  
+    def lorem_english(words)
+        str = 
+          "
+  Pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat. Risus pretium quam vulputate dignissim suspendisse in est ante. Ultrices neque ornare aenean euismod elementum nisi quis eleifend quam. Habitant morbi tristique senectus et netus et. Nec sagittis aliquam malesuada bibendum. Turpis massa tincidunt dui ut ornare lectus sit. Elementum nibh tellus molestie nunc non blandit massa enim. Risus ultricies tristique nulla aliquet enim tortor at. Tempus urna et pharetra pharetra massa massa. Interdum consectetur libero id faucibus. Eget velit aliquet sagittis id consectetur purus ut faucibus.
+
+Ut tortor pretium viverra suspendisse potenti nullam ac tortor. Dictum fusce ut placerat orci nulla. Cras tincidunt lobortis feugiat vivamus at. Ut consequat semper viverra nam libero justo laoreet sit. Neque ornare aenean euismod elementum nisi quis eleifend quam. Elementum tempus egestas sed sed risus pretium quam vulputate dignissim. Quisque sagittis purus sit amet volutpat consequat mauris nunc congue. Ultricies tristique nulla aliquet enim tortor at auctor urna nunc. Sit amet mauris commodo quis imperdiet massa tincidunt. Enim tortor at auctor urna nunc id cursus. Dictumst vestibulum rhoncus est pellentesque. Sed vulputate mi sit amet mauris. Egestas erat imperdiet sed euismod nisi porta lorem. Nec nam aliquam sem et tortor. Risus in hendrerit gravida rutrum. Sollicitudin aliquam ultrices sagittis orci a scelerisque. Luctus accumsan tortor posuere ac ut consequat. Cras semper auctor neque vitae tempus quam.
+
+Volutpat diam ut venenatis tellus in metus. Non diam phasellus vestibulum lorem sed. Libero nunc consequat interdum varius sit amet. Fermentum iaculis eu non diam phasellus vestibulum lorem sed risus. Enim neque volutpat ac tincidunt. Cursus risus at ultrices mi tempus imperdiet nulla malesuada. Donec adipiscing tristique risus nec. Suscipit adipiscing bibendum est ultricies integer quis auctor. Est ante in nibh mauris cursus. Consequat mauris nunc congue nisi vitae suscipit tellus mauris. Mauris in aliquam sem fringilla ut morbi tincidunt augue. Vel pharetra vel turpis nunc eget lorem dolor sed. Magna sit amet purus gravida quis. Pellentesque dignissim enim sit amet venenatis. Maecenas accumsan lacus vel facilisis. Amet nisl suscipit adipiscing bibendum est ultricies integer.
+        "
+        list = str.split(" ").sample(words)
+        s = "";list.each{|i| s = s + i + " "}
+        s
+      end
+      
 
 end

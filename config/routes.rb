@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get 'pages/tradingmachine'
   get 'pages/strategies_api'
   get 'pages/websocket_api'
+  get 'pages/dalore_client'
   get 'pages/terms'
   get 'pages/privacy'
   root 'pages#index'

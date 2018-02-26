@@ -1,0 +1,42 @@
+<h3> Why User Dalore Client Application </h3><hr/>
+<p >
+    <%= lorem_english(30) %>
+</p>
+
+
+<b> Setup client </b><hr/>
+<p >
+   <%= lorem_english(30) %>
+</p>
+
+
+<b> Book </b><br/>
+<pre>
+    <%= render "/pages/jsons/tase-market.json" %>
+</pre>
+
+
+
+<br/><b> Registering for real time updates </b><hr/>
+<ul >
+    <li class="">  <span class="label label-info">GET</span> /api/realtime/candles/:symbols/register?callback=:callback-url    </li>
+    <li class="">  <span class="label label-info">GET</span> /api/realtime/quotes/:symbols/register?callback=:callback-url   </li>
+    <li class="">  <span class="label label-info">GET</span> /api/realtime/quotes/:symbols/register?callback=:callback-url   </li>
+</ul>
+
+<br/><b> Unregistering from real time updates </b>
+<ul >
+    <li class="">  <span class="label label-info">GET</span> /api/realtime/candles/:symbols/unregister?callback=:callback-url    </li>
+    <li class="">  <span class="label label-info">GET</span> /api/realtime/quotes/:symbols/unregister?callback=:callback-url   </li>
+</ul>
+
+<br/><b> Historical Candles  </b>
+<ul >
+    <li class="">  <span class="label label-info">GET</span> /api/history/symbols/:symbols/minutes/recent    </li>
+    <li class="">  <span class="label label-info">GET</span> /api/history/symbols/:symbols/minutes/request   </li>
+    <li class="">  <span class="label label-info">GET</span> /api/history/symbols/:symbols/daily/request   </li>
+    <li class="">  <span class="label label-info">GET</span> /api/history/symbols/:symbols/daily/recent   </li>
+</ul>
+
+
+

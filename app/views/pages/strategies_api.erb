@@ -1,22 +1,4 @@
 
-<section class="banner">
-    <div class="each-slide third-slide" style="background-image:url(https://s-i.huffpost.com/gen/1828108/images/o-WALL-STREET-facebook.jpg);">
-        <div class="center-container animated fadeInDown" data-animation="fadeInDown">
-            <h4>Dalore Financial</h4>
-        </div>
-        <h2 class="text-center animated fadeInDown" data-animation="fadeInDown">פתרונות תוכנה לשוק ההון</h2>
-        <br/>
-        <br/>
-        <br/>
-        <div class="container animated fadeInUp" data-animation="fadeInUp">
-            <div class="row">
-                <div class="col-xs-4 text-center"><i class="fa fa-html5"></i> <p>API למסחר וניהול פוזיציות</p></div>
-                <div class="col-xs-4 text-center"><i class="fa fa-star-o"></i> <p>פיתוח פתרונות מסחר בארץ ובחו"ל</p></div>
-                <div class="col-xs-4 text-center"><i class="fa fa-mobile"></i> <p> תמיכה בניידים</p></div>
-            </div>
-        </div>
-    </div>
-</section>
 
 <section class="features" >
     <div class="container">
@@ -28,13 +10,13 @@
         <div class="row text-right " style="direction:ltr;">
 
             <div class="col-lg-9">
-               <%= render :partial => "/pages/api/strategy_overview" %>
-               <%= render :partial => "/pages/api/strategy_events" %>
-               <%= render :partial => "/pages/api/strategy_getting_quotes" %>
-               <%= render :partial => "/pages/api/strategy_indicators" %>
-               <%= render :partial => "/pages/api/strategy_account_class" %>
-               <%= render :partial => "/pages/api/strategy_quote_class" %>
-               <%= render :partial => "/pages/api/strategy_candle_class" %>
+               <%= render :partial => "/pages/api/strategies/overview" %>
+               <%= render :partial => "/pages/api/strategies/events" %>
+               <%= render :partial => "/pages/api/strategies/getting_quotes" %>
+               <%= render :partial => "/pages/api/strategies/indicators" %>
+               <%= render :partial => "/pages/api/strategies/account_class" %>
+               <%= render :partial => "/pages/api/strategies/quote_class" %>
+               <%= render :partial => "/pages/api/strategies/candle_class" %>
                 
             </div>
             <div class="col-lg-3">
