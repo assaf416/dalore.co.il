@@ -12,4 +12,14 @@ ActiveAdmin.register PageView do
 #   permitted
 # end
 
+  
+    index do 
+      selectable_column
+      column :created_at
+      column :page
+      column :location
+      column :device
+      column :referer
+      actions
+    end
 end
