@@ -22,6 +22,7 @@ class PageView < ApplicationRecord7
   end
   
   require 'net/http'
+  require 'uri'
   def geolocate
     api_key = "fc8c3ae48be39e9f6985eb6a2e55bfb0e38f6f6b3a683f1a01715fd44804226c"
     url = "http://api.ipinfodb.com/v3/ip-city/?key=#{api_key}&ip=#{ip}"
