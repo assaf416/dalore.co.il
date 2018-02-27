@@ -1,10 +1,40 @@
-<h3> Getting Market data </h3><hr/>
+<h3> Getting List of Instruments </h3><hr/>
+
+The API expose several way to get market data. 
+
+<ul >
+    <li class="">  <span class="label label-info">GET</span> /api/instrument/exchanges    </li>
+    <li class="">  <span class="label label-info">GET</span> /api/instruments/kinds    </li>
+    <li class="">  <span class="label label-info">GET</span> /api/instruments/:exchange/:kind/symbols    </li>
+    <li class="">  <span class="label label-info">GET</span> /api/instruments/:kind/symbols    </li>
+</ul>
+
+<b> Exchanges List </b><br/>
+<pre>
+    ["TASE","NYSE","NASDAQ"]
+</pre>
+<br/>
+
+<b> Instrument Kinds </b><br/>
+<pre>
+    ["STK","OPT","BND","FUT","FX","FXP","VC" ,"VCP"]
+</pre>
+<br/>
+
+<b> Instrument Kinds </b><br/>
+<pre>
+    ["STK","OPT","BND","FUT","FX","FXP","VC" ,"VCP"]
+</pre>
+<br/>
+
+
+<h3> Getting Market Quotes </h3><hr/>
 <ul >
     <li class="">  <span class="label label-info">GET</span> /api/market/:symbols/quotes/recent    </li>
     <li class="">  <span class="label label-info">GET</span> /api/market/:symbols/quotes/recent?after=2018-02-12 13:31:00    </li>
 </ul>
 
-<b> Respond Example </b><br/>
+<b> Quotes results </b><br/>
 <pre>
     <%= render "/pages/jsons/tase-market.json" %>
 </pre>
@@ -12,8 +42,8 @@
 
 <b> Getting Symbol info </b><hr/>
 <ul >
-    <li class="">  <span class="label label-info">GET</span>/api/market/:symbol/quotes/intraday  </li>
-    <li class="">  <span class="label label-info">GET</span> /api/market/:symbol/candles/intraday # 1 minute candles    </li>
+    <li class="">  <span class="label label-info">GET</span>/api/market/:symbol/intraday/quotes  </li>
+    <li class="">  <span class="label label-info">GET</span> /api/market/:symbol/intraday/candles # 1 minute candles    </li>
     <li class="">  <span class="label label-info">GET</span> /api/market/:symbol/book    </li>
 </ul>
 
@@ -34,7 +64,7 @@
 
 
 
-<br/><b> Registering for real time updates </b><hr/>
+<br/><h3> Registering for real time updates </h3><hr/>
 <ul >
     <li class="">  <span class="label label-info">GET</span> /api/realtime/candles/:symbols/register?callback=:callback-url    </li>
     <li class="">  <span class="label label-info">GET</span> /api/realtime/quotes/:symbols/register?callback=:callback-url   </li>

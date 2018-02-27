@@ -1,25 +1,84 @@
 <h3> Strategy API </h3><hr/>
+
+The Dalore Strategy HTTP API allow user to test, run and control strategies operations on the Strategy Server.
+
+<p>
+    A Strategy is a code written in Ruby like language
+</p>
+
+<br/>
+
 <ul >
-    <li class="">  <span class="label label-info">GET</span> /api/account/:account/orders    </li>
-    <li class="">  <span class="label label-info">GET</span> /api/account/:account/trades    </li>
+    <li class="">  <span class="label label-info">GET</span> /api/account/:account/strategies    </li>
+    <li class="">  <span class="label label-info">GET</span> /api/account/:account/strategy/:strategy-id/start    </li>
+    <li class="">  <span class="label label-info">GET</span> /api/account/:account/strategy/:strategy-id/stop    </li>
+    <li class="">  <span class="label label-info">GET</span> /api/account/:account/strategy/:strategy-id/info    </li>
 </ul>
 
-<b> Respond Example </b><br/>
+<b> Strategis list </b><br/>
 <pre>
-    <%= render "/pages/jsons/tase-market.json" %>
+[
+ {id: 3982, name: "DEMO ONE" , symbols: "AAPL,GOOG" , interval: "5 min" , params: { stop_at: 82.33  , start_at: 73.22},
+ {id: 3987, name: "DEMO TWO" , symbols: "AAPL,GOOG" , interval: "1 min" , params: { stop_at: 82.33  , start_at: 73.22}
+]
+
 </pre>
 
-
-
-<b> Orders Info </b><br/>
+<br/>
+<br/>
+<b> Strategy info </b><br/>
 <pre>
-    <%= render "/pages/jsons/tase-market.json" %>
+ {
+  name: "DEMO ONE" , 
+  symbols: "AAPL,GOOG" ,
+  interval: "5 min" , 
+  orders: 23,
+  status: "stopped",
+  profit: 123.34,
+  params: { stop_at: 82.33  , start_at: 73.22
+}
+</pre>
+<br/>
+
+<h3> Updating Strategies and Params </h3><hr/>
+<ul >
+    <li class="">  <span class="label label-danger">POST</span> /api/account/:account/strategy/:strategy-id/params/update    </li>
+    <li class="">  <span class="label label-danger">POST</span> /api/account/:account/strategy/:strategy-id/code/update    </li>
+</ul>
+
+<br/>
+<h3> Backtesting Strategy </h3><hr/>
+<ul >
+    <li class="">  <span class="label label-danger">POST</span> /api/account/:account/strategy/:strategy-id/backtest    </li>
+</ul>
+
+<b> BackTest Results </b><br/>
+<pre>
+{
+  name: "DEMO ONE" , 
+  id: 1384 , 
+  symbols: "AAPL,GOOG" ,
+  interval: "5 min" , 
+  orders: 23,
+  status: "stopped",
+  profit: 123.34,
+  params: { stop_at: 82.33  , start_at: 73.22},
+  quotes: [
+          ],
+  candles: [
+          ],
+orders: [
+          ],
+plots : [
+          ],
+logs : [
+          ],
+profit : [
+          ]
+
+}
 </pre>
 
-<b> Trades </b><br/>
-<pre>
-    <%= render "/pages/jsons/tase-market.json" %>
-</pre>
 
 
 <br/>

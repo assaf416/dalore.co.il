@@ -15,20 +15,40 @@
                 <%= render "/pages/api/http/account_and_positions" if params[:v] == "account-info" %>
                 <%= render "/pages/api/http/orders" if params[:v] == "orders" %>
                 <%= render "/pages/api/http/market" if params[:v] == "market" %>
+                <%= render "/pages/api/http/fundamentals" if params[:v] == "fundamentals" %>
+                <%= render "/pages/api/http/history" if params[:v] == "history" %>
                 <%= render "/pages/api/http/strategies" if params[:v] == "strategies" %>
                 <%= render "/pages/api/http/admin" if params[:v] == "admin" %>
                 <%= render "/pages/api/http/params" if params[:v] == "params" %>
             </div>
             <div class="col-lg-3">
                 <h4>Start Here</h4>
-<ul class="navigation">
+                <ul class="navigation">
                     <li class="menu"><a href="/pages/api">API Overview</a></li>
                 </ul>
-                <h4>Market Info</h4>
+                <h4>Market Quotes</h4>
                 <ul class="navigation">
-                    <li class="menu"><a href="/pages/api?v=market">Market Info</a></li>
-                    <li class="menu"><a href="/pages/api?v=market">Fundamental Data</a></li>
-                    <li class="menu"><a href="/pages/api?v=market">Historic Quotes and Candles</a></li>
+                    <li class="menu"><a href="/pages/api?v=market">Overview</a></li>
+                    <li class="menu"><a href="/pages/api?v=market">Quotes</a></li>
+                    <li class="menu"><a href="/pages/api?v=market">Available Instruments</a></li>
+                    <li class="menu"><a href="/pages/api?v=market">Callback</a></li>
+                    <li class="menu"><a href="/pages/api?v=market">TWS Specific</a></li>
+                </ul>
+                <br/>
+                <h4>Fundamental Info</h4>
+                <ul class="navigation">
+                    <li class="menu"><a href="/pages/api?v=fundamentals">Overview</a></li>
+                    <li class="menu"><a href="/pages/api?v=fundamentals">Financial Reports</a></li>
+                    <li class="menu"><a href="/pages/api?v=fundamentals">Dividends</a></li>
+                    <li class="menu"><a href="/pages/api?v=fundamentals">Benefits</a></li>
+                </ul>
+                <br/>
+                <h4>Historic Quotes and Candles</h4>
+                <ul class="navigation">
+                    <li class="menu"><a href="/pages/api?v=history">Overview</a></li>
+                    <li class="menu"><a href="/pages/api?v=history">Daily Candles</a></li>
+                    <li class="menu"><a href="/pages/api?v=history">Minute Candles</a></li>
+                    <li class="menu"><a href="/pages/api?v=history">Quotes</a></li>
                 </ul>
                 <br/>
                 <h4>Account and Positions</h4>

@@ -1,59 +1,34 @@
 <h3> Fundamental Data API </h3><hr/>
+
+<p>
+The Fundamental API allow developers to get Financial information about companies traded around the world.
+
+
+Fundamental Information is collected every day from each Exchange.
+</p>
 <ul >
-    <li class="">  <span class="label label-info">GET</span> /api/market/:symbols/quotes/recent    </li>
-    <li class="">  <span class="label label-info">GET</span> /api/market/:symbols/quotes/recent?after=2018-02-12 13:31:00    </li>
+    <li class="">  <span class="label label-info">GET</span> /api/fundamentals/companies    </li>
+    <li class="">  <span class="label label-info">GET</span> /api/fundamentals/news    </li>
+    <li class="">  <span class="label label-info">GET</span> /api/fundamentals/:company/info    </li>
+    <li class="">  <span class="label label-info">GET</span> /api/fundamentals/:company/news    </li>
+    <li class="">  <span class="label label-info">GET</span> /api/fundamentals/:company/events    </li>
+    <li class="">  <span class="label label-info">GET</span> /api/fundamentals/:company/financial_statement    </li>
+    <li class="">  <span class="label label-info">GET</span> /api/fundamentals/:company/dividends    </li>
+    <li class="">  <span class="label label-info">GET</span> /api/fundamentals/:company/ratios    </li>
 </ul>
 
-<b> Respond Example </b><br/>
-<pre>
-    <%= render "/pages/jsons/tase-market.json" %>
-</pre>
-
-
-<b> Getting Symbol info </b><hr/>
-<ul >
-    <li class="">  <span class="label label-info">GET</span>/api/market/:symbol/quotes/intraday  </li>
-    <li class="">  <span class="label label-info">GET</span> /api/market/:symbol/candles/intraday # 1 minute candles    </li>
-    <li class="">  <span class="label label-info">GET</span> /api/market/:symbol/book    </li>
-</ul>
-
-<b> Intraday Quotes </b><br/>
-<pre>
-    <%= render "/pages/jsons/tase-market.json" %>
-</pre>
-
-<b> Intraday Candles </b><br/>
-<pre>
-    <%= render "/pages/jsons/tase-market.json" %>
-</pre>
-
-<b> Book </b><br/>
-<pre>
-    <%= render "/pages/jsons/tase-market.json" %>
-</pre>
-
-
-
-<br/><b> Registering for real time updates </b><hr/>
-<ul >
-    <li class="">  <span class="label label-info">GET</span> /api/realtime/candles/:symbols/register?callback=:callback-url    </li>
-    <li class="">  <span class="label label-info">GET</span> /api/realtime/quotes/:symbols/register?callback=:callback-url   </li>
-    <li class="">  <span class="label label-info">GET</span> /api/realtime/quotes/:symbols/register?callback=:callback-url   </li>
-</ul>
-
-<br/><b> Unregistering from real time updates </b>
-<ul >
-    <li class="">  <span class="label label-info">GET</span> /api/realtime/candles/:symbols/unregister?callback=:callback-url    </li>
-    <li class="">  <span class="label label-info">GET</span> /api/realtime/quotes/:symbols/unregister?callback=:callback-url   </li>
-</ul>
-
-<br/><b> Historical Candles  </b>
-<ul >
-    <li class="">  <span class="label label-info">GET</span> /api/history/symbols/:symbols/minutes/recent    </li>
-    <li class="">  <span class="label label-info">GET</span> /api/history/symbols/:symbols/minutes/request   </li>
-    <li class="">  <span class="label label-info">GET</span> /api/history/symbols/:symbols/daily/request   </li>
-    <li class="">  <span class="label label-info">GET</span> /api/history/symbols/:symbols/daily/recent   </li>
-</ul>
-
-
-
+<br/><b> Parameters </b><hr/>
+<table class="table table-condensed table-stripped">
+    <thead>
+        <tr>
+            <th class="text-english" >Name</th>
+            <th class="text-english">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+          <tr> 
+              <td class="text-english">:company</td>
+              <td class="text-english">for TASE exchange: issuer_no. </td>
+          </tr>
+    </tbody>
+</table>

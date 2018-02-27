@@ -3,7 +3,74 @@
     <li class="">  <span class="label label-info">GET</span> /api/account/:account/orders    </li>
     <li class="">  <span class="label label-info">GET</span> /api/account/:account/trades    </li>
 </ul>
+<br/>
 
+<br/><b> Parameters </b><hr/>
+<table class="table table-condensed table-stripped">
+    <thead>
+        <tr>
+            <th class="text-english" >Name</th>
+            <th class="text-english">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+          <tr> 
+              <td class="text-english">:account</td>
+              <td class="text-english">Account ID   </td>
+          </tr>
+    </tbody>
+</table>
+
+
+<br/>
+<b> Respond Example </b><br/>
+<pre>
+    <%= render "/pages/jsons/tase-market.json" %>
+</pre>
+
+
+<h3> Placing Orders </h3><hr/>
+<ul >
+    <li class="">  <span class="label label-danger">POST</span> /api/account/:account/:symbol/buy?qty=:qty&limit=:limit    </li>
+    <li class="">  <span class="label label-danger">POST</span> /api/account/:account/:symbol/sell?qty=:qty&limit=:limit    </li>
+    <li class="">  <span class="label label-danger">POST</span> /api/account/:account/orders/:order/update?qty=:qty&limit=:limit    </li>
+    <li class="">  <span class="label label-danger">POST</span> /api/account/:account/orders/:order/cancel    </li>
+</ul>
+
+
+<br/><b> Parameters </b><hr/>
+<table class="table table-condensed table-stripped">
+    <thead>
+        <tr>
+            <th class="text-english" >Name</th>
+            <th class="text-english">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+          <tr> 
+              <td class="text-english">:account</td>
+              <td class="text-english">Account ID   </td>
+          </tr>
+          <tr> 
+              <td class="text-english">:symbol</td>
+              <td class="text-english">The Instrument Symbol or ticker_id for  </td>
+          </tr>
+          <tr> 
+              <td class="text-english">:qty</td>
+              <td class="text-english">Quantity Requested  </td>
+          </tr>
+          <tr> 
+              <td class="text-english">:limit</td>
+              <td class="text-english">Price Requested  </td>
+          </tr>
+          <tr> 
+              <td class="text-english">:callback</td>
+              <td class="text-english">Callback URL for Order changes  </td>
+          </tr>
+    </tbody>
+</table>
+
+<br/>
 <b> Respond Example </b><br/>
 <pre>
     <%= render "/pages/jsons/tase-market.json" %>
