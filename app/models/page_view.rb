@@ -1,5 +1,5 @@
 
-class PageView < ApplicationRecord7
+class PageView < ApplicationRecord
   
   scope :current_month, -> { where('created_at > ?',Time.now.beginning_of_month) }
   scope :today, -> { where('created_at >= ?',Time.now.beginning_of_day) }
