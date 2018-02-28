@@ -45597,3 +45597,688 @@ Processing by PagesController#strategies_api as HTML
 Completed 200 OK in 86ms (Views: 84.5ms | ActiveRecord: 0.0ms)
 
 
+Creating scope :current_month. Overwriting existing method PageView.current_month.
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+Creating scope :current_month. Overwriting existing method PageView.current_month.
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (9.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateInquiries (20171224095748)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "inquiries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "phone_no" varchar, "message" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171224095748"]]
+  [1m[35m (5.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to DeviseCreateAdminUsers (20171224114259)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "admin_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admin_users_on_email" ON "admin_users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admin_users_on_reset_password_token" ON "admin_users" ("reset_password_token")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171224114259"]]
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateActiveAdminComments (20171224114321)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "active_admin_comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "namespace" varchar, "body" text, "resource_type" varchar, "resource_id" integer, "author_type" varchar, "author_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_resource_type_and_resource_id" ON "active_admin_comments" ("resource_type", "resource_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_author_type_and_author_id" ON "active_admin_comments" ("author_type", "author_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_namespace" ON "active_admin_comments" ("namespace")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171224114321"]]
+  [1m[35m (7.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreatePageViews (20171224120351)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "page_views" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "page" varchar, "ip" varchar, "referer" varchar, "user_agent" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_page_views_on_page" ON "page_views" ("page")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_page_views_on_page' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_page_views_on_page' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_page_views_on_ip" ON "page_views" ("ip")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_page_views_on_ip' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_page_views_on_ip' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_page_views_on_page' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_page_views_on_page' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_page_views_on_user_agent" ON "page_views" ("user_agent")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171224120351"]]
+  [1m[35m (9.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddLocationToPageViews (20180226185316)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "page_views" ADD "location" text[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180226185316"]]
+  [1m[35m (7.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddDeviceToPageViews (20180227082538)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "page_views" ADD "device" varchar[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180227082538"]]
+  [1m[35m (7.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-02-28 08:57:46.479661"], ["updated_at", "2018-02-28 08:57:46.479661"]]
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admin_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admin_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_page_views_on_user_agent' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_page_views_on_user_agent' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_page_views_on_ip' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_page_views_on_ip' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_page_views_on_page' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_page_views_on_page' AND type='index'
+[0m
+Creating scope :current_month. Overwriting existing method PageView.current_month.
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "admin_users" WHERE "admin_users"."email" = ? LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "admin@example.com"], ["encrypted_password", "$2a$11$OXB3rmepd6UB9hp2EtKcve4b27Yn9bcA1SdlT5qnkF7NtU/e8bzW6"], ["created_at", "2018-02-28 08:57:52.028027"], ["updated_at", "2018-02-28 08:57:52.028027"]]
+  [1m[35m (7.7ms)[0m  [1m[36mcommit transaction[0m
+Creating scope :current_month. Overwriting existing method PageView.current_month.
+Started GET "/" for 127.0.0.1 at 2018-02-28 10:58:47 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "page_views" ("page", "ip", "user_agent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["page", "Index"], ["ip", "127.0.0.1"], ["user_agent", "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/64.0.3282.140 Chrome/64.0.3282.140 Safari/537.36"], ["created_at", "2018-02-28 08:58:47.221364"], ["updated_at", "2018-02-28 08:58:47.221364"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "page_views" SET "updated_at" = ?, "location" = ? WHERE "page_views"."id" = ?[0m  [["updated_at", "2018-02-28 08:58:47.896339"], ["location", "127.0.0.1 - - - - - 0 0 -"], ["id", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "page_views" SET "updated_at" = ?, "device" = ? WHERE "page_views"."id" = ?[0m  [["updated_at", "2018-02-28 08:58:47.897998"], ["device", "Linux Desktop"], ["id", 1]]
+  [1m[35m (11.4ms)[0m  [1m[36mcommit transaction[0m
+  Rendering pages/index.html.erb within layouts/site
+  Rendered pages/_server.html.erb (0.7ms)
+  Rendered pages/_crm.html.erb (0.5ms)
+  Rendered pages/_dashboard.html.erb (0.3ms)
+  Rendered pages/_trading_machine.html.erb (0.5ms)
+  Rendered pages/_archive.html.erb (0.3ms)
+  Rendered pages/_trader.html.erb (0.5ms)
+  Rendered pages/index.html.erb within layouts/site (7.5ms)
+Completed 200 OK in 17676ms (Views: 16966.9ms | ActiveRecord: 14.6ms)
+
+
+Started GET "/pages/api" for 127.0.0.1 at 2018-02-28 10:59:25 +0200
+Processing by PagesController#api as HTML
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/api/http/_start_here.erb (0.3ms)
+  Rendered pages/api.erb within layouts/site (1.4ms)
+Completed 200 OK in 48ms (Views: 47.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api?v=market" for 127.0.0.1 at 2018-02-28 10:59:41 +0200
+Processing by PagesController#api as HTML
+  Parameters: {"v"=>"market"}
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/jsons/_tase-market.json.erb (0.2ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/api/http/_market.erb (2.3ms)
+  Rendered pages/api.erb within layouts/site (4.3ms)
+Completed 200 OK in 36ms (Views: 33.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api?v=market" for 127.0.0.1 at 2018-02-28 11:08:50 +0200
+Processing by PagesController#api as HTML
+  Parameters: {"v"=>"market"}
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/api/http/_market.erb (3.4ms)
+  Rendered pages/api.erb within layouts/site (4.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial pages/api/http/jsons/_qutoes.json with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :arb, :coffee, :jbuilder]}. Searched in:
+  * "/home/assaf/projects/dalore.co.il/app/views"
+  * "/home/assaf/.bundle/ruby/2.3.0/activeadmin-043ba0c93408/app/views"
+  * "/usr/local/lib/ruby/gems/2.3.0/gems/kaminari-core-1.1.1/app/views"
+  * "/usr/local/lib/ruby/gems/2.3.0/gems/devise-4.3.0/app/views"
+):
+    36: 
+    37: <b> Quotes results </b><br/>
+    38: <pre>
+    39:     <%= render "/pages/api/http/jsons/qutoes.json" %>
+    40: </pre>
+    41: 
+    42: 
+  
+app/views/pages/api/http/_market.erb:39:in `_app_views_pages_api_http__market_erb___3938228403491433503_70029520505300'
+app/views/pages/api.erb:17:in `_app_views_pages_api_erb___2876033859893823344_70029520763260'
+Started GET "/pages/api?v=market" for 127.0.0.1 at 2018-02-28 11:09:14 +0200
+Processing by PagesController#api as HTML
+  Parameters: {"v"=>"market"}
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/api/http/_market.erb (2.0ms)
+  Rendered pages/api.erb within layouts/site (3.4ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial pages/api/http/jsons/_qutoes.json with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :arb, :coffee, :jbuilder]}. Searched in:
+  * "/home/assaf/projects/dalore.co.il/app/views"
+  * "/home/assaf/.bundle/ruby/2.3.0/activeadmin-043ba0c93408/app/views"
+  * "/usr/local/lib/ruby/gems/2.3.0/gems/kaminari-core-1.1.1/app/views"
+  * "/usr/local/lib/ruby/gems/2.3.0/gems/devise-4.3.0/app/views"
+):
+    36: 
+    37: <b> Quotes results </b><br/>
+    38: <pre>
+    39:     <%= render "/pages/api/http/jsons/qutoes.json" %>
+    40: </pre>
+    41: 
+    42: 
+  
+app/views/pages/api/http/_market.erb:39:in `_app_views_pages_api_http__market_erb___3938228403491433503_70029513063040'
+app/views/pages/api.erb:17:in `_app_views_pages_api_erb___2876033859893823344_70029513435580'
+Started GET "/pages/api?v=market" for 127.0.0.1 at 2018-02-28 11:09:32 +0200
+Processing by PagesController#api as HTML
+  Parameters: {"v"=>"market"}
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/api/http/_market.erb (1.8ms)
+  Rendered pages/api.erb within layouts/site (3.1ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial pages/api/http/jsons/_qutoes.json with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :arb, :coffee, :jbuilder]}. Searched in:
+  * "/home/assaf/projects/dalore.co.il/app/views"
+  * "/home/assaf/.bundle/ruby/2.3.0/activeadmin-043ba0c93408/app/views"
+  * "/usr/local/lib/ruby/gems/2.3.0/gems/kaminari-core-1.1.1/app/views"
+  * "/usr/local/lib/ruby/gems/2.3.0/gems/devise-4.3.0/app/views"
+):
+    36: 
+    37: <b> Quotes results </b><br/>
+    38: <pre>
+    39:     <%= render "/pages/api/http/jsons/qutoes.json" %>
+    40: </pre>
+    41: 
+    42: 
+  
+app/views/pages/api/http/_market.erb:39:in `_app_views_pages_api_http__market_erb___3938228403491433503_70029518063080'
+app/views/pages/api.erb:17:in `_app_views_pages_api_erb___2876033859893823344_70029518140080'
+Started GET "/pages/api?v=market" for 127.0.0.1 at 2018-02-28 11:09:46 +0200
+Processing by PagesController#api as HTML
+  Parameters: {"v"=>"market"}
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/api/http/_market.erb (1.8ms)
+  Rendered pages/api.erb within layouts/site (2.9ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial pages/api/http/jsons/_qutoes.json with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :arb, :coffee, :jbuilder]}. Searched in:
+  * "/home/assaf/projects/dalore.co.il/app/views"
+  * "/home/assaf/.bundle/ruby/2.3.0/activeadmin-043ba0c93408/app/views"
+  * "/usr/local/lib/ruby/gems/2.3.0/gems/kaminari-core-1.1.1/app/views"
+  * "/usr/local/lib/ruby/gems/2.3.0/gems/devise-4.3.0/app/views"
+):
+    36: 
+    37: <b> Quotes results </b><br/>
+    38: <pre>
+    39:     <%= render "/pages/api/http/jsons/qutoes.json" %>
+    40: </pre>
+    41: 
+    42: 
+  
+app/views/pages/api/http/_market.erb:39:in `_app_views_pages_api_http__market_erb___3938228403491433503_70029861851580'
+app/views/pages/api.erb:17:in `_app_views_pages_api_erb___2876033859893823344_70029862019800'
+Started GET "/pages/api?v=market" for 127.0.0.1 at 2018-02-28 11:10:09 +0200
+Processing by PagesController#api as HTML
+  Parameters: {"v"=>"market"}
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/api/http/_market.erb (3.2ms)
+  Rendered pages/api.erb within layouts/site (4.4ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial pages/api/http/json/_qutoes.json with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :arb, :coffee, :jbuilder]}. Searched in:
+  * "/home/assaf/projects/dalore.co.il/app/views"
+  * "/home/assaf/.bundle/ruby/2.3.0/activeadmin-043ba0c93408/app/views"
+  * "/usr/local/lib/ruby/gems/2.3.0/gems/kaminari-core-1.1.1/app/views"
+  * "/usr/local/lib/ruby/gems/2.3.0/gems/devise-4.3.0/app/views"
+):
+    36: 
+    37: <b> Quotes results </b><br/>
+    38: <pre>
+    39:     <%= render "/pages/api/http/json/qutoes.json" %>
+    40: </pre>
+    41: 
+    42: 
+  
+app/views/pages/api/http/_market.erb:39:in `_app_views_pages_api_http__market_erb___3938228403491433503_70029516969440'
+app/views/pages/api.erb:17:in `_app_views_pages_api_erb___2876033859893823344_70029517873460'
+Started GET "/pages/api?v=market" for 127.0.0.1 at 2018-02-28 11:10:28 +0200
+Processing by PagesController#api as HTML
+  Parameters: {"v"=>"market"}
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/api/http/json/_quotes.json.erb (0.3ms)
+  Rendered pages/api/http/_market.erb (4.5ms)
+  Rendered pages/api.erb within layouts/site (5.8ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial pages/api/http/json/_qutoes.json with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :arb, :coffee, :jbuilder]}. Searched in:
+  * "/home/assaf/projects/dalore.co.il/app/views"
+  * "/home/assaf/.bundle/ruby/2.3.0/activeadmin-043ba0c93408/app/views"
+  * "/usr/local/lib/ruby/gems/2.3.0/gems/kaminari-core-1.1.1/app/views"
+  * "/usr/local/lib/ruby/gems/2.3.0/gems/devise-4.3.0/app/views"
+):
+    49: 
+    50: <b> Intraday Quotes </b><br/>
+    51: <pre>
+    52:     <%= render "/pages/api/http/json/qutoes.json" %>
+    53: </pre>
+    54: 
+    55: <b> Intraday Candles </b><br/>
+  
+app/views/pages/api/http/_market.erb:52:in `_app_views_pages_api_http__market_erb___3938228403491433503_70029876693400'
+app/views/pages/api.erb:17:in `_app_views_pages_api_erb___2876033859893823344_70029869341120'
+Started GET "/pages/api?v=market" for 127.0.0.1 at 2018-02-28 11:10:35 +0200
+Processing by PagesController#api as HTML
+  Parameters: {"v"=>"market"}
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/api/http/json/_quotes.json.erb (0.2ms)
+  Rendered pages/api/http/json/_quotes.json.erb (0.0ms)
+  Rendered pages/api/http/json/_candles.json.erb (0.2ms)
+  Rendered pages/api/http/_market.erb (1.9ms)
+  Rendered pages/api.erb within layouts/site (2.9ms)
+Completed 200 OK in 37ms (Views: 36.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api?v=market" for 127.0.0.1 at 2018-02-28 11:14:28 +0200
+Processing by PagesController#api as HTML
+  Parameters: {"v"=>"market"}
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/api/http/json/_quotes.json.erb (0.2ms)
+  Rendered pages/api/http/json/_quotes.json.erb (0.0ms)
+  Rendered pages/api/http/json/_candles.json.erb (0.3ms)
+  Rendered pages/api/http/json/_book.json.erb (0.2ms)
+  Rendered pages/api/http/_market.erb (3.0ms)
+  Rendered pages/api.erb within layouts/site (4.2ms)
+Completed 200 OK in 39ms (Views: 38.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api?v=market" for 127.0.0.1 at 2018-02-28 11:14:44 +0200
+Processing by PagesController#api as HTML
+  Parameters: {"v"=>"market"}
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/api/http/json/_quotes.json.erb (0.2ms)
+  Rendered pages/api/http/json/_quotes.json.erb (0.0ms)
+  Rendered pages/api/http/json/_candles.json.erb (0.2ms)
+  Rendered pages/api/http/json/_book.json.erb (0.2ms)
+  Rendered pages/api/http/_market.erb (2.4ms)
+  Rendered pages/api.erb within layouts/site (3.4ms)
+Completed 200 OK in 34ms (Views: 33.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api?v=market" for 127.0.0.1 at 2018-02-28 11:14:54 +0200
+Processing by PagesController#api as HTML
+  Parameters: {"v"=>"market"}
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/api/http/json/_quotes.json.erb (0.2ms)
+  Rendered pages/api/http/json/_quotes.json.erb (0.0ms)
+  Rendered pages/api/http/json/_candles.json.erb (0.2ms)
+  Rendered pages/api/http/json/_book.json.erb (0.2ms)
+  Rendered pages/api/http/_market.erb (2.4ms)
+  Rendered pages/api.erb within layouts/site (3.6ms)
+Completed 200 OK in 35ms (Views: 34.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api?v=fundamentals" for 127.0.0.1 at 2018-02-28 12:24:05 +0200
+Processing by PagesController#api as HTML
+  Parameters: {"v"=>"fundamentals"}
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/api/http/_fundamentals.erb (0.3ms)
+  Rendered pages/api.erb within layouts/site (1.8ms)
+Completed 200 OK in 36ms (Views: 35.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api?v=history" for 127.0.0.1 at 2018-02-28 12:24:37 +0200
+Processing by PagesController#api as HTML
+  Parameters: {"v"=>"history"}
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/api/http/_history.erb (0.3ms)
+  Rendered pages/api.erb within layouts/site (2.7ms)
+Completed 200 OK in 32ms (Views: 30.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api?v=market" for 127.0.0.1 at 2018-02-28 12:24:40 +0200
+Processing by PagesController#api as HTML
+  Parameters: {"v"=>"market"}
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/api/http/json/_quotes.json.erb (0.4ms)
+  Rendered pages/api/http/json/_quotes.json.erb (0.0ms)
+  Rendered pages/api/http/json/_candles.json.erb (0.5ms)
+  Rendered pages/api/http/json/_book.json.erb (0.3ms)
+  Rendered pages/api/http/_market.erb (5.3ms)
+  Rendered pages/api.erb within layouts/site (6.8ms)
+Completed 200 OK in 46ms (Views: 44.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api?v=market" for 127.0.0.1 at 2018-02-28 12:24:55 +0200
+Processing by PagesController#api as HTML
+  Parameters: {"v"=>"market"}
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/api/http/json/_quotes.json.erb (0.3ms)
+  Rendered pages/api/http/json/_quotes.json.erb (0.0ms)
+  Rendered pages/api/http/json/_candles.json.erb (0.2ms)
+  Rendered pages/api/http/json/_book.json.erb (0.2ms)
+  Rendered pages/api/http/_market.erb (2.6ms)
+  Rendered pages/api.erb within layouts/site (4.0ms)
+Completed 200 OK in 39ms (Views: 37.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api?v=orders" for 127.0.0.1 at 2018-02-28 12:29:57 +0200
+Processing by PagesController#api as HTML
+  Parameters: {"v"=>"orders"}
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/jsons/_tase-market.json.erb (0.2ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/api/http/_orders.erb (2.6ms)
+  Rendered pages/api.erb within layouts/site (3.6ms)
+Completed 200 OK in 38ms (Views: 37.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api?v=account-info" for 127.0.0.1 at 2018-02-28 12:30:16 +0200
+Processing by PagesController#api as HTML
+  Parameters: {"v"=>"account-info"}
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/jsons/_tase-market.json.erb (0.2ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/api/http/_account_and_positions.erb (2.4ms)
+  Rendered pages/api.erb within layouts/site (3.5ms)
+Completed 200 OK in 40ms (Views: 39.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api?v=account-info" for 127.0.0.1 at 2018-02-28 12:34:09 +0200
+Processing by PagesController#api as HTML
+  Parameters: {"v"=>"account-info"}
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/jsons/_tase-market.json.erb (0.2ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/api/http/_account_and_positions.erb (2.4ms)
+  Rendered pages/api.erb within layouts/site (3.5ms)
+Completed 200 OK in 36ms (Views: 35.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api?v=params" for 127.0.0.1 at 2018-02-28 12:34:28 +0200
+Processing by PagesController#api as HTML
+  Parameters: {"v"=>"params"}
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/api/http/_params.erb (0.3ms)
+  Rendered pages/api.erb within layouts/site (1.9ms)
+Completed 200 OK in 53ms (Views: 51.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api?v=history" for 127.0.0.1 at 2018-02-28 12:34:28 +0200
+Processing by PagesController#api as HTML
+  Parameters: {"v"=>"history"}
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/api/http/_history.erb (0.3ms)
+  Rendered pages/api.erb within layouts/site (1.8ms)
+Completed 200 OK in 55ms (Views: 53.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api?v=market" for 127.0.0.1 at 2018-02-28 12:34:36 +0200
+Processing by PagesController#api as HTML
+  Parameters: {"v"=>"market"}
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/api/http/json/_quotes.json.erb (0.3ms)
+  Rendered pages/api/http/json/_quotes.json.erb (0.0ms)
+  Rendered pages/api/http/json/_candles.json.erb (0.2ms)
+  Rendered pages/api/http/json/_book.json.erb (0.3ms)
+  Rendered pages/api/http/_market.erb (3.3ms)
+  Rendered pages/api.erb within layouts/site (4.8ms)
+Completed 200 OK in 39ms (Views: 38.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api?v=account-info" for 127.0.0.1 at 2018-02-28 12:34:57 +0200
+Processing by PagesController#api as HTML
+  Parameters: {"v"=>"account-info"}
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/jsons/_tase-market.json.erb (0.2ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/api/http/_account_and_positions.erb (2.6ms)
+  Rendered pages/api.erb within layouts/site (4.5ms)
+Completed 200 OK in 34ms (Views: 32.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api?v=account-info" for 127.0.0.1 at 2018-02-28 12:36:29 +0200
+Processing by PagesController#api as HTML
+  Parameters: {"v"=>"account-info"}
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/api/http/json/_account.json.erb (0.2ms)
+  Rendered pages/api/http/json/_account_ib.json.erb (0.3ms)
+  Rendered pages/api/http/json/_position.json.erb (0.2ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.2ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/api/http/_account_and_positions.erb (3.4ms)
+  Rendered pages/api.erb within layouts/site (4.6ms)
+Completed 200 OK in 36ms (Views: 35.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api?v=account-info" for 127.0.0.1 at 2018-02-28 12:37:15 +0200
+Processing by PagesController#api as HTML
+  Parameters: {"v"=>"account-info"}
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/api/http/json/_account.json.erb (0.3ms)
+  Rendered pages/api/http/json/_account_ib.json.erb (0.4ms)
+  Rendered pages/api/http/json/_position.json.erb (0.3ms)
+  Rendered pages/api/http/json/_order.json.erb (0.3ms)
+  Rendered pages/api/http/json/_trade.json.erb (0.2ms)
+  Rendered pages/api/http/_account_and_positions.erb (4.8ms)
+  Rendered pages/api.erb within layouts/site (6.2ms)
+Completed 200 OK in 37ms (Views: 35.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api?v=account-info" for 127.0.0.1 at 2018-02-28 12:37:30 +0200
+Processing by PagesController#api as HTML
+  Parameters: {"v"=>"account-info"}
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/api/http/json/_account.json.erb (0.4ms)
+  Rendered pages/api/http/json/_account_ib.json.erb (0.4ms)
+  Rendered pages/api/http/json/_position.json.erb (0.2ms)
+  Rendered pages/api/http/json/_order.json.erb (0.2ms)
+  Rendered pages/api/http/json/_trade.json.erb (0.2ms)
+  Rendered pages/api/http/_account_and_positions.erb (4.9ms)
+  Rendered pages/api.erb within layouts/site (6.5ms)
+Completed 200 OK in 40ms (Views: 39.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api?v=orders" for 127.0.0.1 at 2018-02-28 12:38:04 +0200
+Processing by PagesController#api as HTML
+  Parameters: {"v"=>"orders"}
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/jsons/_tase-market.json.erb (0.3ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/api/http/_orders.erb (3.0ms)
+  Rendered pages/api.erb within layouts/site (4.5ms)
+Completed 200 OK in 51ms (Views: 49.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api?v=orders" for 127.0.0.1 at 2018-02-28 12:39:05 +0200
+Processing by PagesController#api as HTML
+  Parameters: {"v"=>"orders"}
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/api/http/json/_order.json.erb (0.2ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.2ms)
+  Rendered pages/api/http/json/_trade.json.erb (0.3ms)
+  Rendered pages/api/http/_orders.erb (2.3ms)
+  Rendered pages/api.erb within layouts/site (3.7ms)
+Completed 200 OK in 33ms (Views: 32.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api?v=history" for 127.0.0.1 at 2018-02-28 12:39:07 +0200
+Processing by PagesController#api as HTML
+  Parameters: {"v"=>"history"}
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/api/http/_history.erb (0.3ms)
+  Rendered pages/api.erb within layouts/site (1.8ms)
+Completed 200 OK in 36ms (Views: 35.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api?v=market" for 127.0.0.1 at 2018-02-28 12:39:13 +0200
+Processing by PagesController#api as HTML
+  Parameters: {"v"=>"market"}
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/api/http/json/_quotes.json.erb (0.3ms)
+  Rendered pages/api/http/json/_quotes.json.erb (0.0ms)
+  Rendered pages/api/http/json/_candles.json.erb (0.2ms)
+  Rendered pages/api/http/json/_book.json.erb (0.2ms)
+  Rendered pages/api/http/_market.erb (2.9ms)
+  Rendered pages/api.erb within layouts/site (4.6ms)
+Completed 200 OK in 38ms (Views: 36.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api?v=history" for 127.0.0.1 at 2018-02-28 12:39:16 +0200
+Processing by PagesController#api as HTML
+  Parameters: {"v"=>"history"}
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/api/http/_history.erb (0.6ms)
+  Rendered pages/api.erb within layouts/site (5.0ms)
+Completed 200 OK in 40ms (Views: 38.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api?v=history" for 127.0.0.1 at 2018-02-28 12:39:18 +0200
+Processing by PagesController#api as HTML
+  Parameters: {"v"=>"history"}
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/api/http/_history.erb (0.2ms)
+  Rendered pages/api.erb within layouts/site (1.8ms)
+Completed 200 OK in 34ms (Views: 33.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api?v=strategies" for 127.0.0.1 at 2018-02-28 12:39:36 +0200
+Processing by PagesController#api as HTML
+  Parameters: {"v"=>"strategies"}
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/api/http/_strategies.erb (0.2ms)
+  Rendered pages/api.erb within layouts/site (2.0ms)
+Completed 200 OK in 35ms (Views: 32.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api?v=strategies" for 127.0.0.1 at 2018-02-28 12:40:14 +0200
+Processing by PagesController#api as HTML
+  Parameters: {"v"=>"strategies"}
+  Rendering pages/api.erb within layouts/site
+  Rendered pages/api/http/_strategies.erb (0.2ms)
+  Rendered pages/api.erb within layouts/site (1.2ms)
+Completed 200 OK in 36ms (Views: 35.3ms | ActiveRecord: 0.0ms)
+
+
