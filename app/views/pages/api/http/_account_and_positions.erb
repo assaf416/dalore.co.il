@@ -7,31 +7,32 @@
     <li class="">  <span class="label label-info">GET</span> /api/accounts/:account/trades    </li>
 </ul>
 
-<b> Respond Example </b><br/>
+<b> Account info </b><br/>
 <pre>
-    <%= render "/pages/jsons/tase-market.json" %>
+    <%= render "/pages/api/http/json/account.json" %>
+</pre>
+<br/>
+
+<b> Account Interactive Brokers </b><br/>
+<pre>
+    <%= render "/pages/api/http/json/account_ib.json" %>
 </pre>
 
 
-
-<b> Account Info </b><br/>
-<pre>
-    <%= render "/pages/jsons/tase-market.json" %>
-</pre>
 
 <b> Account Positions </b><br/>
 <pre>
-    <%= render "/pages/jsons/tase-market.json" %>
+    <%= render "/pages/api/http/json/position.json" %>
 </pre>
 
 <b> Account Open Orders </b><br/>
 <pre>
-    <%= render "/pages/jsons/tase-market.json" %>
+    <%= render "/pages/api/http/json/order.json" %>
 </pre>
 
 <b> Account Trades </b><br/>
 <pre>
-    <%= render "/pages/jsons/tase-market.json" %>
+    <%= render "/pages/api/http/json/trade.json" %>
 </pre>
 
 <br/>

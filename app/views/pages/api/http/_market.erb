@@ -36,7 +36,7 @@ The API expose several way to get market data.
 
 <b> Quotes results </b><br/>
 <pre>
-    <%= render "/pages/jsons/tase-market.json" %>
+    <%= render "/pages/api/http/json/quotes.json" %>
 </pre>
 
 
@@ -49,17 +49,17 @@ The API expose several way to get market data.
 
 <b> Intraday Quotes </b><br/>
 <pre>
-    <%= render "/pages/jsons/tase-market.json" %>
+    <%= render "/pages/api/http/json/quotes.json" %>
 </pre>
 
 <b> Intraday Candles </b><br/>
 <pre>
-    <%= render "/pages/jsons/tase-market.json" %>
+    <%= render "/pages/api/http/json/candles.json" %>
 </pre>
 
 <b> Book </b><br/>
 <pre>
-    <%= render "/pages/jsons/tase-market.json" %>
+    <%= render "/pages/api/http/json/book.json" %>
 </pre>
 
 
@@ -76,14 +76,3 @@ The API expose several way to get market data.
     <li class="">  <span class="label label-info">GET</span> /api/realtime/candles/:symbols/unregister?callback=:callback-url    </li>
     <li class="">  <span class="label label-info">GET</span> /api/realtime/quotes/:symbols/unregister?callback=:callback-url   </li>
 </ul>
-
-<br/><b> Historical Candles  </b>
-<ul >
-    <li class="">  <span class="label label-info">GET</span> /api/history/symbols/:symbols/minutes/recent    </li>
-    <li class="">  <span class="label label-info">GET</span> /api/history/symbols/:symbols/minutes/request   </li>
-    <li class="">  <span class="label label-info">GET</span> /api/history/symbols/:symbols/daily/request   </li>
-    <li class="">  <span class="label label-info">GET</span> /api/history/symbols/:symbols/daily/recent   </li>
-</ul>
-
-
-

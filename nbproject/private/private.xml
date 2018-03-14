@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
@@ -5,3 +6,16 @@
         <group/>
     </open-files>
 </project-private>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/home/assaf/projects/dalore.co.il/app/views/pages/api.erb</file>
+            <file>file:/home/assaf/projects/dalore.co.il/Gemfile</file>
+            <file>file:/home/assaf/projects/dalore.co.il/app/views/pages/api/http/_orders.erb</file>
+        </group>
+    </open-files>
+</project-private>
+>>>>>>> 9e07d3f2014f6e8befb055fd9ea25b78103e9e6c
