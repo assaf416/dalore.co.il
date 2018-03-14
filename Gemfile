@@ -40,6 +40,7 @@ gem 'groupdate'
 gem "chartkick"
 gem 'rails_12factor', group: :production
 gem 'sqlite3', group: :development
+gem 'pg','~> 0.20'
 
 group :development, :test do
 
