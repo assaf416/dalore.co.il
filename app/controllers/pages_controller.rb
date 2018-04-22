@@ -4,6 +4,16 @@ class PagesController < ApplicationController
     PageView.create(:page => "Index" , :ip => request.remote_ip , :referer => request.referer , :user_agent => request.user_agent)
   end
   
+  def index_eng
+    PageView.create(:page => "Index ENG" , :ip => request.remote_ip , :referer => request.referer , :user_agent => request.user_agent)
+    render :layout => 'site_eng'
+  end
+  
+  def index_ib_eng
+    PageView.create(:page => "Index IB ENG" , :ip => request.remote_ip , :referer => request.referer , :user_agent => request.user_agent)
+    render :layout => 'site_ib'
+  end
+  
   def inquiry
     Inquiry.create(:name => params[:name] ,  :email => params[:email] , :phone_no => params[:phone] , :message => params[:message])
     redirect_to "/pages/index" , notice: "Thank You!"
@@ -11,19 +21,6 @@ class PagesController < ApplicationController
 
   def crm
     PageView.create(:page => "CRM" , :ip => request.remote_ip , :referer => request.referer , :user_agent => request.user_agent)
-  end
-  
-  def tradingmachine
-    PageView.create(:page => "Trading Machine" , :ip => request.remote_ip , :referer => request.referer , :user_agent => request.user_agent)
-  end
-  def archive
-    PageView.create(:page => "Trading Archive" , :ip => request.remote_ip , :referer => request.referer , :user_agent => request.user_agent)
-  end
-  def api_tase_bridge
-    PageView.create(:page => "api_tase_bridge" , :ip => request.remote_ip , :referer => request.referer , :user_agent => request.user_agent)
-  end
-  def api_ib_bridge
-    PageView.create(:page => "api_ib_bridge" , :ip => request.remote_ip , :referer => request.referer , :user_agent => request.user_agent)
   end
 
   def backoffice
