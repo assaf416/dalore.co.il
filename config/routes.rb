@@ -15,11 +15,10 @@ Rails.application.routes.draw do
   get 'pages/api_fmr_bridge'
   get 'pages/api_tase_bridge'
   get 'pages/tradingmachine'
-  get 'pages/strategies_api'
-  get 'pages/websocket_api'
-  get 'pages/dalore_client'
   get 'pages/terms'
   get 'pages/privacy'
+  get 'pages/index_eng'
+  get 'pages/index_ib_eng'
   root 'pages#index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
