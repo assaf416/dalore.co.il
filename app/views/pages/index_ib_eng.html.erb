@@ -10,9 +10,9 @@
         <br/>
         <div class="container animated fadeInUp" data-animation="fadeInUp">
             <div class="row">
-                <div class="col-xs-3 text-center"><i class="fa fa-html5"></i> <p> HTTP API for Trading </p></div>
+                <div class="col-xs-3 text-center"><i class="fa fa-html5"></i> <p> Restful HTTP API for Trading with Interactive Brokers</p></div>
                 <div class="col-xs-3 text-center"><i class="fa fa-star-o"></i> <p> CRM and Risk Management Solutions</p></div>
-                <div class="col-xs-3 text-center"><i class="fa fa-code"></i> <p>Algo Trading IDE</p></div>
+                <div class="col-xs-3 text-center"><i class="fa fa-bank"></i> <p>Algo Trading and Backtests IDE</p></div>
                 <div class="col-xs-3 text-center"><i class="fa fa-code"></i> <p>Proffesional Development Services</p></div>
             </div>
         </div>
@@ -31,7 +31,7 @@
                 <div class="feature-big-ico "><img src="<%= "/assets/website/server.svg" %>" width="100px"/> </div>
                 <div class="feature-content">
                     <h3> <a href="#server">IBTTP HTTP Bridge    </a></h3>
-                    <p class="text-right">
+                    <p class="text-left">
                         A simple yet powerfull HTTP bridge that expose HTTP API for varaiety of web applications and Excell sheets 
                     </p>
                 </div>
@@ -41,7 +41,7 @@
                 <div class="feature-big-ico"><img src="<%= "/assets/website/019-handshake.svg" %>" width="100px"/> </div>
                 <div class="feature-content">
                     <h3><a href="#crm">  The Brokers CRM</a></h3>
-                    <p class="text-right">
+                    <p class="text-left">
                         Turn leads into trading customers quickly through tried-and-true processes
                     </p>
                 </div>
@@ -51,7 +51,7 @@
                 <div class="feature-big-ico "><img src="<%= "/assets/website/competitors-scan.svg" %>" width="100px"/> </div>
                 <div class="feature-content">
                     <h3> <a href="#thebrokersdashboard">Risk Management </a></h3>
-                    <p class="text-right">
+                    <p class="text-left">
                         Online professional alaysis tools for investigate and understand your portfolio
                     </p>
                 </div>
@@ -61,7 +61,7 @@
                 <div class="feature-big-ico "><img src="<%= "/assets/website/stats2.svg" %>" width="100px"/> </div>
                 <div class="feature-content">
                     <h3> <a href="#tradingmachine"> Trading Robots IDE</a></h3>
-                    <p class="text-right">
+                    <p class="text-left">
                         Develop and test strategies on the cloud, without downloading data or compiling code  
                     </p>
                 </div>
@@ -69,13 +69,14 @@
 
         </div>
 
+    <br/>
 
         <div class="row">
             <div class="col-md-3 col-xs-6 text-center">
                 <div class="feature-big-ico "><img src="<%= "/assets/website/money.svg" %>" width="100px"/> </div>
                 <div class="feature-content">
                     <h3> <a href="#server">Custom Trading Applications  </a></h3>
-                    <p class="text-right">
+                    <p class="text-left">
                         A simple yet powerfull HTTP bridge that expose HTTP API for varaiety of web applications and Excell sheets 
                     </p>
                 </div>
@@ -85,7 +86,7 @@
                 <div class="feature-big-ico"><img src="<%= "/assets/website/briefcase1.svg" %>" width="100px"/> </div>
                 <div class="feature-content">
                     <h3><a href="#crm">  The HedgeFund CRM</a></h3>
-                    <p class="text-right">
+                    <p class="text-left">
                         Turn leads into trading customers quickly through tried-and-true processes
                     </p>
                 </div>
@@ -95,7 +96,7 @@
                 <div class="feature-big-ico "><img src="<%= "/assets/website/101-analytics-1.svg" %>" width="100px"/> </div>
                 <div class="feature-content">
                     <h3> <a href="#thebrokersdashboard">Custom Scanners </a></h3>
-                    <p class="text-right">
+                    <p class="text-left">
                         Online professional alaysis tools for investigate and understand your portfolio
                     </p>
                 </div>
@@ -105,7 +106,7 @@
                 <div class="feature-big-ico "><img src="<%= "/assets/website/101-archives.svg" %>" width="100px"/> </div>
                 <div class="feature-content">
                     <h3> <a href="#tradingmachine"> The Archiver </a></h3>
-                    <p class="text-right">
+                    <p class="text-left">
                         Store Market and Account data in a SQL Database for data mining
                     </p>
                 </div>
@@ -130,9 +131,14 @@
     </div>
 </section>
 
-<%= render :partial => "pages/crm" %>
-<%= render :partial => "pages/trading_machine" %>
-<%= render :partial => "pages/trader" %>
+
+
+<%= render :partial => "pages/crm_eng" %>
+<%= render :partial => "pages/trading_machine_eng" %>
+<%= render :partial => "pages/trader_eng" %>
+<%= render :partial => "pages/custom_scanners_eng" %>
+<%= render :partial => "pages/archiver_eng" %>
+<%= render :partial => "pages/ibttp_eng" %>
 
 
 
@@ -190,7 +196,7 @@
         <div class="row text-center">
             <form action="/pages/inquiry" method="post">
                 <div class="row">
-                    <div class="col-lg-6 text-right">
+                    <div class="col-lg-6 text-left">
                         <span class="icon-for-contact"><i class="fa fa-user "></i></span> 
                         <input type="name"  name="name" placeholder="Name" class="form-control newsletter-email aos-init" data-aos="fade"><br/>
                         <span class="icon-for-contact"><i class="fa fa-envelope "></i></span> 
@@ -198,7 +204,7 @@
                         <span class="icon-for-contact"><i class="fa fa-phone "></i></span> 
                         <input type="phone"  name="phone" placeholder="Phone" class="form-control newsletter-email aos-init" data-aos="fade"><br/>
                     </div>
-                    <div class="col-lg-6 text-right" >
+                    <div class="col-lg-6 text-left" >
                         <textarea type="message"   name="message" width=100% rows=2 cols=40 class="message" data-aos="fade"/></textarea><br/>
 
                     </div>
