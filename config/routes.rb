@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'pages/stats'
   get 'pages/api'
   get 'pages/backoffice'
+  get 'pages/tradingsystems'
   get 'pages/archive'
   get 'pages/api_ib_bridge'
   get 'pages/api_sivron_bridge'

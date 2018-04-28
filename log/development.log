@@ -821,3 +821,553 @@ Processing by PagesController#index_ib_eng as HTML
 Completed 200 OK in 630ms (Views: 100.4ms | ActiveRecord: 5.5ms)
 
 
+Creating scope :current_month. Overwriting existing method PageView.current_month.
+Started GET "/" for 127.0.0.1 at 2018-04-28 17:11:00 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (9.7ms)[0m  [1m[32mINSERT INTO "page_views" ("page", "ip", "user_agent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["page", "Index"], ["ip", "127.0.0.1"], ["user_agent", "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/65.0.3325.181 Chrome/65.0.3325.181 Safari/537.36"], ["created_at", "2018-04-28 14:11:00.391999"], ["updated_at", "2018-04-28 14:11:00.391999"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "page_views" SET "updated_at" = ?, "location" = ? WHERE "page_views"."id" = ?[0m  [["updated_at", "2018-04-28 14:11:01.066293"], ["location", "127.0.0.1 - - - - - 0 0 -"], ["id", 29]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "page_views" SET "updated_at" = ?, "device" = ? WHERE "page_views"."id" = ?[0m  [["updated_at", "2018-04-28 14:11:01.068172"], ["device", "Linux Desktop"], ["id", 29]]
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  Rendering pages/index.html.erb within layouts/site
+  Rendered pages/_server.html.erb (1.5ms)
+  Rendered pages/_crm.html.erb (1.6ms)
+  Rendered pages/_dashboard.html.erb (0.7ms)
+  Rendered pages/_trading_machine.html.erb (2.7ms)
+  Rendered pages/_archive.html.erb (0.5ms)
+  Rendered pages/_trader.html.erb (1.0ms)
+  Rendered pages/index.html.erb within layouts/site (23.2ms)
+Completed 200 OK in 6162ms (Views: 5459.2ms | ActiveRecord: 16.5ms)
+
+
+Started GET "/pages/api_ib_bridge" for 127.0.0.1 at 2018-04-28 17:12:09 +0300
+Processing by PagesController#api_ib_bridge as HTML
+  Rendering pages/api_ib_bridge.erb within layouts/site
+  Rendered pages/jsons/_tase-market.json.erb (0.3ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.7ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/api_ib_bridge.erb within layouts/site (8.7ms)
+Completed 200 OK in 126ms (Views: 116.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/index_eng" for 127.0.0.1 at 2018-04-28 17:13:47 +0300
+Processing by PagesController#index_eng as HTML
+  [1m[35m (0.8ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.0ms)[0m  [1m[32mINSERT INTO "page_views" ("page", "ip", "user_agent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["page", "Index ENG"], ["ip", "127.0.0.1"], ["user_agent", "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/65.0.3325.181 Chrome/65.0.3325.181 Safari/537.36"], ["created_at", "2018-04-28 14:13:47.482287"], ["updated_at", "2018-04-28 14:13:47.482287"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "page_views" SET "updated_at" = ?, "location" = ? WHERE "page_views"."id" = ?[0m  [["updated_at", "2018-04-28 14:13:47.955024"], ["location", "127.0.0.1 - - - - - 0 0 -"], ["id", 30]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "page_views" SET "updated_at" = ?, "device" = ? WHERE "page_views"."id" = ?[0m  [["updated_at", "2018-04-28 14:13:47.956812"], ["device", "Linux Desktop"], ["id", 30]]
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  Rendering pages/index_eng.html.erb within layouts/site_eng
+  Rendered pages/_server.html.erb (1.5ms)
+  Rendered pages/_crm.html.erb (1.1ms)
+  Rendered pages/_trading_machine.html.erb (0.8ms)
+  Rendered pages/_trader.html.erb (2.1ms)
+  Rendered pages/index_eng.html.erb within layouts/site_eng (15.0ms)
+Completed 200 OK in 571ms (Views: 86.6ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/pages/index_ib_eng" for 127.0.0.1 at 2018-04-28 17:14:33 +0300
+Processing by PagesController#index_ib_eng as HTML
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "page_views" ("page", "ip", "user_agent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["page", "Index IB ENG"], ["ip", "127.0.0.1"], ["user_agent", "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/65.0.3325.181 Chrome/65.0.3325.181 Safari/537.36"], ["created_at", "2018-04-28 14:14:33.619528"], ["updated_at", "2018-04-28 14:14:33.619528"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "page_views" SET "updated_at" = ?, "location" = ? WHERE "page_views"."id" = ?[0m  [["updated_at", "2018-04-28 14:14:34.228141"], ["location", "127.0.0.1 - - - - - 0 0 -"], ["id", 31]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "page_views" SET "updated_at" = ?, "device" = ? WHERE "page_views"."id" = ?[0m  [["updated_at", "2018-04-28 14:14:34.229601"], ["device", "Linux Desktop"], ["id", 31]]
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+  Rendering pages/index_ib_eng.html.erb within layouts/site_ib
+  Rendered pages/_crm_eng.html.erb (1.2ms)
+  Rendered pages/_trading_machine_eng.html.erb (0.9ms)
+  Rendered pages/_trader_eng.html.erb (1.3ms)
+  Rendered pages/_custom_scanners_eng.erb (1.0ms)
+  Rendered pages/_archiver_eng.erb (1.0ms)
+  Rendered pages/_ibttp_eng.erb (3.3ms)
+  Rendered pages/index_ib_eng.html.erb within layouts/site_ib (20.7ms)
+Completed 200 OK in 679ms (Views: 58.9ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-28 17:18:40 +0300
+Processing by PagesController#index as HTML
+  [1m[35m (2.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.8ms)[0m  [1m[32mINSERT INTO "page_views" ("page", "ip", "user_agent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["page", "Index"], ["ip", "127.0.0.1"], ["user_agent", "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/65.0.3325.181 Chrome/65.0.3325.181 Safari/537.36"], ["created_at", "2018-04-28 14:18:40.120562"], ["updated_at", "2018-04-28 14:18:40.120562"]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "page_views" SET "updated_at" = ?, "location" = ? WHERE "page_views"."id" = ?[0m  [["updated_at", "2018-04-28 14:18:40.731875"], ["location", "127.0.0.1 - - - - - 0 0 -"], ["id", 32]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "page_views" SET "updated_at" = ?, "device" = ? WHERE "page_views"."id" = ?[0m  [["updated_at", "2018-04-28 14:18:40.733752"], ["device", "Linux Desktop"], ["id", 32]]
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  Rendering pages/index.html.erb within layouts/site
+  Rendered pages/_server.html.erb (2.3ms)
+  Rendered pages/_crm.html.erb (1.2ms)
+  Rendered pages/_dashboard.html.erb (1.1ms)
+  Rendered pages/_trading_machine.html.erb (1.3ms)
+  Rendered pages/_archive.html.erb (1.4ms)
+  Rendered pages/_trader.html.erb (1.5ms)
+  Rendered pages/index.html.erb within layouts/site (24.2ms)
+Completed 200 OK in 721ms (Views: 90.6ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-28 17:20:20 +0300
+Processing by PagesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "page_views" ("page", "ip", "user_agent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["page", "Index"], ["ip", "127.0.0.1"], ["user_agent", "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/65.0.3325.181 Chrome/65.0.3325.181 Safari/537.36"], ["created_at", "2018-04-28 14:20:20.746629"], ["updated_at", "2018-04-28 14:20:20.746629"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "page_views" SET "updated_at" = ?, "location" = ? WHERE "page_views"."id" = ?[0m  [["updated_at", "2018-04-28 14:20:21.217253"], ["location", "127.0.0.1 - - - - - 0 0 -"], ["id", 33]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "page_views" SET "updated_at" = ?, "device" = ? WHERE "page_views"."id" = ?[0m  [["updated_at", "2018-04-28 14:20:21.218796"], ["device", "Linux Desktop"], ["id", 33]]
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  Rendering pages/index.html.erb within layouts/site
+  Rendered pages/_server.html.erb (1.1ms)
+  Rendered pages/_crm.html.erb (1.3ms)
+  Rendered pages/_dashboard.html.erb (0.8ms)
+  Rendered pages/_trading_machine.html.erb (1.1ms)
+  Rendered pages/_archive.html.erb (1.0ms)
+  Rendered pages/_trader.html.erb (2.3ms)
+  Rendered pages/index.html.erb within layouts/site (18.9ms)
+Completed 200 OK in 552ms (Views: 71.3ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/pages/tradingmachine" for 127.0.0.1 at 2018-04-28 17:20:32 +0300
+Processing by PagesController#tradingmachine as HTML
+  Rendering pages/tradingmachine.erb within layouts/site
+  Rendered pages/tradingmachine.erb within layouts/site (2.9ms)
+Completed 200 OK in 63ms (Views: 61.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/update_trades" for 127.0.0.1 at 2018-04-28 17:22:01 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/update_trades"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/pages/backoffice" for 127.0.0.1 at 2018-04-28 17:22:32 +0300
+Processing by PagesController#backoffice as HTML
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "page_views" ("page", "ip", "referer", "user_agent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["page", "BackOffice"], ["ip", "127.0.0.1"], ["referer", "http://localhost:3000/pages/tradingmachine"], ["user_agent", "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/65.0.3325.181 Chrome/65.0.3325.181 Safari/537.36"], ["created_at", "2018-04-28 14:22:32.632640"], ["updated_at", "2018-04-28 14:22:32.632640"]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "page_views" SET "updated_at" = ?, "location" = ? WHERE "page_views"."id" = ?[0m  [["updated_at", "2018-04-28 14:22:33.225295"], ["location", "127.0.0.1 - - - - - 0 0 -"], ["id", 34]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "page_views" SET "updated_at" = ?, "device" = ? WHERE "page_views"."id" = ?[0m  [["updated_at", "2018-04-28 14:22:33.230162"], ["device", "Linux Desktop"], ["id", 34]]
+  [1m[35m (5.4ms)[0m  [1m[36mcommit transaction[0m
+  Rendering pages/backoffice.html.erb within layouts/site
+  Rendered pages/backoffice.html.erb within layouts/site (2.5ms)
+Completed 200 OK in 669ms (Views: 60.2ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/pages/api_ib_bridge" for 127.0.0.1 at 2018-04-28 17:22:49 +0300
+Processing by PagesController#api_ib_bridge as HTML
+  Rendering pages/api_ib_bridge.erb within layouts/site
+  Rendered pages/jsons/_tase-market.json.erb (0.6ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.1ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.1ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.1ms)
+  Rendered pages/api_ib_bridge.erb within layouts/site (10.8ms)
+Completed 200 OK in 78ms (Views: 76.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api_fmr_bridge" for 127.0.0.1 at 2018-04-28 17:24:05 +0300
+Processing by PagesController#api_fmr_bridge as HTML
+  Rendering pages/api_fmr_bridge.erb within layouts/site
+  Rendered pages/api_fmr_bridge.erb within layouts/site (2.2ms)
+Completed 200 OK in 46ms (Views: 44.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api_sivron_bridge" for 127.0.0.1 at 2018-04-28 17:24:16 +0300
+Processing by PagesController#api_sivron_bridge as HTML
+  Rendering pages/api_sivron_bridge.erb within layouts/site
+  Rendered pages/api_sivron_bridge.erb within layouts/site (1.1ms)
+Completed 200 OK in 34ms (Views: 33.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api_ib_bridge" for 127.0.0.1 at 2018-04-28 17:24:20 +0300
+Processing by PagesController#api_ib_bridge as HTML
+  Rendering pages/api_ib_bridge.erb within layouts/site
+  Rendered pages/jsons/_tase-market.json.erb (0.2ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/api_ib_bridge.erb within layouts/site (3.7ms)
+Completed 200 OK in 55ms (Views: 54.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api_ib_bridge" for 127.0.0.1 at 2018-04-28 17:26:57 +0300
+Processing by PagesController#api_ib_bridge as HTML
+  Rendering pages/api_ib_bridge.erb within layouts/site
+  Rendered pages/jsons/_tase-market.json.erb (0.2ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/api_ib_bridge.erb within layouts/site (3.8ms)
+Completed 200 OK in 38ms (Views: 35.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/websocket_api" for 127.0.0.1 at 2018-04-28 17:27:09 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/pages/websocket_api"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/pages/index" for 127.0.0.1 at 2018-04-28 17:27:14 +0300
+Processing by PagesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "page_views" ("page", "ip", "referer", "user_agent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["page", "Index"], ["ip", "127.0.0.1"], ["referer", "http://localhost:3000/pages/api_ib_bridge"], ["user_agent", "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/65.0.3325.181 Chrome/65.0.3325.181 Safari/537.36"], ["created_at", "2018-04-28 14:27:14.697035"], ["updated_at", "2018-04-28 14:27:14.697035"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "page_views" SET "updated_at" = ?, "location" = ? WHERE "page_views"."id" = ?[0m  [["updated_at", "2018-04-28 14:27:15.301680"], ["location", "127.0.0.1 - - - - - 0 0 -"], ["id", 35]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "page_views" SET "updated_at" = ?, "device" = ? WHERE "page_views"."id" = ?[0m  [["updated_at", "2018-04-28 14:27:15.303990"], ["device", "Linux Desktop"], ["id", 35]]
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  Rendering pages/index.html.erb within layouts/site
+  Rendered pages/_server.html.erb (1.1ms)
+  Rendered pages/_crm.html.erb (1.8ms)
+  Rendered pages/_dashboard.html.erb (1.3ms)
+  Rendered pages/_trading_machine.html.erb (0.9ms)
+  Rendered pages/_archive.html.erb (0.9ms)
+  Rendered pages/_trader.html.erb (1.2ms)
+  Rendered pages/index.html.erb within layouts/site (20.4ms)
+Completed 200 OK in 710ms (Views: 90.0ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/pages/index" for 127.0.0.1 at 2018-04-28 17:29:03 +0300
+Processing by PagesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "page_views" ("page", "ip", "referer", "user_agent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["page", "Index"], ["ip", "127.0.0.1"], ["referer", "http://localhost:3000/pages/index"], ["user_agent", "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/65.0.3325.181 Chrome/65.0.3325.181 Safari/537.36"], ["created_at", "2018-04-28 14:29:03.882564"], ["updated_at", "2018-04-28 14:29:03.882564"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "page_views" SET "updated_at" = ?, "location" = ? WHERE "page_views"."id" = ?[0m  [["updated_at", "2018-04-28 14:29:04.403851"], ["location", "127.0.0.1 - - - - - 0 0 -"], ["id", 36]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "page_views" SET "updated_at" = ?, "device" = ? WHERE "page_views"."id" = ?[0m  [["updated_at", "2018-04-28 14:29:04.405707"], ["device", "Linux Desktop"], ["id", 36]]
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+  Rendering pages/index.html.erb within layouts/site
+  Rendered pages/_server.html.erb (1.2ms)
+  Rendered pages/_crm.html.erb (1.1ms)
+  Rendered pages/_dashboard.html.erb (0.7ms)
+  Rendered pages/_trading_machine.html.erb (0.9ms)
+  Rendered pages/_archive.html.erb (0.7ms)
+  Rendered pages/_trader.html.erb (1.1ms)
+  Rendered pages/index.html.erb within layouts/site (15.3ms)
+Completed 200 OK in 594ms (Views: 59.9ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/pages/tradingmachine" for 127.0.0.1 at 2018-04-28 17:40:01 +0300
+Processing by PagesController#tradingmachine as HTML
+  Rendering pages/tradingmachine.erb within layouts/site
+  Rendered pages/tradingmachine.erb within layouts/site (4.7ms)
+Completed 200 OK in 136ms (Views: 127.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api_ib_bridge" for 127.0.0.1 at 2018-04-28 17:42:04 +0300
+Processing by PagesController#api_ib_bridge as HTML
+  Rendering pages/api_ib_bridge.erb within layouts/site
+  Rendered pages/jsons/_tase-market.json.erb (0.4ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/jsons/_tase-market.json.erb (0.0ms)
+  Rendered pages/api_ib_bridge.erb within layouts/site (12.1ms)
+Completed 200 OK in 103ms (Views: 96.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/api_btc_bridge" for 127.0.0.1 at 2018-04-28 17:42:15 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/pages/api_btc_bridge"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/pages/backoffice" for 127.0.0.1 at 2018-04-28 17:42:21 +0300
+Processing by PagesController#backoffice as HTML
+  [1m[35m (5.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (8.2ms)[0m  [1m[32mINSERT INTO "page_views" ("page", "ip", "referer", "user_agent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["page", "BackOffice"], ["ip", "127.0.0.1"], ["referer", "http://localhost:3000/pages/api_ib_bridge"], ["user_agent", "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/65.0.3325.181 Chrome/65.0.3325.181 Safari/537.36"], ["created_at", "2018-04-28 14:42:21.626732"], ["updated_at", "2018-04-28 14:42:21.626732"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "page_views" SET "updated_at" = ?, "location" = ? WHERE "page_views"."id" = ?[0m  [["updated_at", "2018-04-28 14:42:22.126818"], ["location", "127.0.0.1 - - - - - 0 0 -"], ["id", 37]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "page_views" SET "updated_at" = ?, "device" = ? WHERE "page_views"."id" = ?[0m  [["updated_at", "2018-04-28 14:42:22.128737"], ["device", "Linux Desktop"], ["id", 37]]
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  Rendering pages/backoffice.html.erb within layouts/site
+  Rendered pages/backoffice.html.erb within layouts/site (2.4ms)
+Completed 200 OK in 589ms (Views: 70.6ms | ActiveRecord: 18.7ms)
+
+
+Started GET "/api/v1/update_trades" for 127.0.0.1 at 2018-04-28 17:44:01 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/update_trades"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/pages/tradingroom" for 127.0.0.1 at 2018-04-28 17:59:49 +0300
+Creating scope :current_month. Overwriting existing method PageView.current_month.
+  
+ActionController::RoutingError (No route matches [GET] "/pages/tradingroom"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/pages/archive" for 127.0.0.1 at 2018-04-28 18:00:06 +0300
+Processing by PagesController#archive as HTML
+  Rendering pages/archive.erb within layouts/site
+  Rendered pages/archive.erb within layouts/site (1.2ms)
+Completed 200 OK in 51ms (Views: 48.6ms)
+
+
+Started GET "/pages/tradingsystems" for 127.0.0.1 at 2018-04-28 18:01:42 +0300
+  
+AbstractController::ActionNotFound (The action 'tradingsystems' could not be found for PagesController):
+  
+actionpack (5.1.6) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.6) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.6) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.6) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+rack (2.0.4) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.4) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/pages/tradingsystems" for 127.0.0.1 at 2018-04-28 18:02:48 +0300
+Creating scope :current_month. Overwriting existing method PageView.current_month.
+Processing by PagesController#tradingsystems as HTML
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.3ms)[0m  [1m[32mINSERT INTO "page_views" ("page", "ip", "referer", "user_agent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["page", "TRADING-SYSTEMS"], ["ip", "127.0.0.1"], ["referer", "http://localhost:3000/pages/archive"], ["user_agent", "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/65.0.3325.181 Chrome/65.0.3325.181 Safari/537.36"], ["created_at", "2018-04-28 15:02:48.388730"], ["updated_at", "2018-04-28 15:02:48.388730"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "page_views" SET "updated_at" = ?, "location" = ? WHERE "page_views"."id" = ?[0m  [["updated_at", "2018-04-28 15:02:49.021111"], ["location", "127.0.0.1 - - - - - 0 0 -"], ["id", 38]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "page_views" SET "updated_at" = ?, "device" = ? WHERE "page_views"."id" = ?[0m  [["updated_at", "2018-04-28 15:02:49.022929"], ["device", "Linux Desktop"], ["id", 38]]
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+Completed 406 Not Acceptable in 725ms (ActiveRecord: 13.3ms)
+
+
+  
+ActionController::UnknownFormat (PagesController#tradingsystems is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.6) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.6) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.6) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.6) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.6) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.6) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.6) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.6) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.6) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.6) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.6) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.6) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.6) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.6) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+rack (2.0.4) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.4) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.6.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.1) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.1) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/pages/tradingsystems" for 127.0.0.1 at 2018-04-28 18:03:08 +0300
+Processing by PagesController#tradingsystems as HTML
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "page_views" ("page", "ip", "referer", "user_agent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["page", "TRADING-SYSTEMS"], ["ip", "127.0.0.1"], ["referer", "http://localhost:3000/pages/archive"], ["user_agent", "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/65.0.3325.181 Chrome/65.0.3325.181 Safari/537.36"], ["created_at", "2018-04-28 15:03:08.900851"], ["updated_at", "2018-04-28 15:03:08.900851"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "page_views" SET "updated_at" = ?, "location" = ? WHERE "page_views"."id" = ?[0m  [["updated_at", "2018-04-28 15:03:09.417036"], ["location", "127.0.0.1 - - - - - 0 0 -"], ["id", 39]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "page_views" SET "updated_at" = ?, "device" = ? WHERE "page_views"."id" = ?[0m  [["updated_at", "2018-04-28 15:03:09.418488"], ["device", "Linux Desktop"], ["id", 39]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  Rendering pages/tradingsystems.erb within layouts/site
+  Rendered pages/tradingsystems.erb within layouts/site (2.5ms)
+Completed 200 OK in 581ms (Views: 54.2ms | ActiveRecord: 5.4ms)
+
+

@@ -19,6 +19,9 @@ class PagesController < ApplicationController
     redirect_to "/pages/index" , notice: "Thank You!"
   end
 
+  def tradingsystems
+    PageView.create(:page => "TRADING-SYSTEMS" , :ip => request.remote_ip , :referer => request.referer , :user_agent => request.user_agent)
+  end
   def crm
     PageView.create(:page => "CRM" , :ip => request.remote_ip , :referer => request.referer , :user_agent => request.user_agent)
   end
