@@ -1,0 +1,5302 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- saved from url=(0074)https://strategyquant.com/uploads/qa_example_reports/example1/Example1.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>EA Analyzer Portfolio Report</title>
+   <meta name="generator" content="StrategyQuant EA Analyzer (http://www.strategyquant.com)">
+   <meta name="version" content="1.0">
+	
+   <style type="text/css">
+body { background-color: white; font-family: Arial,Helvetica,sans-serif; font-size: 11px; }
+#center { margin: 0 auto; width: 820px; text-align: center; }
+#center a { display: block; margin: 10px 0 10px 0; color: #4B78AF; text-decoration: none;}
+#center a:hover { text-decoration: underline; }
+#summaryBox { margin: 5px 0 5px; padding: 7px 0px; }
+div.plPart { float: left; width: 175px; }
+div.summaryPart { float: right; width: 612px; }
+div.plPart .plH1 { font-size: 30px; font-weight: bold; text-align: right; font-family: Arial,Helvetica,sans-serif; border-bottom: 1px solid #D0D3D4; }
+div.plPart .plH2 { color: #898989; font-family: Tahoma,Arial,sans-serif; font-size: 12px; padding: 3px 0 0; text-transform: uppercase; clear: both; }
+.plPart .name { color: #606060; display: block; font-size: 11px; text-align: left; text-transform: uppercase; }
+.plPart .name2 { color: #606060; font-size: 11px; text-align: left; text-transform: uppercase; float: left; }
+.plPart .value{ text-align: right; display: block; float: right;}
+.plPart .value2{ text-align: right; display: block; float: right; font-size: 11px;}
+.positiveNum { color: #119911 !important; }
+.negativeNum { color: #FF4040 !important; }
+div.sumH2 { display: block; width: 117px; float: left; margin: 0 5px 5px 0;}
+div.sumH2 .name { color: #707070; font-size: 11px; text-align: left; text-transform: uppercase; display: block;}
+div.sumH2 .value { color: #404040; font-size: 14px; font-weight: bold; text-align: center; display: block; padding: 4px 0 4px 0; border: 1px solid #D0D3D4; margin-bottom: 5px;}
+div.title { text-align: center; color: #333333; font-family: Tahoma,Arial,sans-serif; padding-bottom: 10px;}
+.title h1 { color: #222222; font-size: 24px; font-weight: bold; line-height: 115%; margin: 5px 0; padding: 0; border-bottom: 0px; font-family: Arial,Helvetica,sans-serif; text-align: center;}
+.title h3 { margin: 5px 0; padding: 0; color: #333333;}
+div.params { text-align: center; color: #333333; font-family: Tahoma,Arial,sans-serif; border-bottom: 1px solid #E0E3E4; padding-bottom: 10px; margin-top: 10px;}
+.params th { white-space:nowrap; width: 150px; vertical-align: top; text-align: left; padding-left: 10px; font-weight: normal; color: #606060;}
+.params td { --background-color: #F5F5F5; font-weight: bold; color: #606060;}
+div.params { padding-right: 5px;}
+.params td th { padding: 3px;}
+div.chart { margin: 0px; text-align: center;}
+div.performance { margin-top: 20px;}
+.months td { color: #4B78AF; font-weight: bold; padding-right: 10px !important;}
+.bold { font-weight: bold;}
+.oddrow td { background-color: #F5F5F5; border-bottom: 1px solid #EEEEEE; border-top: 1px solid #EEEEEE; color: #404040; font-size: 11px; text-align: right; white-space:nowrap;}
+.evenrow td { color: #404040; font-size: 11px; text-align: right; white-space:nowrap;}
+.tbg { background-color: #F0F0F0;}
+table.calendar { width: 100%;}
+table.calendar td { padding: 5px 3px 5px 0; text-align: right; width: 6%;}
+td.red { color: #FF4040;}
+.performance h1 { margin: 0 0 2px;}
+div.charts { position: relative;}
+div.charts td { text-align: center;}
+h1 { border-bottom: 1px solid #DCDCDC; color: #454545; font-family: Tahoma,Arial,sans-serif; font-size: 12px; line-height: 18px; margin: 20px 0 2px; padding: 0 0 5px; text-transform: uppercase; text-align: left;}
+#helptext { top: 7px; position: absolute; right: 0; color: #4B78AF;}
+td { font-size: 11px; padding: 3px 5px 3px 5px; text-align: left; }
+h4 { font-size: 11px; font-weight: bold; margin: 0; margin-bottom: 5px; text-align: center; color: #454545; }
+.orders {width: 820px; }
+.orders td {text-align: right; color: #404040; }
+.stats td { width: 135px; text-align: right; padding: 3px 10px 3px 5px; white-space:nowrap; color: #333333; }
+.stats table {width: 820px; }
+.vital td { font: 12px Tahoma,Arial; text-align: right; padding: 3px 10px 3px 5px; white-space:nowrap;}
+td.keyB { width: 125px; background-color: #e4e4e4; font-weight: bold; }
+td.valB { width: 145px; background-color: #F3F3F3; font-weight: bold; }
+td.key { width: 125px; background-color: #F0F0F0; }
+td.val { width: 145px; background-color: #F8F8F8; }
+td.keyT { background-color: #F0F0F0; }
+td.valT { background-color: #F8F8F8; }
+.statsBox { width: 820px; padding: 5px 0 2px 0; }
+.trTrades { background-color: #E0E0E0; text-align: right; }
+.trTrades td { color: #4B78AF !important; font-weight: bold; }
+div.cPart { display:block; clear: both; text-align: right; position: relative; top: -7px; margin-right: 7px; color: #707070; font-size: 10px; font-family: Tahoma, Arial;}
+div.cPart a { margin: 0 !important; color: #707070 !important;}
+img { border: 1px solid #CCCCCC; }
+table.strategies { width: 100%;}
+table.strategies td { padding: 5px 3px 5px 0; text-align: right; white-space:nowrap;}
+</style>
+</head>
+<body cz-shortcut-listen="true">
+<div id="center">
+   <div class="title">
+      <h1>EA Analyzer Portfolio Report</h1>
+      <h3>Portfolio</h3>
+     
+   </div>
+
+   <div id="summaryBox">
+      <div class="plPart">
+         <div class="plH1">
+            <span class="name">Total Profit</span>
+            <span class="positiveNum">		$ 51481.64
+</span>
+            
+         </div>
+         <div class="plH2">
+            <span class="name2">
+					Profit in pips
+			</span>
+            <span class="positiveNum value2">5522.12 pips</span>
+         </div>
+         <div class="plH2">
+            <span class="name2">Yearly Avg profit</span>
+            <span class="positiveNum value2">		$ 29418.09
+</span>
+         </div>
+      </div>
+
+      <div class="summaryPart">
+         <div class="sumH2">
+            <span class="name"># of trades</span>
+            <span class="value">395</span>
+         </div>
+         <div class="sumH2">
+            <span class="name">Sharpe ratio</span>
+            <span class="value">0.11</span>
+         </div>
+         <div class="sumH2">
+            <span class="name">Profit factor</span>
+            <span class="value">1.31</span>
+         </div>
+         <div class="sumH2">
+            <span class="name">Return / DD ratio</span>
+            <span class="value">3.4</span>
+         </div>
+         <div class="sumH2">
+            <span class="name">Winning %</span>
+            <span class="value">63.04 %</span>
+         </div>
+         <div class="sumH2">
+            <span class="name">Drawdown</span>
+            <span class="value">		$ 15161.96
+</span>
+         </div>
+         <div class="sumH2">
+            <span class="name">% Drawdown</span>
+            <span class="value">66.75 %</span>
+         </div>
+         <div class="sumH2">
+            <span class="name">Daily Avg profit</span>
+            <span class="value">		$ 78.36
+</span>
+         </div>
+         <div class="sumH2">
+            <span class="name">Monthly Avg profit</span>
+            <span class="value">		$ 2451.51
+</span>
+         </div>
+         <div class="sumH2">
+            <span class="name">Average trade</span>
+            <span class="value">		$ 977.83
+</span>
+         </div>
+      </div>
+      <div class="cPart">
+      <a href="http://www.strategyquant.com/eaanalyzer/">generated by StrategyQuant EA Analyzer</a>
+      </div>
+   </div>
+
+   <div class="chart">
+	  <a href="./EA Analyzer Portfolio Report_files/Portfolio_equityChart.jpg" target="_blank"><img src="./EA Analyzer Portfolio Report_files/Portfolio_equityChart.jpg"></a>
+   </div>
+
+	   <div class="strategies">
+		  <h1>Strategies in portfolio</h1>
+		  <table class="strategies" cellspacing="2" cellpadding="0" border="0">
+		  
+		  <tbody><tr class="months">
+			 <td>#</td>
+			 <td>Name</td>
+			 <td>Symbol</td>
+			 <td>Timeframe</td>
+			 <td>Net Profit ($)</td>
+			 <td>Net Profit (pips)</td>
+			 <td># of Trades</td>
+			 <td>Sharpe Ratio</td>
+			 <td>Profit Factor</td>
+		  </tr>
+		  
+			  <tr class="oddrow">
+				 <td>S1</td>
+				 <td>audusd</td>
+				 <td>audusd</td>
+				 <td>?</td>
+				 <td class="negativeNum">$ -6012.2</td>
+				 <td class="negativeNum">-757.3 pips</td>
+				 <td>25</td>
+				 <td>0.1</td>
+				 <td>0.71</td>
+			  </tr>
+			  
+			  <tr class="evenrow">
+				 <td>S2</td>
+				 <td>eurusd</td>
+				 <td>eurusd</td>
+				 <td>?</td>
+				 <td>$ 16675.19</td>
+				 <td>1286.41 pips</td>
+				 <td>221</td>
+				 <td>0.12</td>
+				 <td>1.26</td>
+			  </tr>
+			  
+			  <tr class="oddrow">
+				 <td>S3</td>
+				 <td>gbpusd</td>
+				 <td>gbpusd</td>
+				 <td>?</td>
+				 <td>$ 4426.63</td>
+				 <td>1512.3 pips</td>
+				 <td>40</td>
+				 <td>0.14</td>
+				 <td>1.18</td>
+			  </tr>
+			  
+			  <tr class="evenrow">
+				 <td>S4</td>
+				 <td>usdcad</td>
+				 <td>usdcad</td>
+				 <td>?</td>
+				 <td>$ 922.73</td>
+				 <td>13.9 pips</td>
+				 <td>35</td>
+				 <td>0.07</td>
+				 <td>1.11</td>
+			  </tr>
+			  
+			  <tr class="oddrow">
+				 <td>S5</td>
+				 <td>usdchf</td>
+				 <td>usdchf</td>
+				 <td>?</td>
+				 <td>$ 18311.92</td>
+				 <td>1476.2 pips</td>
+				 <td>40</td>
+				 <td>0.22</td>
+				 <td>1.63</td>
+			  </tr>
+			  
+			  <tr class="evenrow">
+				 <td>S6</td>
+				 <td>usdjpy</td>
+				 <td>usdjpy</td>
+				 <td>?</td>
+				 <td>$ 17157.37</td>
+				 <td>1990.6 pips</td>
+				 <td>34</td>
+				 <td>0.29</td>
+				 <td>1.76</td>
+			  </tr>
+			  
+		  
+		  <tr class="months">
+			 <td>#</td>
+			 <td>Name</td>
+			 <td>Return / DD Ratio</td>
+			 <td>Winning %</td>
+			 <td>Drawdown</td>
+			 <td>% Drawdown</td>
+			 <td>Yearly avg. profit</td>
+			 <td>Monthly avg. profit</td>
+			 <td>Daily avg. profit</td>
+		  </tr>
+		  
+			  <tr class="oddrow" "="">
+				 <td>S1</td>
+				 <td>audusd</td>
+				 <td>-0.36</td>
+				 <td>32 %</td>
+				 <td>		$ 16571
+</td>
+				 <td>100 %</td>
+				 <td>		$ -3607.32
+</td>
+				 <td>		$ -300.61
+</td>
+				 <td>		$ -9.71
+</td>
+			  </tr>
+			  
+			  <tr class="evenrow" "="">
+				 <td>S2</td>
+				 <td>eurusd</td>
+				 <td>1.85</td>
+				 <td>72.4 %</td>
+				 <td>		$ 9024.48
+</td>
+				 <td>75.17 %</td>
+				 <td>		$ 9528.68
+</td>
+				 <td>		$ 794.06
+</td>
+				 <td>		$ 25.38
+</td>
+			  </tr>
+			  
+			  <tr class="oddrow" "="">
+				 <td>S3</td>
+				 <td>gbpusd</td>
+				 <td>0.51</td>
+				 <td>60 %</td>
+				 <td>		$ 8744.57
+</td>
+				 <td>60.61 %</td>
+				 <td>		$ 2529.5
+</td>
+				 <td>		$ 210.79
+</td>
+				 <td>		$ 6.88
+</td>
+			  </tr>
+			  
+			  <tr class="evenrow" "="">
+				 <td>S4</td>
+				 <td>usdcad</td>
+				 <td>0.25</td>
+				 <td>80 %</td>
+				 <td>		$ 3649.84
+</td>
+				 <td>49.4 %</td>
+				 <td>		$ 527.27
+</td>
+				 <td>		$ 43.94
+</td>
+				 <td>		$ 1.44
+</td>
+			  </tr>
+			  
+			  <tr class="oddrow" "="">
+				 <td>S5</td>
+				 <td>usdchf</td>
+				 <td>2.78</td>
+				 <td>35 %</td>
+				 <td>		$ 6583.23
+</td>
+				 <td>100 %</td>
+				 <td>		$ 11565.42
+</td>
+				 <td>		$ 963.79
+</td>
+				 <td>		$ 30.67
+</td>
+			  </tr>
+			  
+			  <tr class="evenrow" "="">
+				 <td>S6</td>
+				 <td>usdjpy</td>
+				 <td>3.38</td>
+				 <td>44.12 %</td>
+				 <td>		$ 5069.63
+</td>
+				 <td>55.96 %</td>
+				 <td>		$ 13725.89
+</td>
+				 <td>		$ 1143.82
+</td>
+				 <td>		$ 36.04
+</td>
+			  </tr>
+			  
+		  
+		  </tbody></table>
+	   </div>
+   
+   <div class="performance">
+      <h1>Monthly Performance ($)</h1>
+      <table class="calendar" cellspacing="0" cellpadding="0" border="0">
+      <tbody><tr class="months">
+         <td>Year</td>
+         <td>Jan</td>
+         <td>Feb</td>
+         <td>Mar</td>
+         <td>Apr</td>
+         <td>May</td>
+         <td>Jun</td>
+         <td>Jul</td>
+         <td>Aug</td>
+         <td>Sep</td>
+         <td>Oct</td>
+         <td>Nov</td>
+         <td>Dec</td>
+         <td>YTD</td>
+      </tr>
+	  
+	  
+		  <tr class="oddrow">
+			 <td class="bold">2013</td>
+			 
+				 <td class="red">-806.71</td>
+				 <td class="red">-19.13</td>
+				 <td>7800.64</td>
+				 <td>2246.33</td>
+				 <td>5785.88</td>
+				 <td>2949.4</td>
+				 <td>1629.74</td>
+				 <td>2184.74</td>
+				 <td>10088.26</td>
+				 <td>3461.43</td>
+				 <td>8499.57</td>
+				 <td class="red">-5333.51</td>
+				 <td>38486.64</td>
+		  </tr>
+		  
+		  <tr class="evenrow">
+			 <td class="bold">2012</td>
+			 
+				 <td>0</td>
+				 <td>1387</td>
+				 <td>4060.24</td>
+				 <td>2638.59</td>
+				 <td class="red">-3092.5</td>
+				 <td class="red">-3618.36</td>
+				 <td>3020.99</td>
+				 <td>2749.39</td>
+				 <td class="red">-909.82</td>
+				 <td class="red">-1561.54</td>
+				 <td>5568.27</td>
+				 <td>2752.74</td>
+				 <td>12995</td>
+		  </tr>
+		  
+      </tbody></table>
+   </div>
+
+   <div class="stats">
+      <h1>Stats</h1>
+      <div class="statsBox">
+      <h4>Strategy</h4>
+      <table class="stats" width="820" cellspacing="2">
+		<tbody><tr>
+         <td class="key">Wins/Losses Ratio</td><td class="val">1.71</td>
+         <td class="key">Payout Ratio (Avg Win/Loss)</td><td class="val">0.77</td>
+         <td class="key">Average # of Bars in Trade</td><td class="val">0</td>
+      </tr>
+		<tr>
+         <td class="key">AHPR</td><td class="val">0.59</td>
+         <td class="key">Z-Score</td><td class="val">-2.01</td>
+         <td class="key">Z-Probability</td><td class="val">97.77 %</td>
+      </tr>
+      <tr>
+         <td class="key">Expectancy</td><td class="val">977.83</td>
+         <td class="key">Deviation</td><td class="val">		$ 1579.72
+</td>
+         <td class="key">Exposure</td><td class="val">0 %</td>
+      </tr>
+      <tr>
+         <td class="key">Stagnation in Days</td><td class="val">116</td>
+         <td class="key">Stagnation in %</td><td class="val">17.66 %</td>
+         <td></td><td></td>
+      </tr>
+      </tbody></table>
+      </div>
+
+      <br>
+      <div class="statsBox">
+      <h4>Trades</h4>
+      <table class="stats" width="820" cellspacing="2">
+		<tbody><tr>
+         <td></td><td></td>
+         <td class="keyT"># of Wins</td><td class="valT">249</td>
+         <td class="keyT"># of Losses</td><td class="valT">146</td>
+         <td></td><td></td>
+      </tr>
+		<tr>
+         <td class="keyT">Gross Profit</td><td class="valT">		$ 218862.41
+</td>
+         <td class="keyT">Gross Loss</td><td class="valT">		$ -167380.81
+</td>
+         <td class="keyT">Average Win</td><td class="valT">		$ 878.97
+</td>
+         <td class="keyT">Average Loss</td><td class="valT">		$ -1146.44
+</td>
+      </tr>
+		<tr>
+         <td class="keyT">Largest Win</td><td class="valT">		$ 6272.27
+</td>
+         <td class="keyT">Largest Loss</td><td class="valT">		$ -3265
+</td>
+         <td class="keyT">Max Consec Wins</td><td class="valT">12</td>
+         <td class="keyT">Max Consec Losses</td><td class="valT">7</td>
+      </tr>
+		<tr>
+         <td class="keyT">Avg Consec Wins</td><td class="valT">3</td>
+         <td class="keyT">Avg Consec Loss</td><td class="valT">1.74</td>
+         <td class="keyT">Avg # of Bars in Wins</td><td class="valT">0</td>
+         <td class="keyT">Avg # of Bars in Losses</td><td class="valT">0</td>
+      </tr>
+      </tbody></table>
+      </div>
+   </div>
+
+   <div class="charts">
+      <h1>Charts</h1>
+      <div id="helptext">Click on the chart to see bigger image
+      </div>
+   	 <table>
+			<tbody><tr>
+		  
+		  <td><a href="./EA Analyzer Portfolio Report_files/Portfolio_plByHour.jpg" target="_blank"><img src="./EA Analyzer Portfolio Report_files/Portfolio_plByHour.jpg" width="260">P/L by hour</a><a></a></td>
+		  
+		  
+		  <td><a href="./EA Analyzer Portfolio Report_files/Portfolio_plByWeekday.jpg" target="_blank"><img src="./EA Analyzer Portfolio Report_files/Portfolio_plByWeekday.jpg" width="260">P/L by weekday</a><a></a></td>
+		  
+		  
+		  <td><a href="./EA Analyzer Portfolio Report_files/Portfolio_plByMonth.jpg" target="_blank"><img src="./EA Analyzer Portfolio Report_files/Portfolio_plByMonth.jpg" width="260">P/L by month</a><a></a></td>
+		  
+			</tr>
+			<tr>
+		  
+		  <td><a href="./EA Analyzer Portfolio Report_files/Portfolio_longVsShortTrades.jpg" target="_blank"><img src="./EA Analyzer Portfolio Report_files/Portfolio_longVsShortTrades.jpg" width="260">Long vs Short trades</a><a></a></td>
+		  
+		  
+		  <td><a href="./EA Analyzer Portfolio Report_files/Portfolio_longVsShortPL.jpg" target="_blank"><img src="./EA Analyzer Portfolio Report_files/Portfolio_longVsShortPL.jpg" width="260">Long vs Short P/L</a><a></a></td>
+		  
+		  
+		  <td><a href="./EA Analyzer Portfolio Report_files/Portfolio_tradesByMonth.jpg" target="_blank"><img src="./EA Analyzer Portfolio Report_files/Portfolio_tradesByMonth.jpg" width="260">Trades by month</a><a></a></td>
+		  
+			</tr>
+			<tr>
+		  
+		  <td><a href="./EA Analyzer Portfolio Report_files/Portfolio_plByTradeDuration.jpg" target="_blank"><img src="./EA Analyzer Portfolio Report_files/Portfolio_plByTradeDuration.jpg" width="260">P/L by trade duration</a><a></a></td>
+		  
+		  
+		  <td><a href="./EA Analyzer Portfolio Report_files/Portfolio_winLosCountByHour.jpg" target="_blank"><img src="./EA Analyzer Portfolio Report_files/Portfolio_winLosCountByHour.jpg" width="260">Wins/Losses by hour</a><a></a></td>
+		  
+		  
+		  <td><a href="./EA Analyzer Portfolio Report_files/Portfolio_winLosPLByWeekday.jpg" target="_blank"><img src="./EA Analyzer Portfolio Report_files/Portfolio_winLosPLByWeekday.jpg" width="260">Wins/Losses Profit by weekday</a><a></a></td>
+		  
+			</tr>
+	 
+	 
+      </tbody></table>
+   </div>
+   <div class="trades">
+      <h1>Trades</h1>
+
+   	<table class="orders">
+		<tbody><tr class="trTrades">
+				<td>Order</td>
+				<td>Type</td>
+				<td>Open time</td>
+				<td>Open price</td>
+				<td>Size</td>
+				<td>Close time</td>
+				<td>Close price</td>
+				<td>Profit/Loss</td>
+				<td>Comment</td>
+		</tr>
+		 <tr>
+				<td>264291465</td>
+				<td>Deposit</td>
+				<td>06.02.2012 14:23:00</td>
+				<td>0.0</td>
+				<td>0.0</td>
+				<td>06.02.2012 14:23:00</td>
+				<td>0.0</td>
+				<td>$ 10000</td>
+				<td>Deposit</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>265890629</td>
+				<td>LONG</td>
+				<td>14.02.2012 12:22:00</td>
+				<td>1.3208</td>
+				<td>0.52</td>
+				<td>14.02.2012 19:57:00</td>
+				<td>1.3112</td>
+				<td>$ -499.72</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>266168506</td>
+				<td>LONG</td>
+				<td>15.02.2012 07:53:00</td>
+				<td>1.3185</td>
+				<td>0.49</td>
+				<td>15.02.2012 15:16:00</td>
+				<td>1.3082</td>
+				<td>$ -505.19</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>265890621</td>
+				<td>SHORT</td>
+				<td>14.02.2012 12:30:00</td>
+				<td>0.9982</td>
+				<td>0.22</td>
+				<td>20.02.2012 01:06:00</td>
+				<td>0.9926</td>
+				<td>$ 124.79</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>264292745</td>
+				<td>SHORT</td>
+				<td>06.02.2012 15:03:00</td>
+				<td>0.924</td>
+				<td>0.47</td>
+				<td>24.02.2012 20:02:00</td>
+				<td>0.8935</td>
+				<td>$ 1604.42</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>269099160</td>
+				<td>SHORT</td>
+				<td>28.02.2012 17:16:00</td>
+				<td>1.3389</td>
+				<td>0.67</td>
+				<td>28.02.2012 22:21:00</td>
+				<td>1.3469</td>
+				<td>$ -537.34</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>268879072</td>
+				<td>LONG</td>
+				<td>28.02.2012 08:21:00</td>
+				<td>1.3449</td>
+				<td>0.68</td>
+				<td>29.02.2012 04:41:00</td>
+				<td>1.3484</td>
+				<td>$ 238</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>268926625</td>
+				<td>SHORT</td>
+				<td>27.02.2012 16:15:00</td>
+				<td>80.253</td>
+				<td>0.43</td>
+				<td>02.03.2012 06:05:00</td>
+				<td>81.493</td>
+				<td>$ -654.29</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>269425857</td>
+				<td>SHORT</td>
+				<td>29.02.2012 17:48:00</td>
+				<td>0.9019</td>
+				<td>0.49</td>
+				<td>02.03.2012 14:06:00</td>
+				<td>0.9126</td>
+				<td>$ -574.49</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>270300629</td>
+				<td>SHORT</td>
+				<td>06.03.2012 06:03:00</td>
+				<td>1.3187</td>
+				<td>0.55</td>
+				<td>06.03.2012 12:16:00</td>
+				<td>1.3152</td>
+				<td>$ 192.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>270451416</td>
+				<td>SHORT</td>
+				<td>06.03.2012 11:14:00</td>
+				<td>81.186</td>
+				<td>0.37</td>
+				<td>09.03.2012 17:27:00</td>
+				<td>82.426</td>
+				<td>$ -556.62</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>271556819</td>
+				<td>SHORT</td>
+				<td>13.03.2012 14:17:00</td>
+				<td>1.3089</td>
+				<td>0.52</td>
+				<td>13.03.2012 15:02:00</td>
+				<td>1.3054</td>
+				<td>$ 182</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>269452992</td>
+				<td>LONG</td>
+				<td>29.02.2012 17:46:00</td>
+				<td>0.9016</td>
+				<td>0.49</td>
+				<td>14.03.2012 17:06:00</td>
+				<td>0.9321</td>
+				<td>$ 1603.32</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>270392147</td>
+				<td>LONG</td>
+				<td>06.03.2012 11:28:00</td>
+				<td>81.095</td>
+				<td>0.37</td>
+				<td>15.03.2012 02:27:00</td>
+				<td>83.995</td>
+				<td>$ 1277.46</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>272028954</td>
+				<td>LONG</td>
+				<td>14.03.2012 18:53:00</td>
+				<td>1.3036</td>
+				<td>0.63</td>
+				<td>15.03.2012 16:41:00</td>
+				<td>1.3071</td>
+				<td>$ 220.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>272428483</td>
+				<td>LONG</td>
+				<td>16.03.2012 13:08:00</td>
+				<td>1.3073</td>
+				<td>0.75</td>
+				<td>16.03.2012 14:32:00</td>
+				<td>1.3108</td>
+				<td>$ 262.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>273218366</td>
+				<td>LONG</td>
+				<td>20.03.2012 15:52:00</td>
+				<td>1.3225</td>
+				<td>0.85</td>
+				<td>21.03.2012 02:49:00</td>
+				<td>1.326</td>
+				<td>$ 297.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>273503254</td>
+				<td>LONG</td>
+				<td>22.03.2012 09:05:00</td>
+				<td>1.3249</td>
+				<td>0.82</td>
+				<td>22.03.2012 10:29:00</td>
+				<td>1.3172</td>
+				<td>$ -636.32</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>271323653</td>
+				<td>LONG</td>
+				<td>12.03.2012 07:36:00</td>
+				<td>1.0523</td>
+				<td>0.28</td>
+				<td>22.03.2012 11:31:00</td>
+				<td>1.0358</td>
+				<td>$ -462</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>273675141</td>
+				<td>LONG</td>
+				<td>23.03.2012 09:24:00</td>
+				<td>1.3226</td>
+				<td>0.76</td>
+				<td>23.03.2012 10:32:00</td>
+				<td>1.3261</td>
+				<td>$ 266</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>274081179</td>
+				<td>LONG</td>
+				<td>26.03.2012 16:00:00</td>
+				<td>1.3261</td>
+				<td>0.69</td>
+				<td>26.03.2012 16:22:00</td>
+				<td>1.3308</td>
+				<td>$ 324.3</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>274365714</td>
+				<td>LONG</td>
+				<td>27.03.2012 19:03:00</td>
+				<td>1.3327</td>
+				<td>0.71</td>
+				<td>28.03.2012 11:41:00</td>
+				<td>1.3362</td>
+				<td>$ 248.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>274470779</td>
+				<td>SHORT</td>
+				<td>28.03.2012 16:43:00</td>
+				<td>1.3325</td>
+				<td>0.86</td>
+				<td>28.03.2012 18:32:00</td>
+				<td>1.329</td>
+				<td>$ 301</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>274550193</td>
+				<td>LONG</td>
+				<td>28.03.2012 23:01:00</td>
+				<td>1.3325</td>
+				<td>0.79</td>
+				<td>30.03.2012 09:24:00</td>
+				<td>1.336</td>
+				<td>$ 276.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>275004400</td>
+				<td>SHORT</td>
+				<td>02.04.2012 17:11:00</td>
+				<td>1.3316</td>
+				<td>0.76</td>
+				<td>02.04.2012 18:20:00</td>
+				<td>1.3281</td>
+				<td>$ 266</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>275149675</td>
+				<td>LONG</td>
+				<td>02.04.2012 21:29:00</td>
+				<td>1.3336</td>
+				<td>0.8</td>
+				<td>03.04.2012 23:16:00</td>
+				<td>1.3253</td>
+				<td>$ -663.2</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>271343114</td>
+				<td>SHORT</td>
+				<td>12.03.2012 04:11:00</td>
+				<td>1.0526</td>
+				<td>0.27</td>
+				<td>04.04.2012 06:30:00</td>
+				<td>1.0289</td>
+				<td>$ 639.9</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>275793877</td>
+				<td>SHORT</td>
+				<td>09.04.2012 03:57:00</td>
+				<td>1.3067</td>
+				<td>0.91</td>
+				<td>10.04.2012 06:47:00</td>
+				<td>1.3138</td>
+				<td>$ -654.29</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>276377828</td>
+				<td>SHORT</td>
+				<td>13.04.2012 17:47:00</td>
+				<td>1.3125</td>
+				<td>0.72</td>
+				<td>13.04.2012 19:11:00</td>
+				<td>1.309</td>
+				<td>$ 252</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>272547864</td>
+				<td>SHORT</td>
+				<td>19.03.2012 09:43:00</td>
+				<td>83.226</td>
+				<td>0.5</td>
+				<td>16.04.2012 19:16:00</td>
+				<td>80.326</td>
+				<td>$ 1805.14</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>265168571</td>
+				<td>LONG</td>
+				<td>09.02.2012 17:27:00</td>
+				<td>1.5836</td>
+				<td>0.19</td>
+				<td>19.04.2012 12:29:00</td>
+				<td>1.6075</td>
+				<td>$ 454.1</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>276986982</td>
+				<td>LONG</td>
+				<td>18.04.2012 08:23:00</td>
+				<td>1.3126</td>
+				<td>0.87</td>
+				<td>19.04.2012 13:40:00</td>
+				<td>1.3161</td>
+				<td>$ 304.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>277203495</td>
+				<td>SHORT</td>
+				<td>19.04.2012 15:23:00</td>
+				<td>1.3117</td>
+				<td>0.96</td>
+				<td>19.04.2012 16:30:00</td>
+				<td>1.3082</td>
+				<td>$ 336</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>277224660</td>
+				<td>LONG</td>
+				<td>19.04.2012 18:43:00</td>
+				<td>1.3111</td>
+				<td>0.93</td>
+				<td>19.04.2012 19:24:00</td>
+				<td>1.3146</td>
+				<td>$ 325.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>277721934</td>
+				<td>SHORT</td>
+				<td>25.04.2012 19:30:00</td>
+				<td>1.3192</td>
+				<td>1.26</td>
+				<td>26.04.2012 12:33:00</td>
+				<td>1.3256</td>
+				<td>$ -801.36</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>277176597</td>
+				<td>LONG</td>
+				<td>19.04.2012 16:00:00</td>
+				<td>1.603</td>
+				<td>0.28</td>
+				<td>27.04.2012 22:13:00</td>
+				<td>1.6269</td>
+				<td>$ 669.2</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>277859624</td>
+				<td>SHORT</td>
+				<td>26.04.2012 14:34:00</td>
+				<td>1.3222</td>
+				<td>1.16</td>
+				<td>02.05.2012 12:47:00</td>
+				<td>1.3187</td>
+				<td>$ 406</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>278544002</td>
+				<td>LONG</td>
+				<td>04.05.2012 12:13:00</td>
+				<td>1.3141</td>
+				<td>1.25</td>
+				<td>04.05.2012 18:50:00</td>
+				<td>1.3176</td>
+				<td>$ 437.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>278222075</td>
+				<td>LONG</td>
+				<td>01.05.2012 10:19:00</td>
+				<td>1.0322</td>
+				<td>0.48</td>
+				<td>07.05.2012 02:00:00</td>
+				<td>1.0153</td>
+				<td>$ -813.6</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>264483470</td>
+				<td>SHORT</td>
+				<td>09.05.2012 07:54:00</td>
+				<td>1.0062</td>
+				<td>0.1</td>
+				<td>09.05.2012 08:05:00</td>
+				<td>1.0071</td>
+				<td>$ -9</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>278872584</td>
+				<td>LONG</td>
+				<td>08.05.2012 15:32:00</td>
+				<td>1.3032</td>
+				<td>1.08</td>
+				<td>09.05.2012 17:12:00</td>
+				<td>1.2957</td>
+				<td>$ -811.08</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>279037290</td>
+				<td>LONG</td>
+				<td>09.05.2012 22:31:00</td>
+				<td>1.2967</td>
+				<td>0.98</td>
+				<td>14.05.2012 02:27:00</td>
+				<td>1.289</td>
+				<td>$ -755.58</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>279467182</td>
+				<td>SHORT</td>
+				<td>15.05.2012 17:56:00</td>
+				<td>1.2823</td>
+				<td>1.05</td>
+				<td>15.05.2012 18:05:00</td>
+				<td>1.2792</td>
+				<td>$ 321.3</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>271997145</td>
+				<td>SHORT</td>
+				<td>14.03.2012 18:54:00</td>
+				<td>0.9284</td>
+				<td>0.5</td>
+				<td>15.05.2012 18:05:00</td>
+				<td>0.9393</td>
+				<td>$ -578.62</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>265705797</td>
+				<td>LONG</td>
+				<td>14.02.2012 03:33:00</td>
+				<td>1.0015</td>
+				<td>0.22</td>
+				<td>16.05.2012 06:52:00</td>
+				<td>1.0077</td>
+				<td>$ 133.4</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>278558426</td>
+				<td>SHORT</td>
+				<td>03.05.2012 19:00:00</td>
+				<td>1.6179</td>
+				<td>0.31</td>
+				<td>16.05.2012 12:14:00</td>
+				<td>1.594</td>
+				<td>$ 740.9</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>279783491</td>
+				<td>LONG</td>
+				<td>17.05.2012 19:10:00</td>
+				<td>1.2736</td>
+				<td>0.91</td>
+				<td>18.05.2012 11:34:00</td>
+				<td>1.2655</td>
+				<td>$ -742.56</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>279924140</td>
+				<td>LONG</td>
+				<td>18.05.2012 13:22:00</td>
+				<td>1.2692</td>
+				<td>0.79</td>
+				<td>18.05.2012 17:15:00</td>
+				<td>1.2727</td>
+				<td>$ 276.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>280149247</td>
+				<td>SHORT</td>
+				<td>22.05.2012 17:33:00</td>
+				<td>1.2741</td>
+				<td>0.75</td>
+				<td>23.05.2012 00:27:00</td>
+				<td>1.2706</td>
+				<td>$ 262.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>279611230</td>
+				<td>SHORT</td>
+				<td>16.05.2012 14:39:00</td>
+				<td>0.9452</td>
+				<td>0.69</td>
+				<td>23.05.2012 19:49:00</td>
+				<td>0.9559</td>
+				<td>$ -772.38</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>280568463</td>
+				<td>LONG</td>
+				<td>25.05.2012 12:06:00</td>
+				<td>1.2567</td>
+				<td>0.63</td>
+				<td>25.05.2012 13:17:00</td>
+				<td>1.2602</td>
+				<td>$ 220.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>280824754</td>
+				<td>LONG</td>
+				<td>29.05.2012 12:47:00</td>
+				<td>1.2569</td>
+				<td>0.71</td>
+				<td>29.05.2012 21:03:00</td>
+				<td>1.2471</td>
+				<td>$ -698.64</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>280442630</td>
+				<td>SHORT</td>
+				<td>24.05.2012 04:17:00</td>
+				<td>0.9539</td>
+				<td>0.65</td>
+				<td>30.05.2012 12:12:00</td>
+				<td>0.9646</td>
+				<td>$ -722.36</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>280210910</td>
+				<td>SHORT</td>
+				<td>22.05.2012 19:18:00</td>
+				<td>1.5817</td>
+				<td>0.27</td>
+				<td>30.05.2012 12:40:00</td>
+				<td>1.5578</td>
+				<td>$ 645.3</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>281062774</td>
+				<td>LONG</td>
+				<td>30.05.2012 16:00:00</td>
+				<td>1.2461</td>
+				<td>0.83</td>
+				<td>30.05.2012 23:28:00</td>
+				<td>1.238</td>
+				<td>$ -668.98</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>280880758</td>
+				<td>LONG</td>
+				<td>29.05.2012 20:36:00</td>
+				<td>1.0255</td>
+				<td>0.31</td>
+				<td>31.05.2012 05:11:00</td>
+				<td>1.0312</td>
+				<td>$ 170.75</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>281038165</td>
+				<td>SHORT</td>
+				<td>30.05.2012 16:50:00</td>
+				<td>1.5613</td>
+				<td>0.25</td>
+				<td>31.05.2012 20:03:00</td>
+				<td>1.5374</td>
+				<td>$ 597.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>281112695</td>
+				<td>LONG</td>
+				<td>31.05.2012 14:07:00</td>
+				<td>1.2424</td>
+				<td>0.75</td>
+				<td>31.05.2012 20:04:00</td>
+				<td>1.2341</td>
+				<td>$ -625.5</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>281031151</td>
+				<td>SHORT</td>
+				<td>30.05.2012 12:25:00</td>
+				<td>0.9637</td>
+				<td>0.59</td>
+				<td>01.06.2012 06:02:00</td>
+				<td>0.9744</td>
+				<td>$ -649.06</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>279748752</td>
+				<td>LONG</td>
+				<td>18.05.2012 09:00:00</td>
+				<td>0.9832</td>
+				<td>0.45</td>
+				<td>01.06.2012 06:06:00</td>
+				<td>0.9666</td>
+				<td>$ -744.3</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>276824453</td>
+				<td>SHORT</td>
+				<td>17.04.2012 14:02:00</td>
+				<td>80.735</td>
+				<td>0.59</td>
+				<td>01.06.2012 17:30:00</td>
+				<td>77.835</td>
+				<td>$ 2198.24</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>279739941</td>
+				<td>SHORT</td>
+				<td>18.05.2012 09:00:00</td>
+				<td>0.9833</td>
+				<td>0.45</td>
+				<td>01.06.2012 17:31:00</td>
+				<td>0.9595</td>
+				<td>$ 1071</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>281972316</td>
+				<td>SHORT</td>
+				<td>07.06.2012 20:35:00</td>
+				<td>1.2549</td>
+				<td>0.74</td>
+				<td>08.06.2012 10:40:00</td>
+				<td>1.2514</td>
+				<td>$ 258.26</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>282112203</td>
+				<td>LONG</td>
+				<td>11.06.2012 02:00:00</td>
+				<td>1.2642</td>
+				<td>0.74</td>
+				<td>11.06.2012 02:00:00</td>
+				<td>1.2639</td>
+				<td>$ -22.94</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>280843762</td>
+				<td>SHORT</td>
+				<td>29.05.2012 20:46:00</td>
+				<td>1.0264</td>
+				<td>0.31</td>
+				<td>11.06.2012 10:35:00</td>
+				<td>1.0206</td>
+				<td>$ 176.79</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>282430382</td>
+				<td>LONG</td>
+				<td>12.06.2012 20:21:00</td>
+				<td>1.2484</td>
+				<td>0.73</td>
+				<td>13.06.2012 12:12:00</td>
+				<td>1.2519</td>
+				<td>$ 255.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>282836589</td>
+				<td>SHORT</td>
+				<td>18.06.2012 17:48:00</td>
+				<td>1.2593</td>
+				<td>0.86</td>
+				<td>18.06.2012 22:00:00</td>
+				<td>1.2558</td>
+				<td>$ 299.28</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>281267624</td>
+				<td>SHORT</td>
+				<td>06.06.2012 16:25:00</td>
+				<td>1.5509</td>
+				<td>0.25</td>
+				<td>20.06.2012 16:56:00</td>
+				<td>1.5773</td>
+				<td>$ -661.25</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>283271148</td>
+				<td>LONG</td>
+				<td>21.06.2012 07:06:00</td>
+				<td>1.2663</td>
+				<td>0.82</td>
+				<td>21.06.2012 16:24:00</td>
+				<td>1.2697</td>
+				<td>$ 287</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>282303605</td>
+				<td>SHORT</td>
+				<td>12.06.2012 05:09:00</td>
+				<td>79.224</td>
+				<td>0.6</td>
+				<td>22.06.2012 10:36:00</td>
+				<td>80.464</td>
+				<td>$ -924.64</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>282333430</td>
+				<td>SHORT</td>
+				<td>12.06.2012 04:01:00</td>
+				<td>79.278</td>
+				<td>0.6</td>
+				<td>22.06.2012 10:40:00</td>
+				<td>80.523</td>
+				<td>$ -927.69</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>283533464</td>
+				<td>SHORT</td>
+				<td>22.06.2012 20:08:00</td>
+				<td>1.2523</td>
+				<td>0.71</td>
+				<td>25.06.2012 12:30:00</td>
+				<td>1.2488</td>
+				<td>$ 248.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>283747130</td>
+				<td>SHORT</td>
+				<td>26.06.2012 13:47:00</td>
+				<td>1.2494</td>
+				<td>0.86</td>
+				<td>26.06.2012 17:19:00</td>
+				<td>1.2459</td>
+				<td>$ 301</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>283823508</td>
+				<td>LONG</td>
+				<td>26.06.2012 18:37:00</td>
+				<td>1.2495</td>
+				<td>0.91</td>
+				<td>28.06.2012 13:02:00</td>
+				<td>1.2419</td>
+				<td>$ -689.78</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>283265594</td>
+				<td>SHORT</td>
+				<td>21.06.2012 21:27:00</td>
+				<td>0.9559</td>
+				<td>0.69</td>
+				<td>28.06.2012 13:02:00</td>
+				<td>0.9666</td>
+				<td>$ -764.5</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>282437734</td>
+				<td>LONG</td>
+				<td>12.06.2012 23:47:00</td>
+				<td>1.026</td>
+				<td>0.33</td>
+				<td>28.06.2012 21:32:00</td>
+				<td>1.0344</td>
+				<td>$ 267.35</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>284033178</td>
+				<td>LONG</td>
+				<td>29.06.2012 07:52:00</td>
+				<td>1.2487</td>
+				<td>0.84</td>
+				<td>29.06.2012 08:00:00</td>
+				<td>1.2522</td>
+				<td>$ 294</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>284071334</td>
+				<td>SHORT</td>
+				<td>29.06.2012 11:02:00</td>
+				<td>1.025</td>
+				<td>0.28</td>
+				<td>29.06.2012 17:41:00</td>
+				<td>1.019</td>
+				<td>$ 165.42</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>283288016</td>
+				<td>SHORT</td>
+				<td>21.06.2012 20:02:00</td>
+				<td>1.0113</td>
+				<td>0.45</td>
+				<td>02.07.2012 14:23:00</td>
+				<td>1.0278</td>
+				<td>$ -742.5</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>284389743</td>
+				<td>SHORT</td>
+				<td>04.07.2012 12:21:00</td>
+				<td>1.2576</td>
+				<td>0.63</td>
+				<td>04.07.2012 19:41:00</td>
+				<td>1.2541</td>
+				<td>$ 220.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>284024640</td>
+				<td>SHORT</td>
+				<td>28.06.2012 16:22:00</td>
+				<td>0.9642</td>
+				<td>0.58</td>
+				<td>06.07.2012 18:01:00</td>
+				<td>0.9749</td>
+				<td>$ -636.57</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>283189063</td>
+				<td>LONG</td>
+				<td>20.06.2012 19:54:00</td>
+				<td>1.5727</td>
+				<td>0.28</td>
+				<td>06.07.2012 21:38:00</td>
+				<td>1.5464</td>
+				<td>$ -736.4</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>284738112</td>
+				<td>SHORT</td>
+				<td>09.07.2012 19:00:00</td>
+				<td>1.2284</td>
+				<td>0.73</td>
+				<td>10.07.2012 19:19:00</td>
+				<td>1.2249</td>
+				<td>$ 255.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>284833169</td>
+				<td>LONG</td>
+				<td>11.07.2012 13:45:00</td>
+				<td>1.2287</td>
+				<td>0.81</td>
+				<td>11.07.2012 23:05:00</td>
+				<td>1.2217</td>
+				<td>$ -569.43</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>284655827</td>
+				<td>SHORT</td>
+				<td>06.07.2012 18:03:00</td>
+				<td>0.9741</td>
+				<td>0.55</td>
+				<td>12.07.2012 15:28:00</td>
+				<td>0.9848</td>
+				<td>$ -598.71</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>285108997</td>
+				<td>LONG</td>
+				<td>13.07.2012 18:32:00</td>
+				<td>1.2197</td>
+				<td>0.69</td>
+				<td>13.07.2012 18:43:00</td>
+				<td>1.2232</td>
+				<td>$ 241.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>285116315</td>
+				<td>LONG</td>
+				<td>16.07.2012 14:15:00</td>
+				<td>1.2197</td>
+				<td>0.71</td>
+				<td>16.07.2012 17:57:00</td>
+				<td>1.2232</td>
+				<td>$ 248.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>285118840</td>
+				<td>SHORT</td>
+				<td>16.07.2012 14:16:00</td>
+				<td>1.2188</td>
+				<td>0.66</td>
+				<td>16.07.2012 20:19:00</td>
+				<td>1.2266</td>
+				<td>$ -517.44</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>285171939</td>
+				<td>LONG</td>
+				<td>16.07.2012 17:54:00</td>
+				<td>1.2231</td>
+				<td>0.76</td>
+				<td>16.07.2012 20:19:00</td>
+				<td>1.2266</td>
+				<td>$ 266</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>283283898</td>
+				<td>LONG</td>
+				<td>21.06.2012 20:02:00</td>
+				<td>1.0116</td>
+				<td>0.45</td>
+				<td>18.07.2012 20:43:00</td>
+				<td>1.0353</td>
+				<td>$ 1066.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>285302125</td>
+				<td>LONG</td>
+				<td>17.07.2012 23:34:00</td>
+				<td>1.2281</td>
+				<td>0.65</td>
+				<td>19.07.2012 12:18:00</td>
+				<td>1.2316</td>
+				<td>$ 227.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>285504920</td>
+				<td>SHORT</td>
+				<td>19.07.2012 16:25:00</td>
+				<td>1.2285</td>
+				<td>0.75</td>
+				<td>19.07.2012 18:17:00</td>
+				<td>1.225</td>
+				<td>$ 262.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>284750558</td>
+				<td>LONG</td>
+				<td>10.07.2012 20:05:00</td>
+				<td>1.5485</td>
+				<td>0.21</td>
+				<td>19.07.2012 21:15:00</td>
+				<td>1.5724</td>
+				<td>$ 501.9</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>285532488</td>
+				<td>LONG</td>
+				<td>19.07.2012 21:28:00</td>
+				<td>1.2277</td>
+				<td>0.7</td>
+				<td>20.07.2012 16:48:00</td>
+				<td>1.2191</td>
+				<td>$ -602</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>285000950</td>
+				<td>SHORT</td>
+				<td>13.07.2012 14:11:00</td>
+				<td>0.9829</td>
+				<td>0.47</td>
+				<td>23.07.2012 11:27:00</td>
+				<td>0.9936</td>
+				<td>$ -506.61</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>282297018</td>
+				<td>LONG</td>
+				<td>12.06.2012 05:09:00</td>
+				<td>79.218</td>
+				<td>0.6</td>
+				<td>23.07.2012 11:41:00</td>
+				<td>77.977</td>
+				<td>$ -954.9</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>285030083</td>
+				<td>SHORT</td>
+				<td>12.07.2012 20:54:00</td>
+				<td>0.9845</td>
+				<td>0.47</td>
+				<td>23.07.2012 17:43:00</td>
+				<td>0.9952</td>
+				<td>$ -505.81</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>285595068</td>
+				<td>SHORT</td>
+				<td>20.07.2012 14:24:00</td>
+				<td>1.5709</td>
+				<td>0.24</td>
+				<td>25.07.2012 13:46:00</td>
+				<td>1.547</td>
+				<td>$ 573.6</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>285820684</td>
+				<td>LONG</td>
+				<td>25.07.2012 13:19:00</td>
+				<td>1.212</td>
+				<td>0.62</td>
+				<td>25.07.2012 15:41:00</td>
+				<td>1.2155</td>
+				<td>$ 217</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>286182840</td>
+				<td>LONG</td>
+				<td>27.07.2012 14:43:00</td>
+				<td>1.2271</td>
+				<td>0.61</td>
+				<td>27.07.2012 15:58:00</td>
+				<td>1.2306</td>
+				<td>$ 213.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>286196041</td>
+				<td>SHORT</td>
+				<td>27.07.2012 17:38:00</td>
+				<td>1.2284</td>
+				<td>0.59</td>
+				<td>27.07.2012 19:22:00</td>
+				<td>1.2376</td>
+				<td>$ -543.39</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>285669099</td>
+				<td>SHORT</td>
+				<td>23.07.2012 12:46:00</td>
+				<td>1.0294</td>
+				<td>0.36</td>
+				<td>27.07.2012 22:28:00</td>
+				<td>1.0459</td>
+				<td>$ -594</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>286221050</td>
+				<td>SHORT</td>
+				<td>27.07.2012 23:11:00</td>
+				<td>1.2288</td>
+				<td>0.51</td>
+				<td>30.07.2012 16:54:00</td>
+				<td>1.2253</td>
+				<td>$ 178.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>286298180</td>
+				<td>LONG</td>
+				<td>31.07.2012 07:54:00</td>
+				<td>1.2287</td>
+				<td>0.5</td>
+				<td>31.07.2012 20:02:00</td>
+				<td>1.2321</td>
+				<td>$ 174.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>286523880</td>
+				<td>LONG</td>
+				<td>02.08.2012 16:53:00</td>
+				<td>1.2298</td>
+				<td>0.66</td>
+				<td>02.08.2012 17:10:00</td>
+				<td>1.2333</td>
+				<td>$ 231</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>285657022</td>
+				<td>LONG</td>
+				<td>23.07.2012 07:25:00</td>
+				<td>1.0313</td>
+				<td>0.36</td>
+				<td>02.08.2012 17:32:00</td>
+				<td>1.055</td>
+				<td>$ 853.2</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>286619579</td>
+				<td>LONG</td>
+				<td>03.08.2012 14:30:00</td>
+				<td>1.224</td>
+				<td>0.59</td>
+				<td>03.08.2012 15:49:00</td>
+				<td>1.2275</td>
+				<td>$ 204.73</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>284812704</td>
+				<td>LONG</td>
+				<td>10.07.2012 19:56:00</td>
+				<td>1.021</td>
+				<td>0.24</td>
+				<td>03.08.2012 19:27:00</td>
+				<td>0.9984</td>
+				<td>$ -543.74</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>286884930</td>
+				<td>SHORT</td>
+				<td>08.08.2012 04:44:00</td>
+				<td>1.2387</td>
+				<td>0.66</td>
+				<td>08.08.2012 15:07:00</td>
+				<td>1.2352</td>
+				<td>$ 231</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>286966349</td>
+				<td>SHORT</td>
+				<td>08.08.2012 13:19:00</td>
+				<td>0.9967</td>
+				<td>0.24</td>
+				<td>09.08.2012 19:10:00</td>
+				<td>0.9926</td>
+				<td>$ 99.62</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>287137324</td>
+				<td>LONG</td>
+				<td>10.08.2012 19:26:00</td>
+				<td>1.2291</td>
+				<td>0.89</td>
+				<td>13.08.2012 15:16:00</td>
+				<td>1.2326</td>
+				<td>$ 311.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>287448443</td>
+				<td>LONG</td>
+				<td>16.08.2012 13:32:00</td>
+				<td>1.2283</td>
+				<td>1.07</td>
+				<td>16.08.2012 17:40:00</td>
+				<td>1.2318</td>
+				<td>$ 374.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>287584100</td>
+				<td>LONG</td>
+				<td>20.08.2012 02:00:00</td>
+				<td>1.2354</td>
+				<td>0.97</td>
+				<td>21.08.2012 12:26:00</td>
+				<td>1.2383</td>
+				<td>$ 282.27</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>285745294</td>
+				<td>SHORT</td>
+				<td>23.07.2012 18:37:00</td>
+				<td>0.9929</td>
+				<td>0.46</td>
+				<td>21.08.2012 19:59:00</td>
+				<td>0.9624</td>
+				<td>$ 1457.77</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>287870349</td>
+				<td>LONG</td>
+				<td>22.08.2012 17:35:00</td>
+				<td>1.2459</td>
+				<td>1.16</td>
+				<td>22.08.2012 23:00:00</td>
+				<td>1.2494</td>
+				<td>$ 406</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>288014943</td>
+				<td>SHORT</td>
+				<td>24.08.2012 12:11:00</td>
+				<td>1.2537</td>
+				<td>0.93</td>
+				<td>24.08.2012 16:38:00</td>
+				<td>1.2502</td>
+				<td>$ 325.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>288077947</td>
+				<td>LONG</td>
+				<td>24.08.2012 20:19:00</td>
+				<td>1.2558</td>
+				<td>1.05</td>
+				<td>28.08.2012 05:51:00</td>
+				<td>1.2489</td>
+				<td>$ -721.35</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>288215322</td>
+				<td>LONG</td>
+				<td>28.08.2012 12:56:00</td>
+				<td>1.251</td>
+				<td>1.13</td>
+				<td>28.08.2012 14:02:00</td>
+				<td>1.2545</td>
+				<td>$ 395.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>287116075</td>
+				<td>LONG</td>
+				<td>10.08.2012 12:20:00</td>
+				<td>1.0507</td>
+				<td>0.34</td>
+				<td>30.08.2012 02:04:00</td>
+				<td>1.0342</td>
+				<td>$ -561</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>288344165</td>
+				<td>LONG</td>
+				<td>29.08.2012 13:28:00</td>
+				<td>1.2558</td>
+				<td>1.31</td>
+				<td>30.08.2012 19:43:00</td>
+				<td>1.2504</td>
+				<td>$ -703.47</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>288494230</td>
+				<td>LONG</td>
+				<td>31.08.2012 13:52:00</td>
+				<td>1.2537</td>
+				<td>1.03</td>
+				<td>31.08.2012 14:40:00</td>
+				<td>1.2572</td>
+				<td>$ 360.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>288864915</td>
+				<td>LONG</td>
+				<td>05.09.2012 14:35:00</td>
+				<td>1.2526</td>
+				<td>1.21</td>
+				<td>05.09.2012 16:38:00</td>
+				<td>1.2561</td>
+				<td>$ 423.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>285543546</td>
+				<td>LONG</td>
+				<td>20.07.2012 16:37:00</td>
+				<td>1.5684</td>
+				<td>0.24</td>
+				<td>05.09.2012 17:03:00</td>
+				<td>1.5923</td>
+				<td>$ 573.6</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>288796892</td>
+				<td>LONG</td>
+				<td>05.09.2012 17:41:00</td>
+				<td>1.2609</td>
+				<td>1.03</td>
+				<td>06.09.2012 16:45:00</td>
+				<td>1.2644</td>
+				<td>$ 360.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>288971283</td>
+				<td>SHORT</td>
+				<td>06.09.2012 17:35:00</td>
+				<td>1.2605</td>
+				<td>1.06</td>
+				<td>06.09.2012 18:43:00</td>
+				<td>1.257</td>
+				<td>$ 371</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>288994992</td>
+				<td>LONG</td>
+				<td>06.09.2012 19:35:00</td>
+				<td>1.261</td>
+				<td>0.99</td>
+				<td>06.09.2012 23:53:00</td>
+				<td>1.2645</td>
+				<td>$ 346.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>289186330</td>
+				<td>LONG</td>
+				<td>11.09.2012 07:28:00</td>
+				<td>1.2775</td>
+				<td>0.99</td>
+				<td>11.09.2012 12:11:00</td>
+				<td>1.281</td>
+				<td>$ 346.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>287092285</td>
+				<td>LONG</td>
+				<td>10.08.2012 17:30:00</td>
+				<td>0.995</td>
+				<td>0.25</td>
+				<td>11.09.2012 14:35:00</td>
+				<td>0.9724</td>
+				<td>$ -581.04</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>289324812</td>
+				<td>SHORT</td>
+				<td>13.09.2012 22:00:00</td>
+				<td>0.9717</td>
+				<td>0.33</td>
+				<td>13.09.2012 23:25:00</td>
+				<td>0.9675</td>
+				<td>$ 143.59</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>289052091</td>
+				<td>LONG</td>
+				<td>07.09.2012 15:50:00</td>
+				<td>1.593</td>
+				<td>0.29</td>
+				<td>13.09.2012 23:37:00</td>
+				<td>1.6169</td>
+				<td>$ 693.1</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>288217376</td>
+				<td>SHORT</td>
+				<td>28.08.2012 06:21:00</td>
+				<td>0.9626</td>
+				<td>0.64</td>
+				<td>14.09.2012 11:32:00</td>
+				<td>0.9321</td>
+				<td>$ 2094.13</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>289619963</td>
+				<td>LONG</td>
+				<td>17.09.2012 17:56:00</td>
+				<td>1.3125</td>
+				<td>1.08</td>
+				<td>17.09.2012 18:37:00</td>
+				<td>1.316</td>
+				<td>$ 378</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>289637339</td>
+				<td>SHORT</td>
+				<td>17.09.2012 22:04:00</td>
+				<td>1.3115</td>
+				<td>1.03</td>
+				<td>18.09.2012 12:33:00</td>
+				<td>1.308</td>
+				<td>$ 360.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>289707885</td>
+				<td>LONG</td>
+				<td>18.09.2012 13:43:00</td>
+				<td>1.3093</td>
+				<td>1.1</td>
+				<td>19.09.2012 15:36:00</td>
+				<td>1.3008</td>
+				<td>$ -938.3</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>289838824</td>
+				<td>LONG</td>
+				<td>19.09.2012 19:01:00</td>
+				<td>1.3036</td>
+				<td>1.15</td>
+				<td>19.09.2012 20:23:00</td>
+				<td>1.3071</td>
+				<td>$ 402.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>289805868</td>
+				<td>LONG</td>
+				<td>19.09.2012 18:38:00</td>
+				<td>0.9757</td>
+				<td>0.41</td>
+				<td>20.09.2012 12:01:00</td>
+				<td>0.9808</td>
+				<td>$ 215.28</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>290053023</td>
+				<td>SHORT</td>
+				<td>24.09.2012 06:06:00</td>
+				<td>1.2962</td>
+				<td>1.15</td>
+				<td>24.09.2012 13:02:00</td>
+				<td>1.2928</td>
+				<td>$ 401.35</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>290157120</td>
+				<td>LONG</td>
+				<td>24.09.2012 16:33:00</td>
+				<td>1.293</td>
+				<td>1.04</td>
+				<td>25.09.2012 17:48:00</td>
+				<td>1.2965</td>
+				<td>$ 364</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>289913430</td>
+				<td>SHORT</td>
+				<td>20.09.2012 09:36:00</td>
+				<td>0.9297</td>
+				<td>0.85</td>
+				<td>26.09.2012 13:09:00</td>
+				<td>0.9404</td>
+				<td>$ -968.97</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>290794144</td>
+				<td>SHORT</td>
+				<td>03.10.2012 11:07:00</td>
+				<td>1.289</td>
+				<td>1.15</td>
+				<td>04.10.2012 17:33:00</td>
+				<td>1.2969</td>
+				<td>$ -908.5</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>291114324</td>
+				<td>SHORT</td>
+				<td>08.10.2012 07:24:00</td>
+				<td>1.3002</td>
+				<td>1.29</td>
+				<td>08.10.2012 12:30:00</td>
+				<td>1.2967</td>
+				<td>$ 451.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>289826501</td>
+				<td>LONG</td>
+				<td>19.09.2012 14:17:00</td>
+				<td>1.6245</td>
+				<td>0.35</td>
+				<td>09.10.2012 20:42:00</td>
+				<td>1.5981</td>
+				<td>$ -923.3</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>291454106</td>
+				<td>SHORT</td>
+				<td>11.10.2012 02:51:00</td>
+				<td>1.2859</td>
+				<td>1.15</td>
+				<td>11.10.2012 16:46:00</td>
+				<td>1.2933</td>
+				<td>$ -855.6</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>291724717</td>
+				<td>LONG</td>
+				<td>15.10.2012 12:31:00</td>
+				<td>1.2948</td>
+				<td>1.08</td>
+				<td>16.10.2012 11:07:00</td>
+				<td>1.2983</td>
+				<td>$ 378</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>289805843</td>
+				<td>LONG</td>
+				<td>20.09.2012 14:16:00</td>
+				<td>0.9344</td>
+				<td>0.87</td>
+				<td>17.10.2012 02:20:00</td>
+				<td>0.9236</td>
+				<td>$ -1023.94</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>292035335</td>
+				<td>LONG</td>
+				<td>18.10.2012 11:40:00</td>
+				<td>1.3117</td>
+				<td>1.11</td>
+				<td>19.10.2012 11:43:00</td>
+				<td>1.3048</td>
+				<td>$ -768.12</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>292171428</td>
+				<td>LONG</td>
+				<td>22.10.2012 10:09:00</td>
+				<td>1.3054</td>
+				<td>1.05</td>
+				<td>23.10.2012 17:33:00</td>
+				<td>1.2985</td>
+				<td>$ -723.45</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>289811539</td>
+				<td>LONG</td>
+				<td>19.09.2012 13:53:00</td>
+				<td>1.6238</td>
+				<td>0.35</td>
+				<td>23.10.2012 17:33:00</td>
+				<td>1.5971</td>
+				<td>$ -932.05</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>289928207</td>
+				<td>SHORT</td>
+				<td>21.09.2012 07:11:00</td>
+				<td>0.9746</td>
+				<td>0.41</td>
+				<td>23.10.2012 17:33:00</td>
+				<td>0.9972</td>
+				<td>$ -929.58</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>292380978</td>
+				<td>LONG</td>
+				<td>24.10.2012 18:05:00</td>
+				<td>1.298</td>
+				<td>0.94</td>
+				<td>25.10.2012 13:01:00</td>
+				<td>1.3015</td>
+				<td>$ 329</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>292451571</td>
+				<td>SHORT</td>
+				<td>25.10.2012 19:40:00</td>
+				<td>1.2963</td>
+				<td>0.92</td>
+				<td>26.10.2012 01:36:00</td>
+				<td>1.2928</td>
+				<td>$ 322</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>292577139</td>
+				<td>LONG</td>
+				<td>26.10.2012 18:30:00</td>
+				<td>1.2933</td>
+				<td>0.87</td>
+				<td>30.10.2012 16:19:00</td>
+				<td>1.2968</td>
+				<td>$ 304.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>292918996</td>
+				<td>LONG</td>
+				<td>01.11.2012 14:29:00</td>
+				<td>1.2958</td>
+				<td>1.2</td>
+				<td>02.11.2012 08:45:00</td>
+				<td>1.2905</td>
+				<td>$ -642</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>292188338</td>
+				<td>SHORT</td>
+				<td>22.10.2012 03:51:00</td>
+				<td>0.9283</td>
+				<td>0.68</td>
+				<td>02.11.2012 15:30:00</td>
+				<td>0.9392</td>
+				<td>$ -787.73</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>293175112</td>
+				<td>LONG</td>
+				<td>06.11.2012 12:16:00</td>
+				<td>1.2784</td>
+				<td>0.91</td>
+				<td>06.11.2012 19:37:00</td>
+				<td>1.2819</td>
+				<td>$ 318.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>291678917</td>
+				<td>LONG</td>
+				<td>15.10.2012 05:18:00</td>
+				<td>1.021</td>
+				<td>0.48</td>
+				<td>07.11.2012 07:04:00</td>
+				<td>1.0447</td>
+				<td>$ 1137.6</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>293210880</td>
+				<td>SHORT</td>
+				<td>07.11.2012 15:22:00</td>
+				<td>1.2769</td>
+				<td>0.85</td>
+				<td>08.11.2012 12:30:00</td>
+				<td>1.2734</td>
+				<td>$ 297.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>293387061</td>
+				<td>LONG</td>
+				<td>08.11.2012 14:15:00</td>
+				<td>1.2748</td>
+				<td>0.91</td>
+				<td>09.11.2012 08:27:00</td>
+				<td>1.2783</td>
+				<td>$ 318.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>293379202</td>
+				<td>LONG</td>
+				<td>08.11.2012 16:57:00</td>
+				<td>1.2753</td>
+				<td>0.92</td>
+				<td>09.11.2012 08:29:00</td>
+				<td>1.2788</td>
+				<td>$ 322</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>293459414</td>
+				<td>SHORT</td>
+				<td>09.11.2012 11:37:00</td>
+				<td>1.2741</td>
+				<td>0.91</td>
+				<td>09.11.2012 15:57:00</td>
+				<td>1.2706</td>
+				<td>$ 318.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>293616314</td>
+				<td>LONG</td>
+				<td>13.11.2012 14:37:00</td>
+				<td>1.2711</td>
+				<td>1.17</td>
+				<td>14.11.2012 12:43:00</td>
+				<td>1.2746</td>
+				<td>$ 409.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>285992690</td>
+				<td>LONG</td>
+				<td>25.07.2012 18:38:00</td>
+				<td>78.256</td>
+				<td>0.43</td>
+				<td>15.11.2012 13:26:00</td>
+				<td>81.156</td>
+				<td>$ 1536.55</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>293946723</td>
+				<td>LONG</td>
+				<td>19.11.2012 05:30:00</td>
+				<td>1.2771</td>
+				<td>1.36</td>
+				<td>19.11.2012 18:45:00</td>
+				<td>1.2806</td>
+				<td>$ 476</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>294301495</td>
+				<td>LONG</td>
+				<td>21.11.2012 14:06:00</td>
+				<td>1.2805</td>
+				<td>1.14</td>
+				<td>22.11.2012 02:08:00</td>
+				<td>1.284</td>
+				<td>$ 399</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>294754863</td>
+				<td>SHORT</td>
+				<td>27.11.2012 12:31:00</td>
+				<td>1.296</td>
+				<td>1.31</td>
+				<td>27.11.2012 18:04:00</td>
+				<td>1.2925</td>
+				<td>$ 458.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>294929175</td>
+				<td>LONG</td>
+				<td>28.11.2012 18:35:00</td>
+				<td>1.2912</td>
+				<td>1.43</td>
+				<td>29.11.2012 00:57:00</td>
+				<td>1.2947</td>
+				<td>$ 500.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>295016646</td>
+				<td>SHORT</td>
+				<td>29.11.2012 19:42:00</td>
+				<td>1.2951</td>
+				<td>1.44</td>
+				<td>30.11.2012 10:12:00</td>
+				<td>1.3013</td>
+				<td>$ -901.44</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>295125797</td>
+				<td>SHORT</td>
+				<td>30.11.2012 16:34:00</td>
+				<td>1.2969</td>
+				<td>1.42</td>
+				<td>03.12.2012 04:51:00</td>
+				<td>1.303</td>
+				<td>$ -854.84</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>295442522</td>
+				<td>SHORT</td>
+				<td>05.12.2012 13:00:00</td>
+				<td>1.3091</td>
+				<td>1.32</td>
+				<td>06.12.2012 04:02:00</td>
+				<td>1.3056</td>
+				<td>$ 462</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>292298913</td>
+				<td>SHORT</td>
+				<td>23.10.2012 18:00:00</td>
+				<td>0.9922</td>
+				<td>0.3</td>
+				<td>10.12.2012 01:27:00</td>
+				<td>0.9868</td>
+				<td>$ 164.16</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>293749041</td>
+				<td>LONG</td>
+				<td>15.11.2012 13:30:00</td>
+				<td>1.0334</td>
+				<td>0.44</td>
+				<td>12.12.2012 20:46:00</td>
+				<td>1.0571</td>
+				<td>$ 1042.8</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>294652461</td>
+				<td>SHORT</td>
+				<td>26.11.2012 09:58:00</td>
+				<td>82.164</td>
+				<td>0.69</td>
+				<td>13.12.2012 04:00:00</td>
+				<td>83.404</td>
+				<td>$ -1025.85</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>296069203</td>
+				<td>SHORT</td>
+				<td>14.12.2012 12:26:00</td>
+				<td>1.3071</td>
+				<td>1.42</td>
+				<td>14.12.2012 19:07:00</td>
+				<td>1.3133</td>
+				<td>$ -887.5</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>292299299</td>
+				<td>SHORT</td>
+				<td>24.10.2012 15:28:00</td>
+				<td>1.6006</td>
+				<td>0.23</td>
+				<td>18.12.2012 19:15:00</td>
+				<td>1.6269</td>
+				<td>$ -604.9</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>293086760</td>
+				<td>SHORT</td>
+				<td>05.11.2012 09:35:00</td>
+				<td>0.941</td>
+				<td>0.53</td>
+				<td>19.12.2012 13:02:00</td>
+				<td>0.9105</td>
+				<td>$ 1775.4</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>296327088</td>
+				<td>SHORT</td>
+				<td>20.12.2012 00:46:00</td>
+				<td>1.3228</td>
+				<td>1.49</td>
+				<td>20.12.2012 01:47:00</td>
+				<td>1.3193</td>
+				<td>$ 521.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>296374513</td>
+				<td>LONG</td>
+				<td>20.12.2012 14:07:00</td>
+				<td>1.3251</td>
+				<td>1.55</td>
+				<td>20.12.2012 16:48:00</td>
+				<td>1.3286</td>
+				<td>$ 542.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>296419856</td>
+				<td>SHORT</td>
+				<td>21.12.2012 04:03:00</td>
+				<td>1.321</td>
+				<td>1.48</td>
+				<td>21.12.2012 17:40:00</td>
+				<td>1.3175</td>
+				<td>$ 518</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>296501359</td>
+				<td>LONG</td>
+				<td>21.12.2012 18:10:00</td>
+				<td>1.3187</td>
+				<td>1.21</td>
+				<td>24.12.2012 12:00:00</td>
+				<td>1.3222</td>
+				<td>$ 423.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>294614765</td>
+				<td>LONG</td>
+				<td>26.11.2012 11:06:00</td>
+				<td>82.043</td>
+				<td>0.69</td>
+				<td>26.12.2012 01:56:00</td>
+				<td>84.943</td>
+				<td>$ 2355.7</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>296621252</td>
+				<td>SHORT</td>
+				<td>27.12.2012 18:31:00</td>
+				<td>1.3224</td>
+				<td>1.68</td>
+				<td>28.12.2012 12:13:00</td>
+				<td>1.3189</td>
+				<td>$ 588</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>296714099</td>
+				<td>LONG</td>
+				<td>28.12.2012 17:37:00</td>
+				<td>1.3237</td>
+				<td>1.69</td>
+				<td>02.01.2013 04:52:00</td>
+				<td>1.3272</td>
+				<td>$ 584.74</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>296834081</td>
+				<td>SHORT</td>
+				<td>02.01.2013 19:11:00</td>
+				<td>1.3211</td>
+				<td>1.43</td>
+				<td>02.01.2013 20:23:00</td>
+				<td>1.3177</td>
+				<td>$ 494.78</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>296510853</td>
+				<td>SHORT</td>
+				<td>21.12.2012 21:03:00</td>
+				<td>0.9171</td>
+				<td>0.88</td>
+				<td>04.01.2013 01:43:00</td>
+				<td>0.9278</td>
+				<td>$ -1019.57</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>296419867</td>
+				<td>LONG</td>
+				<td>20.12.2012 18:41:00</td>
+				<td>1.6263</td>
+				<td>0.35</td>
+				<td>09.01.2013 16:27:00</td>
+				<td>1.6</td>
+				<td>$ -920.5</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>297449650</td>
+				<td>LONG</td>
+				<td>09.01.2013 20:32:00</td>
+				<td>1.3067</td>
+				<td>1.49</td>
+				<td>10.01.2013 12:59:00</td>
+				<td>1.3102</td>
+				<td>$ 521.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>297185542</td>
+				<td>SHORT</td>
+				<td>08.01.2013 02:52:00</td>
+				<td>87.26</td>
+				<td>0.89</td>
+				<td>11.01.2013 00:12:00</td>
+				<td>88.5</td>
+				<td>$ -1247.01</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>297253333</td>
+				<td>SHORT</td>
+				<td>08.01.2013 01:52:00</td>
+				<td>87.409</td>
+				<td>0.89</td>
+				<td>11.01.2013 00:12:00</td>
+				<td>88.649</td>
+				<td>$ -1244.91</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>297835076</td>
+				<td>LONG</td>
+				<td>15.01.2013 18:11:00</td>
+				<td>1.335</td>
+				<td>1.15</td>
+				<td>15.01.2013 21:57:00</td>
+				<td>1.3267</td>
+				<td>$ -964.85</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>297034303</td>
+				<td>SHORT</td>
+				<td>04.01.2013 22:29:00</td>
+				<td>0.9245</td>
+				<td>1.04</td>
+				<td>17.01.2013 10:57:00</td>
+				<td>0.9352</td>
+				<td>$ -1189.91</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>297795506</td>
+				<td>SHORT</td>
+				<td>15.01.2013 14:35:00</td>
+				<td>88.634</td>
+				<td>0.78</td>
+				<td>17.01.2013 20:30:00</td>
+				<td>89.874</td>
+				<td>$ -1076.17</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>297825858</td>
+				<td>SHORT</td>
+				<td>15.01.2013 16:52:00</td>
+				<td>88.703</td>
+				<td>0.78</td>
+				<td>17.01.2013 22:50:00</td>
+				<td>89.943</td>
+				<td>$ -1075.35</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>297056865</td>
+				<td>SHORT</td>
+				<td>04.01.2013 10:03:00</td>
+				<td>0.9277</td>
+				<td>1.04</td>
+				<td>18.01.2013 06:47:00</td>
+				<td>0.9384</td>
+				<td>$ -1185.79</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>297426925</td>
+				<td>SHORT</td>
+				<td>10.01.2013 13:46:00</td>
+				<td>1.6056</td>
+				<td>0.4</td>
+				<td>21.01.2013 20:12:00</td>
+				<td>1.5817</td>
+				<td>$ 956</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>298240596</td>
+				<td>SHORT</td>
+				<td>22.01.2013 12:04:00</td>
+				<td>1.331</td>
+				<td>1.09</td>
+				<td>22.01.2013 12:16:00</td>
+				<td>1.3275</td>
+				<td>$ 381.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>298360826</td>
+				<td>SHORT</td>
+				<td>23.01.2013 18:27:00</td>
+				<td>1.3312</td>
+				<td>1.07</td>
+				<td>23.01.2013 18:41:00</td>
+				<td>1.3277</td>
+				<td>$ 374.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>298383957</td>
+				<td>LONG</td>
+				<td>23.01.2013 19:20:00</td>
+				<td>1.3285</td>
+				<td>1.02</td>
+				<td>23.01.2013 22:57:00</td>
+				<td>1.332</td>
+				<td>$ 357</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>296125616</td>
+				<td>SHORT</td>
+				<td>17.12.2012 18:28:00</td>
+				<td>0.9837</td>
+				<td>0.38</td>
+				<td>25.01.2013 15:45:00</td>
+				<td>1.0063</td>
+				<td>$ -853.44</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>298595938</td>
+				<td>LONG</td>
+				<td>28.01.2013 12:52:00</td>
+				<td>1.3457</td>
+				<td>0.98</td>
+				<td>29.01.2013 17:51:00</td>
+				<td>1.3492</td>
+				<td>$ 343</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>298828397</td>
+				<td>SHORT</td>
+				<td>30.01.2013 21:48:00</td>
+				<td>1.0016</td>
+				<td>0.34</td>
+				<td>31.01.2013 20:48:00</td>
+				<td>0.9974</td>
+				<td>$ 143.51</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>297792211</td>
+				<td>LONG</td>
+				<td>15.01.2013 14:35:00</td>
+				<td>88.617</td>
+				<td>0.78</td>
+				<td>31.01.2013 23:36:00</td>
+				<td>91.517</td>
+				<td>$ 2471.67</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>298078598</td>
+				<td>SHORT</td>
+				<td>18.01.2013 07:12:00</td>
+				<td>0.9378</td>
+				<td>0.64</td>
+				<td>01.02.2013 11:58:00</td>
+				<td>0.9074</td>
+				<td>$ 2151.32</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>298212330</td>
+				<td>SHORT</td>
+				<td>22.01.2013 15:45:00</td>
+				<td>1.5879</td>
+				<td>0.28</td>
+				<td>05.02.2013 20:42:00</td>
+				<td>1.564</td>
+				<td>$ 669.2</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>297896403</td>
+				<td>LONG</td>
+				<td>17.01.2013 07:39:00</td>
+				<td>1.0499</td>
+				<td>0.56</td>
+				<td>06.02.2013 10:02:00</td>
+				<td>1.0334</td>
+				<td>$ -924</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>299276743</td>
+				<td>LONG</td>
+				<td>07.02.2013 11:38:00</td>
+				<td>1.3575</td>
+				<td>1.13</td>
+				<td>07.02.2013 16:45:00</td>
+				<td>1.3487</td>
+				<td>$ -997.79</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>299436552</td>
+				<td>SHORT</td>
+				<td>08.02.2013 10:22:00</td>
+				<td>93.081</td>
+				<td>0.76</td>
+				<td>12.02.2013 00:30:00</td>
+				<td>94.321</td>
+				<td>$ -999.14</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>298282449</td>
+				<td>LONG</td>
+				<td>22.01.2013 19:09:00</td>
+				<td>1.5853</td>
+				<td>0.29</td>
+				<td>12.02.2013 12:12:00</td>
+				<td>1.559</td>
+				<td>$ -762.7</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>299482418</td>
+				<td>LONG</td>
+				<td>08.02.2013 17:27:00</td>
+				<td>1.3396</td>
+				<td>1.05</td>
+				<td>12.02.2013 13:50:00</td>
+				<td>1.3431</td>
+				<td>$ 367.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>299759587</td>
+				<td>SHORT</td>
+				<td>13.02.2013 18:36:00</td>
+				<td>1.3437</td>
+				<td>1.15</td>
+				<td>14.02.2013 10:14:00</td>
+				<td>1.3402</td>
+				<td>$ 402.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>299250359</td>
+				<td>SHORT</td>
+				<td>06.02.2013 10:35:00</td>
+				<td>0.9119</td>
+				<td>0.97</td>
+				<td>14.02.2013 13:00:00</td>
+				<td>0.9226</td>
+				<td>$ -1125.01</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>299954736</td>
+				<td>SHORT</td>
+				<td>15.02.2013 11:11:00</td>
+				<td>1.3347</td>
+				<td>1.15</td>
+				<td>15.02.2013 11:42:00</td>
+				<td>1.3313</td>
+				<td>$ 395.6</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>299983790</td>
+				<td>LONG</td>
+				<td>15.02.2013 16:09:00</td>
+				<td>1.3347</td>
+				<td>1.08</td>
+				<td>19.02.2013 19:44:00</td>
+				<td>1.3382</td>
+				<td>$ 378</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>299963973</td>
+				<td>SHORT</td>
+				<td>15.02.2013 16:09:00</td>
+				<td>1.3348</td>
+				<td>1.18</td>
+				<td>20.02.2013 04:06:00</td>
+				<td>1.3421</td>
+				<td>$ -861.4</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>299645574</td>
+				<td>SHORT</td>
+				<td>12.02.2013 18:56:00</td>
+				<td>1.5653</td>
+				<td>0.33</td>
+				<td>20.02.2013 12:30:00</td>
+				<td>1.5414</td>
+				<td>$ 788.7</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>300214708</td>
+				<td>SHORT</td>
+				<td>20.02.2013 14:54:00</td>
+				<td>1.3383</td>
+				<td>1.28</td>
+				<td>20.02.2013 19:13:00</td>
+				<td>1.3348</td>
+				<td>$ 448</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>298981449</td>
+				<td>SHORT</td>
+				<td>02.02.2013 00:51:00</td>
+				<td>0.9966</td>
+				<td>0.44</td>
+				<td>21.02.2013 08:37:00</td>
+				<td>1.0192</td>
+				<td>$ -976.93</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>300512741</td>
+				<td>LONG</td>
+				<td>25.02.2013 01:00:00</td>
+				<td>1.3218</td>
+				<td>0.95</td>
+				<td>25.02.2013 11:08:00</td>
+				<td>1.3236</td>
+				<td>$ 175.75</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>300557391</td>
+				<td>SHORT</td>
+				<td>25.02.2013 19:55:00</td>
+				<td>1.3181</td>
+				<td>1.0</td>
+				<td>25.02.2013 21:35:00</td>
+				<td>1.3146</td>
+				<td>$ 350</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>299430027</td>
+				<td>LONG</td>
+				<td>08.02.2013 10:22:00</td>
+				<td>93.06</td>
+				<td>0.76</td>
+				<td>25.02.2013 23:29:00</td>
+				<td>91.82</td>
+				<td>$ -1026.36</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>299167996</td>
+				<td>LONG</td>
+				<td>06.02.2013 10:36:00</td>
+				<td>0.9128</td>
+				<td>0.94</td>
+				<td>01.03.2013 17:26:00</td>
+				<td>0.9433</td>
+				<td>$ 3037.4</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>300463826</td>
+				<td>LONG</td>
+				<td>22.02.2013 12:13:00</td>
+				<td>1.5253</td>
+				<td>0.32</td>
+				<td>01.03.2013 18:01:00</td>
+				<td>1.499</td>
+				<td>$ -841.6</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>299983817</td>
+				<td>LONG</td>
+				<td>15.02.2013 18:54:00</td>
+				<td>1.0299</td>
+				<td>0.52</td>
+				<td>04.03.2013 07:22:00</td>
+				<td>1.0134</td>
+				<td>$ -858</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>300786216</td>
+				<td>SHORT</td>
+				<td>28.02.2013 04:01:00</td>
+				<td>92.574</td>
+				<td>0.66</td>
+				<td>06.03.2013 20:18:00</td>
+				<td>93.814</td>
+				<td>$ -872.36</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>301221366</td>
+				<td>LONG</td>
+				<td>07.03.2013 13:00:00</td>
+				<td>1.3045</td>
+				<td>1.29</td>
+				<td>07.03.2013 16:46:00</td>
+				<td>1.308</td>
+				<td>$ 451.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>300826673</td>
+				<td>LONG</td>
+				<td>28.02.2013 03:51:00</td>
+				<td>92.424</td>
+				<td>0.66</td>
+				<td>08.03.2013 05:59:00</td>
+				<td>95.324</td>
+				<td>$ 2007.89</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>301357067</td>
+				<td>SHORT</td>
+				<td>08.03.2013 15:59:00</td>
+				<td>1.3089</td>
+				<td>1.39</td>
+				<td>08.03.2013 16:30:00</td>
+				<td>1.3054</td>
+				<td>$ 486.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>301016032</td>
+				<td>SHORT</td>
+				<td>04.03.2013 01:12:00</td>
+				<td>0.9426</td>
+				<td>0.87</td>
+				<td>08.03.2013 17:07:00</td>
+				<td>0.9533</td>
+				<td>$ -976.46</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>301470020</td>
+				<td>SHORT</td>
+				<td>12.03.2013 11:25:00</td>
+				<td>1.2992</td>
+				<td>1.13</td>
+				<td>13.03.2013 16:41:00</td>
+				<td>1.2957</td>
+				<td>$ 394.37</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>301734272</td>
+				<td>LONG</td>
+				<td>14.03.2013 16:55:00</td>
+				<td>1.2953</td>
+				<td>1.43</td>
+				<td>14.03.2013 19:16:00</td>
+				<td>1.2988</td>
+				<td>$ 499.07</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>302125314</td>
+				<td>LONG</td>
+				<td>19.03.2013 22:14:00</td>
+				<td>1.2918</td>
+				<td>0.92</td>
+				<td>20.03.2013 15:10:00</td>
+				<td>1.2952</td>
+				<td>$ 313.72</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>302340866</td>
+				<td>LONG</td>
+				<td>21.03.2013 18:40:00</td>
+				<td>1.2933</td>
+				<td>1.09</td>
+				<td>22.03.2013 17:12:00</td>
+				<td>1.2968</td>
+				<td>$ 381.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>301283886</td>
+				<td>LONG</td>
+				<td>08.03.2013 08:02:00</td>
+				<td>1.4986</td>
+				<td>0.32</td>
+				<td>22.03.2013 18:23:00</td>
+				<td>1.5225</td>
+				<td>$ 764.8</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>302995156</td>
+				<td>SHORT</td>
+				<td>28.03.2013 11:52:00</td>
+				<td>1.2773</td>
+				<td>1.52</td>
+				<td>28.03.2013 18:33:00</td>
+				<td>1.2843</td>
+				<td>$ -1065.52</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>303140612</td>
+				<td>LONG</td>
+				<td>01.04.2013 12:06:00</td>
+				<td>1.2813</td>
+				<td>1.6</td>
+				<td>01.04.2013 19:09:00</td>
+				<td>1.2848</td>
+				<td>$ 560</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>301598115</td>
+				<td>SHORT</td>
+				<td>13.03.2013 08:36:00</td>
+				<td>95.663</td>
+				<td>0.76</td>
+				<td>02.04.2013 08:24:00</td>
+				<td>92.763</td>
+				<td>$ 2375.95</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>301587783</td>
+				<td>SHORT</td>
+				<td>13.03.2013 10:35:00</td>
+				<td>95.586</td>
+				<td>0.76</td>
+				<td>02.04.2013 08:26:00</td>
+				<td>92.686</td>
+				<td>$ 2377.92</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>303261162</td>
+				<td>LONG</td>
+				<td>02.04.2013 20:06:00</td>
+				<td>1.2847</td>
+				<td>2.0</td>
+				<td>03.04.2013 11:27:00</td>
+				<td>1.2791</td>
+				<td>$ -1104</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>303269310</td>
+				<td>SHORT</td>
+				<td>03.04.2013 06:05:00</td>
+				<td>93.661</td>
+				<td>1.03</td>
+				<td>04.04.2013 11:13:00</td>
+				<td>94.901</td>
+				<td>$ -1345.82</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>303328108</td>
+				<td>SHORT</td>
+				<td>04.04.2013 12:53:00</td>
+				<td>1.2804</td>
+				<td>2.0</td>
+				<td>04.04.2013 17:39:00</td>
+				<td>1.2769</td>
+				<td>$ 700</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>303388844</td>
+				<td>LONG</td>
+				<td>04.04.2013 18:45:00</td>
+				<td>1.2843</td>
+				<td>2.0</td>
+				<td>04.04.2013 19:08:00</td>
+				<td>1.2878</td>
+				<td>$ 700</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>300384232</td>
+				<td>SHORT</td>
+				<td>22.02.2013 06:41:00</td>
+				<td>1.017</td>
+				<td>0.38</td>
+				<td>04.04.2013 22:46:00</td>
+				<td>1.012</td>
+				<td>$ 188.12</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>303294308</td>
+				<td>LONG</td>
+				<td>03.04.2013 05:51:00</td>
+				<td>93.597</td>
+				<td>1.03</td>
+				<td>05.04.2013 05:08:00</td>
+				<td>96.497</td>
+				<td>$ 3095.43</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>303274934</td>
+				<td>LONG</td>
+				<td>03.04.2013 05:48:00</td>
+				<td>93.634</td>
+				<td>1.03</td>
+				<td>05.04.2013 05:10:00</td>
+				<td>96.534</td>
+				<td>$ 3094.25</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>303470165</td>
+				<td>LONG</td>
+				<td>05.04.2013 17:30:00</td>
+				<td>1.0165</td>
+				<td>0.55</td>
+				<td>05.04.2013 17:33:00</td>
+				<td>1.0206</td>
+				<td>$ 219.87</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>303656922</td>
+				<td>SHORT</td>
+				<td>08.04.2013 19:19:00</td>
+				<td>1.0212</td>
+				<td>0.69</td>
+				<td>09.04.2013 16:34:00</td>
+				<td>1.0154</td>
+				<td>$ 394.82</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>303690956</td>
+				<td>SHORT</td>
+				<td>09.04.2013 12:13:00</td>
+				<td>1.3006</td>
+				<td>1.7</td>
+				<td>09.04.2013 20:29:00</td>
+				<td>1.3098</td>
+				<td>$ -1564</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>303806810</td>
+				<td>LONG</td>
+				<td>11.04.2013 14:56:00</td>
+				<td>1.3096</td>
+				<td>2.0</td>
+				<td>11.04.2013 15:15:00</td>
+				<td>1.3131</td>
+				<td>$ 700</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>303898107</td>
+				<td>LONG</td>
+				<td>12.04.2013 13:43:00</td>
+				<td>99.102</td>
+				<td>1.23</td>
+				<td>15.04.2013 08:34:00</td>
+				<td>97.862</td>
+				<td>$ -1558.52</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>303781201</td>
+				<td>LONG</td>
+				<td>10.04.2013 15:32:00</td>
+				<td>1.0144</td>
+				<td>0.66</td>
+				<td>15.04.2013 09:22:00</td>
+				<td>1.0188</td>
+				<td>$ 288.91</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>303916890</td>
+				<td>LONG</td>
+				<td>13.04.2013 00:56:00</td>
+				<td>1.3105</td>
+				<td>2.0</td>
+				<td>15.04.2013 23:29:00</td>
+				<td>1.3042</td>
+				<td>$ -1260</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>303907204</td>
+				<td>SHORT</td>
+				<td>12.04.2013 13:39:00</td>
+				<td>99.154</td>
+				<td>1.23</td>
+				<td>16.04.2013 02:18:00</td>
+				<td>96.254</td>
+				<td>$ 3705.82</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>304057086</td>
+				<td>LONG</td>
+				<td>16.04.2013 08:49:00</td>
+				<td>1.3063</td>
+				<td>1.91</td>
+				<td>16.04.2013 15:34:00</td>
+				<td>1.3098</td>
+				<td>$ 668.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>301406390</td>
+				<td>SHORT</td>
+				<td>08.03.2013 22:50:00</td>
+				<td>0.9514</td>
+				<td>0.89</td>
+				<td>16.04.2013 23:36:00</td>
+				<td>0.9209</td>
+				<td>$ 2947.53</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>304328467</td>
+				<td>SHORT</td>
+				<td>18.04.2013 19:07:00</td>
+				<td>1.3033</td>
+				<td>1.93</td>
+				<td>19.04.2013 18:40:00</td>
+				<td>1.3124</td>
+				<td>$ -1765.95</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>304197764</td>
+				<td>SHORT</td>
+				<td>17.04.2013 06:07:00</td>
+				<td>98.158</td>
+				<td>1.43</td>
+				<td>19.04.2013 23:10:00</td>
+				<td>99.421</td>
+				<td>$ -1816.61</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>304446900</td>
+				<td>SHORT</td>
+				<td>19.04.2013 20:58:00</td>
+				<td>1.3063</td>
+				<td>1.9</td>
+				<td>22.04.2013 17:45:00</td>
+				<td>1.3028</td>
+				<td>$ 663.1</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>302900038</td>
+				<td>LONG</td>
+				<td>28.03.2013 14:37:00</td>
+				<td>1.0408</td>
+				<td>0.65</td>
+				<td>22.04.2013 19:02:00</td>
+				<td>1.0243</td>
+				<td>$ -1072.5</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>304527708</td>
+				<td>LONG</td>
+				<td>22.04.2013 23:39:00</td>
+				<td>1.3063</td>
+				<td>2.0</td>
+				<td>23.04.2013 12:45:00</td>
+				<td>1.2984</td>
+				<td>$ -1570</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>304690924</td>
+				<td>SHORT</td>
+				<td>24.04.2013 17:36:00</td>
+				<td>1.2988</td>
+				<td>2.0</td>
+				<td>25.04.2013 06:45:00</td>
+				<td>1.3061</td>
+				<td>$ -1452</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>302541396</td>
+				<td>LONG</td>
+				<td>22.03.2013 20:03:00</td>
+				<td>1.5203</td>
+				<td>0.4</td>
+				<td>25.04.2013 13:58:00</td>
+				<td>1.5442</td>
+				<td>$ 956</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>304737821</td>
+				<td>SHORT</td>
+				<td>25.04.2013 19:00:00</td>
+				<td>1.3009</td>
+				<td>1.93</td>
+				<td>29.04.2013 12:25:00</td>
+				<td>1.3088</td>
+				<td>$ -1515.05</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>304982698</td>
+				<td>SHORT</td>
+				<td>30.04.2013 11:21:00</td>
+				<td>1.3092</td>
+				<td>2.0</td>
+				<td>30.04.2013 14:00:00</td>
+				<td>1.3057</td>
+				<td>$ 700</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>304995578</td>
+				<td>LONG</td>
+				<td>30.04.2013 14:23:00</td>
+				<td>1.3084</td>
+				<td>2.0</td>
+				<td>30.04.2013 18:38:00</td>
+				<td>1.3119</td>
+				<td>$ 698</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>305252296</td>
+				<td>SHORT</td>
+				<td>03.05.2013 17:31:00</td>
+				<td>1.3068</td>
+				<td>1.9</td>
+				<td>03.05.2013 17:44:00</td>
+				<td>1.3033</td>
+				<td>$ 665</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>305381370</td>
+				<td>LONG</td>
+				<td>07.05.2013 10:36:00</td>
+				<td>1.3092</td>
+				<td>1.65</td>
+				<td>07.05.2013 16:00:00</td>
+				<td>1.3127</td>
+				<td>$ 572.55</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>305437534</td>
+				<td>SHORT</td>
+				<td>07.05.2013 19:30:00</td>
+				<td>1.3076</td>
+				<td>2.0</td>
+				<td>08.05.2013 17:26:00</td>
+				<td>1.3148</td>
+				<td>$ -1434</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>304159170</td>
+				<td>LONG</td>
+				<td>17.04.2013 16:34:00</td>
+				<td>1.0257</td>
+				<td>0.72</td>
+				<td>08.05.2013 19:52:00</td>
+				<td>1.003</td>
+				<td>$ -1622.99</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>305590764</td>
+				<td>LONG</td>
+				<td>09.05.2013 15:19:00</td>
+				<td>1.3154</td>
+				<td>2.0</td>
+				<td>09.05.2013 18:45:00</td>
+				<td>1.3095</td>
+				<td>$ -1182</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>305093142</td>
+				<td>LONG</td>
+				<td>01.05.2013 19:17:00</td>
+				<td>1.0279</td>
+				<td>0.89</td>
+				<td>09.05.2013 23:25:00</td>
+				<td>1.0114</td>
+				<td>$ -1468.5</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>304203181</td>
+				<td>LONG</td>
+				<td>17.04.2013 06:17:00</td>
+				<td>98.114</td>
+				<td>1.43</td>
+				<td>10.05.2013 06:41:00</td>
+				<td>101.014</td>
+				<td>$ 4105.37</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>305535833</td>
+				<td>LONG</td>
+				<td>09.05.2013 23:37:00</td>
+				<td>1.0058</td>
+				<td>0.61</td>
+				<td>10.05.2013 13:58:00</td>
+				<td>1.0098</td>
+				<td>$ 242.24</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>301380559</td>
+				<td>SHORT</td>
+				<td>11.03.2013 17:58:00</td>
+				<td>0.9497</td>
+				<td>0.89</td>
+				<td>10.05.2013 20:15:00</td>
+				<td>0.9608</td>
+				<td>$ -1033.74</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>305841469</td>
+				<td>SHORT</td>
+				<td>14.05.2013 15:23:00</td>
+				<td>1.2968</td>
+				<td>1.61</td>
+				<td>14.05.2013 22:16:00</td>
+				<td>1.2933</td>
+				<td>$ 563.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>304904525</td>
+				<td>LONG</td>
+				<td>29.04.2013 23:49:00</td>
+				<td>1.5486</td>
+				<td>0.56</td>
+				<td>14.05.2013 23:32:00</td>
+				<td>1.5223</td>
+				<td>$ -1472.8</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>305739732</td>
+				<td>SHORT</td>
+				<td>10.05.2013 21:50:00</td>
+				<td>0.9554</td>
+				<td>1.31</td>
+				<td>14.05.2013 23:57:00</td>
+				<td>0.9661</td>
+				<td>$ -1450.85</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>305795649</td>
+				<td>LONG</td>
+				<td>14.05.2013 16:16:00</td>
+				<td>1.0141</td>
+				<td>0.62</td>
+				<td>15.05.2013 12:18:00</td>
+				<td>1.0205</td>
+				<td>$ 393.07</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>306069298</td>
+				<td>LONG</td>
+				<td>16.05.2013 15:52:00</td>
+				<td>1.02</td>
+				<td>0.58</td>
+				<td>17.05.2013 14:12:00</td>
+				<td>1.0255</td>
+				<td>$ 311.08</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>306136315</td>
+				<td>SHORT</td>
+				<td>17.05.2013 07:04:00</td>
+				<td>1.2863</td>
+				<td>1.65</td>
+				<td>17.05.2013 17:30:00</td>
+				<td>1.2828</td>
+				<td>$ 577.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>306217886</td>
+				<td>LONG</td>
+				<td>20.05.2013 12:23:00</td>
+				<td>1.286</td>
+				<td>1.73</td>
+				<td>20.05.2013 23:14:00</td>
+				<td>1.2895</td>
+				<td>$ 605.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>306307725</td>
+				<td>SHORT</td>
+				<td>21.05.2013 13:30:00</td>
+				<td>1.2855</td>
+				<td>1.78</td>
+				<td>21.05.2013 22:02:00</td>
+				<td>1.2933</td>
+				<td>$ -1377.72</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>305955571</td>
+				<td>SHORT</td>
+				<td>15.05.2013 01:57:00</td>
+				<td>0.967</td>
+				<td>1.2</td>
+				<td>22.05.2013 19:30:00</td>
+				<td>0.9777</td>
+				<td>$ -1314.46</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>306301757</td>
+				<td>LONG</td>
+				<td>21.05.2013 18:25:00</td>
+				<td>1.0293</td>
+				<td>0.6</td>
+				<td>22.05.2013 21:11:00</td>
+				<td>1.036</td>
+				<td>$ 389.76</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>306244059</td>
+				<td>LONG</td>
+				<td>20.05.2013 02:37:00</td>
+				<td>102.065</td>
+				<td>1.09</td>
+				<td>24.05.2013 23:05:00</td>
+				<td>100.825</td>
+				<td>$ -1340.54</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>306780075</td>
+				<td>LONG</td>
+				<td>28.05.2013 08:30:00</td>
+				<td>1.2924</td>
+				<td>1.79</td>
+				<td>28.05.2013 19:33:00</td>
+				<td>1.2857</td>
+				<td>$ -1195.72</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>305955753</td>
+				<td>SHORT</td>
+				<td>15.05.2013 13:30:00</td>
+				<td>1.5251</td>
+				<td>0.49</td>
+				<td>29.05.2013 10:42:00</td>
+				<td>1.5012</td>
+				<td>$ 1171.1</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>306409970</td>
+				<td>LONG</td>
+				<td>22.05.2013 19:39:00</td>
+				<td>0.9702</td>
+				<td>0.8</td>
+				<td>29.05.2013 10:48:00</td>
+				<td>0.9537</td>
+				<td>$ -1320</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>306830138</td>
+				<td>LONG</td>
+				<td>29.05.2013 14:32:00</td>
+				<td>1.2893</td>
+				<td>1.62</td>
+				<td>29.05.2013 15:50:00</td>
+				<td>1.2928</td>
+				<td>$ 567</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>306537383</td>
+				<td>SHORT</td>
+				<td>23.05.2013 07:33:00</td>
+				<td>0.9793</td>
+				<td>1.18</td>
+				<td>03.06.2013 20:10:00</td>
+				<td>0.9488</td>
+				<td>$ 3793.37</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>307076413</td>
+				<td>LONG</td>
+				<td>03.06.2013 12:53:00</td>
+				<td>1.3037</td>
+				<td>1.41</td>
+				<td>03.06.2013 20:14:00</td>
+				<td>1.3072</td>
+				<td>$ 489.27</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>306472222</td>
+				<td>SHORT</td>
+				<td>23.05.2013 12:17:00</td>
+				<td>0.9736</td>
+				<td>1.16</td>
+				<td>03.06.2013 20:20:00</td>
+				<td>0.9431</td>
+				<td>$ 3750.11</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>306988378</td>
+				<td>LONG</td>
+				<td>30.05.2013 17:47:00</td>
+				<td>1.5161</td>
+				<td>0.44</td>
+				<td>05.06.2013 20:06:00</td>
+				<td>1.54</td>
+				<td>$ 1051.6</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>306768425</td>
+				<td>SHORT</td>
+				<td>28.05.2013 05:14:00</td>
+				<td>101.608</td>
+				<td>0.97</td>
+				<td>06.06.2013 19:46:00</td>
+				<td>98.708</td>
+				<td>$ 2849.82</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>307003154</td>
+				<td>SHORT</td>
+				<td>30.05.2013 19:06:00</td>
+				<td>1.033</td>
+				<td>0.51</td>
+				<td>06.06.2013 20:52:00</td>
+				<td>1.0257</td>
+				<td>$ 366.47</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>307580059</td>
+				<td>LONG</td>
+				<td>10.06.2013 22:41:00</td>
+				<td>1.3246</td>
+				<td>2.0</td>
+				<td>11.06.2013 08:00:00</td>
+				<td>1.3281</td>
+				<td>$ 700</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>307611569</td>
+				<td>LONG</td>
+				<td>10.06.2013 03:47:00</td>
+				<td>98.328</td>
+				<td>1.43</td>
+				<td>11.06.2013 14:39:00</td>
+				<td>97.083</td>
+				<td>$ -1833.84</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>307758703</td>
+				<td>LONG</td>
+				<td>11.06.2013 18:35:00</td>
+				<td>1.3261</td>
+				<td>2.0</td>
+				<td>11.06.2013 19:19:00</td>
+				<td>1.3296</td>
+				<td>$ 700</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>307601603</td>
+				<td>SHORT</td>
+				<td>10.06.2013 12:26:00</td>
+				<td>98.441</td>
+				<td>1.43</td>
+				<td>12.06.2013 20:47:00</td>
+				<td>95.541</td>
+				<td>$ 4340.54</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>307783629</td>
+				<td>SHORT</td>
+				<td>12.06.2013 16:33:00</td>
+				<td>1.3268</td>
+				<td>1.93</td>
+				<td>12.06.2013 20:55:00</td>
+				<td>1.3359</td>
+				<td>$ -1752.44</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>307886031</td>
+				<td>SHORT</td>
+				<td>13.06.2013 17:30:00</td>
+				<td>1.3305</td>
+				<td>2.0</td>
+				<td>18.06.2013 13:00:00</td>
+				<td>1.3386</td>
+				<td>$ -1616</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>307975531</td>
+				<td>LONG</td>
+				<td>14.06.2013 00:14:00</td>
+				<td>1.3351</td>
+				<td>2.0</td>
+				<td>18.06.2013 13:00:00</td>
+				<td>1.3386</td>
+				<td>$ 696</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>308262664</td>
+				<td>SHORT</td>
+				<td>19.06.2013 23:00:00</td>
+				<td>1.3386</td>
+				<td>2.0</td>
+				<td>19.06.2013 23:08:00</td>
+				<td>1.3352</td>
+				<td>$ 674</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>308101465</td>
+				<td>SHORT</td>
+				<td>17.06.2013 11:44:00</td>
+				<td>94.935</td>
+				<td>1.52</td>
+				<td>19.06.2013 23:16:00</td>
+				<td>96.175</td>
+				<td>$ -1959.76</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>308129434</td>
+				<td>LONG</td>
+				<td>18.06.2013 12:12:00</td>
+				<td>0.9475</td>
+				<td>1.14</td>
+				<td>20.06.2013 00:14:00</td>
+				<td>0.931</td>
+				<td>$ -1881</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>307565673</td>
+				<td>LONG</td>
+				<td>07.06.2013 17:30:00</td>
+				<td>1.0213</td>
+				<td>0.79</td>
+				<td>20.06.2013 09:11:00</td>
+				<td>1.0293</td>
+				<td>$ 616.32</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>308247293</td>
+				<td>SHORT</td>
+				<td>19.06.2013 23:16:00</td>
+				<td>0.9259</td>
+				<td>1.72</td>
+				<td>21.06.2013 20:14:00</td>
+				<td>0.9366</td>
+				<td>$ -1964.87</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>307579171</td>
+				<td>SHORT</td>
+				<td>10.06.2013 22:56:00</td>
+				<td>1.5581</td>
+				<td>0.67</td>
+				<td>26.06.2013 19:59:00</td>
+				<td>1.5342</td>
+				<td>$ 1601.3</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>307690017</td>
+				<td>LONG</td>
+				<td>11.06.2013 17:36:00</td>
+				<td>1.5534</td>
+				<td>0.67</td>
+				<td>27.06.2013 13:42:00</td>
+				<td>1.5271</td>
+				<td>$ -1762.1</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>308806905</td>
+				<td>LONG</td>
+				<td>27.06.2013 20:10:00</td>
+				<td>1.3017</td>
+				<td>2.0</td>
+				<td>27.06.2013 21:31:00</td>
+				<td>1.3052</td>
+				<td>$ 700</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>308863710</td>
+				<td>SHORT</td>
+				<td>28.06.2013 18:42:00</td>
+				<td>1.306</td>
+				<td>2.0</td>
+				<td>28.06.2013 19:07:00</td>
+				<td>1.3024</td>
+				<td>$ 700</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>308833838</td>
+				<td>SHORT</td>
+				<td>28.06.2013 19:00:00</td>
+				<td>1.3027</td>
+				<td>2.0</td>
+				<td>28.06.2013 20:03:00</td>
+				<td>1.2992</td>
+				<td>$ 700</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>308289061</td>
+				<td>LONG</td>
+				<td>20.06.2013 02:08:00</td>
+				<td>0.928</td>
+				<td>1.02</td>
+				<td>28.06.2013 21:42:00</td>
+				<td>0.9115</td>
+				<td>$ -1683</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>308875074</td>
+				<td>LONG</td>
+				<td>01.07.2013 12:33:00</td>
+				<td>1.3041</td>
+				<td>2.0</td>
+				<td>02.07.2013 11:54:00</td>
+				<td>1.3076</td>
+				<td>$ 700</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>309043617</td>
+				<td>LONG</td>
+				<td>03.07.2013 14:05:00</td>
+				<td>1.2965</td>
+				<td>2.0</td>
+				<td>03.07.2013 20:11:00</td>
+				<td>1.3</td>
+				<td>$ 700</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>308228327</td>
+				<td>LONG</td>
+				<td>19.06.2013 23:15:00</td>
+				<td>0.9259</td>
+				<td>1.72</td>
+				<td>04.07.2013 17:56:00</td>
+				<td>0.9564</td>
+				<td>$ 5484.98</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>308946038</td>
+				<td>LONG</td>
+				<td>01.07.2013 21:54:00</td>
+				<td>1.5222</td>
+				<td>0.62</td>
+				<td>05.07.2013 17:24:00</td>
+				<td>1.4959</td>
+				<td>$ -1630.6</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>309224731</td>
+				<td>LONG</td>
+				<td>05.07.2013 17:02:00</td>
+				<td>1.2893</td>
+				<td>2.0</td>
+				<td>05.07.2013 17:31:00</td>
+				<td>1.2824</td>
+				<td>$ -1384</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>309192449</td>
+				<td>SHORT</td>
+				<td>05.07.2013 07:08:00</td>
+				<td>0.957</td>
+				<td>1.84</td>
+				<td>09.07.2013 12:55:00</td>
+				<td>0.9677</td>
+				<td>$ -2034.51</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>309389191</td>
+				<td>SHORT</td>
+				<td>09.07.2013 15:04:00</td>
+				<td>1.2866</td>
+				<td>2.0</td>
+				<td>09.07.2013 19:08:00</td>
+				<td>1.2831</td>
+				<td>$ 700</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>309336773</td>
+				<td>LONG</td>
+				<td>09.07.2013 13:52:00</td>
+				<td>1.4887</td>
+				<td>0.69</td>
+				<td>11.07.2013 03:46:00</td>
+				<td>1.5126</td>
+				<td>$ 1649.1</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>308933690</td>
+				<td>SHORT</td>
+				<td>01.07.2013 19:18:00</td>
+				<td>1.0497</td>
+				<td>0.72</td>
+				<td>11.07.2013 03:47:00</td>
+				<td>1.0416</td>
+				<td>$ 565.46</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>309403879</td>
+				<td>SHORT</td>
+				<td>09.07.2013 19:33:00</td>
+				<td>0.9719</td>
+				<td>1.6</td>
+				<td>11.07.2013 03:55:00</td>
+				<td>0.9414</td>
+				<td>$ 5183.77</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>309816299</td>
+				<td>LONG</td>
+				<td>15.07.2013 18:02:00</td>
+				<td>1.3056</td>
+				<td>1.63</td>
+				<td>16.07.2013 10:59:00</td>
+				<td>1.3091</td>
+				<td>$ 570.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>310023238</td>
+				<td>LONG</td>
+				<td>17.07.2013 21:43:00</td>
+				<td>1.3122</td>
+				<td>2.0</td>
+				<td>17.07.2013 22:17:00</td>
+				<td>1.3157</td>
+				<td>$ 700</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>310094612</td>
+				<td>LONG</td>
+				<td>18.07.2013 18:35:00</td>
+				<td>1.309</td>
+				<td>2.0</td>
+				<td>19.07.2013 07:44:00</td>
+				<td>1.3125</td>
+				<td>$ 700</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>310136650</td>
+				<td>SHORT</td>
+				<td>19.07.2013 14:13:00</td>
+				<td>1.31</td>
+				<td>2.0</td>
+				<td>22.07.2013 14:41:00</td>
+				<td>1.3179</td>
+				<td>$ -1594</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>309828359</td>
+				<td>SHORT</td>
+				<td>15.07.2013 17:31:00</td>
+				<td>1.5087</td>
+				<td>0.81</td>
+				<td>22.07.2013 18:45:00</td>
+				<td>1.535</td>
+				<td>$ -2130.3</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>310286250</td>
+				<td>LONG</td>
+				<td>23.07.2013 17:34:00</td>
+				<td>1.3192</td>
+				<td>2.0</td>
+				<td>23.07.2013 19:49:00</td>
+				<td>1.3226</td>
+				<td>$ 684</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>309786707</td>
+				<td>SHORT</td>
+				<td>16.07.2013 21:45:00</td>
+				<td>1.0368</td>
+				<td>0.94</td>
+				<td>24.07.2013 15:40:00</td>
+				<td>1.0273</td>
+				<td>$ 872.06</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>310375509</td>
+				<td>SHORT</td>
+				<td>24.07.2013 18:00:00</td>
+				<td>1.3207</td>
+				<td>1.0</td>
+				<td>25.07.2013 14:44:00</td>
+				<td>1.3172</td>
+				<td>$ 350</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>310472743</td>
+				<td>SHORT</td>
+				<td>24.07.2013 18:00:00</td>
+				<td>1.3207</td>
+				<td>1.0</td>
+				<td>25.07.2013 14:44:00</td>
+				<td>1.3172</td>
+				<td>$ 350</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>310364709</td>
+				<td>LONG</td>
+				<td>24.07.2013 22:15:00</td>
+				<td>0.9145</td>
+				<td>1.25</td>
+				<td>31.07.2013 17:16:00</td>
+				<td>0.898</td>
+				<td>$ -2067.5</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>310624566</td>
+				<td>LONG</td>
+				<td>30.07.2013 13:00:00</td>
+				<td>1.3273</td>
+				<td>2.0</td>
+				<td>31.07.2013 23:00:00</td>
+				<td>1.3308</td>
+				<td>$ 700</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>310814467</td>
+				<td>SHORT</td>
+				<td>01.08.2013 12:00:00</td>
+				<td>1.325</td>
+				<td>2.0</td>
+				<td>01.08.2013 17:31:00</td>
+				<td>1.3215</td>
+				<td>$ 700</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>310286265</td>
+				<td>SHORT</td>
+				<td>23.07.2013 19:41:00</td>
+				<td>1.5364</td>
+				<td>0.77</td>
+				<td>01.08.2013 21:55:00</td>
+				<td>1.5125</td>
+				<td>$ 1840.3</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>311097886</td>
+				<td>LONG</td>
+				<td>07.08.2013 15:01:00</td>
+				<td>1.3296</td>
+				<td>2.0</td>
+				<td>07.08.2013 20:30:00</td>
+				<td>1.3331</td>
+				<td>$ 700</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>310774029</td>
+				<td>LONG</td>
+				<td>31.07.2013 19:07:00</td>
+				<td>0.9319</td>
+				<td>1.91</td>
+				<td>07.08.2013 22:02:00</td>
+				<td>0.9212</td>
+				<td>$ -2218.42</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>311249004</td>
+				<td>LONG</td>
+				<td>09.08.2013 16:02:00</td>
+				<td>1.3377</td>
+				<td>2.0</td>
+				<td>12.08.2013 02:00:00</td>
+				<td>1.332</td>
+				<td>$ -1154</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>311038387</td>
+				<td>LONG</td>
+				<td>06.08.2013 17:00:00</td>
+				<td>1.5349</td>
+				<td>0.84</td>
+				<td>15.08.2013 14:38:00</td>
+				<td>1.5588</td>
+				<td>$ 2007.6</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>311457308</td>
+				<td>SHORT</td>
+				<td>15.08.2013 17:35:00</td>
+				<td>1.3254</td>
+				<td>2.0</td>
+				<td>15.08.2013 19:03:00</td>
+				<td>1.3219</td>
+				<td>$ 692</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>311489596</td>
+				<td>LONG</td>
+				<td>15.08.2013 22:14:00</td>
+				<td>1.3285</td>
+				<td>2.0</td>
+				<td>15.08.2013 22:14:00</td>
+				<td>1.3319</td>
+				<td>$ 694</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>311564143</td>
+				<td>SHORT</td>
+				<td>16.08.2013 19:47:00</td>
+				<td>1.3325</td>
+				<td>2.0</td>
+				<td>20.08.2013 14:18:00</td>
+				<td>1.3391</td>
+				<td>$ -1316</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>309940382</td>
+				<td>LONG</td>
+				<td>17.07.2013 18:59:00</td>
+				<td>1.0436</td>
+				<td>0.95</td>
+				<td>22.08.2013 17:16:00</td>
+				<td>1.0501</td>
+				<td>$ 591.64</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>311787917</td>
+				<td>LONG</td>
+				<td>22.08.2013 17:34:00</td>
+				<td>1.3333</td>
+				<td>2.0</td>
+				<td>22.08.2013 20:07:00</td>
+				<td>1.3368</td>
+				<td>$ 700</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>311603699</td>
+				<td>LONG</td>
+				<td>20.08.2013 09:02:00</td>
+				<td>0.9057</td>
+				<td>1.36</td>
+				<td>28.08.2013 18:37:00</td>
+				<td>0.8892</td>
+				<td>$ -2244</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>311949848</td>
+				<td>LONG</td>
+				<td>27.08.2013 18:30:00</td>
+				<td>1.3369</td>
+				<td>2.0</td>
+				<td>28.08.2013 18:37:00</td>
+				<td>1.3318</td>
+				<td>$ -1020</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>312191070</td>
+				<td>LONG</td>
+				<td>03.09.2013 20:01:00</td>
+				<td>1.316</td>
+				<td>2.0</td>
+				<td>04.09.2013 19:57:00</td>
+				<td>1.3195</td>
+				<td>$ 700</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>310779324</td>
+				<td>SHORT</td>
+				<td>31.07.2013 18:18:00</td>
+				<td>0.9321</td>
+				<td>1.91</td>
+				<td>05.09.2013 19:06:00</td>
+				<td>0.9428</td>
+				<td>$ -2167.76</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>312276150</td>
+				<td>LONG</td>
+				<td>05.09.2013 18:17:00</td>
+				<td>1.3163</td>
+				<td>2.0</td>
+				<td>06.09.2013 15:19:00</td>
+				<td>1.3108</td>
+				<td>$ -1096</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>311937104</td>
+				<td>SHORT</td>
+				<td>27.08.2013 21:50:00</td>
+				<td>1.0497</td>
+				<td>0.99</td>
+				<td>06.09.2013 16:27:00</td>
+				<td>1.0451</td>
+				<td>$ 441.44</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>312311352</td>
+				<td>LONG</td>
+				<td>06.09.2013 17:30:00</td>
+				<td>1.314</td>
+				<td>2.0</td>
+				<td>06.09.2013 17:30:00</td>
+				<td>1.3168</td>
+				<td>$ 556</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>311479714</td>
+				<td>LONG</td>
+				<td>15.08.2013 17:37:00</td>
+				<td>1.5532</td>
+				<td>0.83</td>
+				<td>11.09.2013 13:27:00</td>
+				<td>1.5771</td>
+				<td>$ 1983.7</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>312397338</td>
+				<td>LONG</td>
+				<td>10.09.2013 18:07:00</td>
+				<td>1.3256</td>
+				<td>2.0</td>
+				<td>11.09.2013 18:55:00</td>
+				<td>1.3291</td>
+				<td>$ 700</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>312471608</td>
+				<td>LONG</td>
+				<td>12.09.2013 19:24:00</td>
+				<td>1.3308</td>
+				<td>2.0</td>
+				<td>13.09.2013 19:01:00</td>
+				<td>1.3258</td>
+				<td>$ -1008</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>312542909</td>
+				<td>LONG</td>
+				<td>13.09.2013 20:23:00</td>
+				<td>1.3277</td>
+				<td>2.0</td>
+				<td>16.09.2013 02:00:00</td>
+				<td>1.3353</td>
+				<td>$ 1514</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>312702443</td>
+				<td>LONG</td>
+				<td>16.09.2013 22:05:00</td>
+				<td>1.3341</td>
+				<td>2.0</td>
+				<td>18.09.2013 22:16:00</td>
+				<td>1.3376</td>
+				<td>$ 700</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>312480039</td>
+				<td>SHORT</td>
+				<td>12.09.2013 20:08:00</td>
+				<td>1.0314</td>
+				<td>0.94</td>
+				<td>18.09.2013 23:00:00</td>
+				<td>1.027</td>
+				<td>$ 400.9</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>312471605</td>
+				<td>SHORT</td>
+				<td>12.09.2013 15:06:00</td>
+				<td>1.5823</td>
+				<td>0.81</td>
+				<td>18.09.2013 23:44:00</td>
+				<td>1.6086</td>
+				<td>$ -2130.3</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>312296613</td>
+				<td>SHORT</td>
+				<td>06.09.2013 07:20:00</td>
+				<td>0.9437</td>
+				<td>1.87</td>
+				<td>18.09.2013 23:59:00</td>
+				<td>0.9132</td>
+				<td>$ 6245.35</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>312280987</td>
+				<td>SHORT</td>
+				<td>06.09.2013 17:30:00</td>
+				<td>0.9398</td>
+				<td>1.87</td>
+				<td>19.09.2013 13:40:00</td>
+				<td>0.9093</td>
+				<td>$ 6272.27</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>312892504</td>
+				<td>LONG</td>
+				<td>20.09.2013 17:47:00</td>
+				<td>1.3534</td>
+				<td>2.0</td>
+				<td>24.09.2013 17:14:00</td>
+				<td>1.3472</td>
+				<td>$ -1250</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>313011698</td>
+				<td>LONG</td>
+				<td>24.09.2013 18:52:00</td>
+				<td>1.3492</td>
+				<td>2.0</td>
+				<td>25.09.2013 20:27:00</td>
+				<td>1.3527</td>
+				<td>$ 700</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>313119240</td>
+				<td>LONG</td>
+				<td>26.09.2013 19:02:00</td>
+				<td>1.3511</td>
+				<td>2.0</td>
+				<td>27.09.2013 17:24:00</td>
+				<td>1.3546</td>
+				<td>$ 700</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>313175348</td>
+				<td>SHORT</td>
+				<td>30.09.2013 02:40:00</td>
+				<td>1.3479</td>
+				<td>2.0</td>
+				<td>30.09.2013 17:25:00</td>
+				<td>1.3529</td>
+				<td>$ -986</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>312939917</td>
+				<td>LONG</td>
+				<td>23.09.2013 19:15:00</td>
+				<td>1.602</td>
+				<td>1.04</td>
+				<td>01.10.2013 12:25:00</td>
+				<td>1.6259</td>
+				<td>$ 2485.6</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>312967486</td>
+				<td>LONG</td>
+				<td>24.09.2013 16:06:00</td>
+				<td>1.0305</td>
+				<td>1.21</td>
+				<td>02.10.2013 12:17:00</td>
+				<td>1.0352</td>
+				<td>$ 550.53</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>313555145</td>
+				<td>SHORT</td>
+				<td>04.10.2013 16:29:00</td>
+				<td>1.3589</td>
+				<td>2.0</td>
+				<td>04.10.2013 21:30:00</td>
+				<td>1.3554</td>
+				<td>$ 700</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>313758358</td>
+				<td>SHORT</td>
+				<td>09.10.2013 11:06:00</td>
+				<td>1.3561</td>
+				<td>2.0</td>
+				<td>09.10.2013 12:18:00</td>
+				<td>1.3526</td>
+				<td>$ 700</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>313357831</td>
+				<td>SHORT</td>
+				<td>02.10.2013 12:34:00</td>
+				<td>1.62</td>
+				<td>1.07</td>
+				<td>09.10.2013 16:00:00</td>
+				<td>1.5961</td>
+				<td>$ 2557.3</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>313879718</td>
+				<td>LONG</td>
+				<td>10.10.2013 13:25:00</td>
+				<td>1.3517</td>
+				<td>2.0</td>
+				<td>11.10.2013 12:45:00</td>
+				<td>1.3552</td>
+				<td>$ 700</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>314040916</td>
+				<td>SHORT</td>
+				<td>14.10.2013 22:56:00</td>
+				<td>1.3563</td>
+				<td>2.0</td>
+				<td>15.10.2013 14:03:00</td>
+				<td>1.3528</td>
+				<td>$ 700</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>314161172</td>
+				<td>SHORT</td>
+				<td>16.10.2013 19:47:00</td>
+				<td>1.3507</td>
+				<td>2.0</td>
+				<td>17.10.2013 11:05:00</td>
+				<td>1.356</td>
+				<td>$ -1048</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>313924602</td>
+				<td>LONG</td>
+				<td>11.10.2013 19:25:00</td>
+				<td>1.5946</td>
+				<td>1.15</td>
+				<td>18.10.2013 11:37:00</td>
+				<td>1.6185</td>
+				<td>$ 2748.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>314386547</td>
+				<td>LONG</td>
+				<td>21.10.2013 19:17:00</td>
+				<td>1.3672</td>
+				<td>2.0</td>
+				<td>22.10.2013 17:30:00</td>
+				<td>1.3707</td>
+				<td>$ 700</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>313987565</td>
+				<td>SHORT</td>
+				<td>14.10.2013 07:24:00</td>
+				<td>1.598</td>
+				<td>1.17</td>
+				<td>22.10.2013 22:24:00</td>
+				<td>1.6243</td>
+				<td>$ -3077.1</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>314502781</td>
+				<td>LONG</td>
+				<td>23.10.2013 18:45:00</td>
+				<td>1.3785</td>
+				<td>2.0</td>
+				<td>24.10.2013 11:30:00</td>
+				<td>1.382</td>
+				<td>$ 700</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>314569468</td>
+				<td>SHORT</td>
+				<td>24.10.2013 13:02:00</td>
+				<td>1.3774</td>
+				<td>2.0</td>
+				<td>24.10.2013 18:06:00</td>
+				<td>1.3822</td>
+				<td>$ -960</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>314653213</td>
+				<td>SHORT</td>
+				<td>25.10.2013 14:41:00</td>
+				<td>1.3797</td>
+				<td>2.0</td>
+				<td>29.10.2013 11:58:00</td>
+				<td>1.3762</td>
+				<td>$ 700</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>314774718</td>
+				<td>LONG</td>
+				<td>29.10.2013 17:20:00</td>
+				<td>1.3778</td>
+				<td>2.0</td>
+				<td>29.10.2013 17:45:00</td>
+				<td>1.3813</td>
+				<td>$ 700</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>314797033</td>
+				<td>SHORT</td>
+				<td>29.10.2013 18:51:00</td>
+				<td>1.3775</td>
+				<td>2.0</td>
+				<td>29.10.2013 19:18:00</td>
+				<td>1.374</td>
+				<td>$ 700</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>314804232</td>
+				<td>LONG</td>
+				<td>30.10.2013 11:45:00</td>
+				<td>1.3753</td>
+				<td>2.0</td>
+				<td>31.10.2013 08:32:00</td>
+				<td>1.3694</td>
+				<td>$ -1196</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>315067154</td>
+				<td>LONG</td>
+				<td>05.11.2013 13:02:00</td>
+				<td>1.3499</td>
+				<td>5.0</td>
+				<td>06.11.2013 17:52:00</td>
+				<td>1.3534</td>
+				<td>$ 1750</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>315170116</td>
+				<td>LONG</td>
+				<td>07.11.2013 14:14:00</td>
+				<td>1.3514</td>
+				<td>5.0</td>
+				<td>07.11.2013 15:45:00</td>
+				<td>1.3449</td>
+				<td>$ -3265</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>313009685</td>
+				<td>SHORT</td>
+				<td>24.09.2013 17:25:00</td>
+				<td>0.9125</td>
+				<td>2.0</td>
+				<td>07.11.2013 16:31:00</td>
+				<td>0.9232</td>
+				<td>$ -2318.12</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>313005617</td>
+				<td>SHORT</td>
+				<td>24.09.2013 17:30:00</td>
+				<td>1.0271</td>
+				<td>1.21</td>
+				<td>08.11.2013 17:23:00</td>
+				<td>1.0501</td>
+				<td>$ -2647.97</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>314728748</td>
+				<td>LONG</td>
+				<td>29.10.2013 03:10:00</td>
+				<td>0.953</td>
+				<td>1.85</td>
+				<td>08.11.2013 17:48:00</td>
+				<td>0.9365</td>
+				<td>$ -3052.5</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>314447336</td>
+				<td>LONG</td>
+				<td>23.10.2013 11:59:00</td>
+				<td>1.6162</td>
+				<td>1.17</td>
+				<td>12.11.2013 12:30:00</td>
+				<td>1.5889</td>
+				<td>$ -3195.27</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>315261539</td>
+				<td>LONG</td>
+				<td>11.11.2013 12:21:00</td>
+				<td>1.3388</td>
+				<td>3.49</td>
+				<td>12.11.2013 16:04:00</td>
+				<td>1.3423</td>
+				<td>$ 1221.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>314725242</td>
+				<td>SHORT</td>
+				<td>29.10.2013 03:11:00</td>
+				<td>0.9527</td>
+				<td>1.85</td>
+				<td>12.11.2013 19:57:00</td>
+				<td>0.929</td>
+				<td>$ 4384.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>315389959</td>
+				<td>LONG</td>
+				<td>13.11.2013 16:48:00</td>
+				<td>1.3435</td>
+				<td>4.81</td>
+				<td>14.11.2013 00:31:00</td>
+				<td>1.347</td>
+				<td>$ 1683.5</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>315491340</td>
+				<td>LONG</td>
+				<td>15.11.2013 13:56:00</td>
+				<td>1.345</td>
+				<td>4.14</td>
+				<td>15.11.2013 16:46:00</td>
+				<td>1.3485</td>
+				<td>$ 1449</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>315582704</td>
+				<td>LONG</td>
+				<td>19.11.2013 14:07:00</td>
+				<td>1.3503</td>
+				<td>5.0</td>
+				<td>19.11.2013 18:26:00</td>
+				<td>1.3538</td>
+				<td>$ 1750</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>315416332</td>
+				<td>LONG</td>
+				<td>14.11.2013 13:56:00</td>
+				<td>1.0496</td>
+				<td>1.21</td>
+				<td>22.11.2013 06:15:00</td>
+				<td>1.0534</td>
+				<td>$ 441.07</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr>
+				<td>315836068</td>
+				<td>LONG</td>
+				<td>26.11.2013 04:12:00</td>
+				<td>1.3539</td>
+				<td>4.72</td>
+				<td>26.11.2013 22:33:00</td>
+				<td>1.3574</td>
+				<td>$ 1652</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>315339227</td>
+				<td>SHORT</td>
+				<td>13.11.2013 13:30:00</td>
+				<td>1.5983</td>
+				<td>0.94</td>
+				<td>27.11.2013 12:44:00</td>
+				<td>1.6246</td>
+				<td>$ -2472.2</td>
+				<td>SL</td>
+         </tr>
+		 
+		 <tr>
+				<td>315644859</td>
+				<td>SHORT</td>
+				<td>21.11.2013 04:45:00</td>
+				<td>0.9294</td>
+				<td>1.81</td>
+				<td>29.11.2013 04:12:00</td>
+				<td>0.9057</td>
+				<td>$ 4289.7</td>
+				<td>PT</td>
+         </tr>
+		 
+		 <tr bgcolor="#E0E0E0">
+				<td>316022689</td>
+				<td>LONG</td>
+				<td>02.12.2013 03:39:00</td>
+				<td>1.3597</td>
+				<td>5.0</td>
+				<td>02.12.2013 12:36:00</td>
+				<td>1.3546</td>
+				<td>$ -2540</td>
+				<td>SL</td>
+         </tr>
+		 
+	</tbody></table>
+   </div>
+
+<a href="http://www.strategyquant.com/eaanalyzer/">Report generated by StrategyQuant EA Analyzer</a>
+</div>
+
+
+
+</body></html>

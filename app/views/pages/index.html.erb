@@ -27,10 +27,10 @@
         <br/>  <br/>  <br/>
         <div class="row">
             
-            <div class="col-md-3 col-xs-6 text-center">
+            <div class="col-md-4 col-xs-6 text-center">
                  <div class="feature-big-ico "><img src="<%= "/assets/website/server.svg" %>" width="100px"/> </div>
                 <div class="feature-content">
-                    <h3> <a href="#server">שרתי מסחר </a></h3>
+                    <h3> <a href="#server"> Dalore Back Office</a></h3>
                     <p class="text-left">
                         שרת המסחר המרכז את כל נתוני השוק וחשבונות בזמן אמת.
                         שימוש ב API מאפשר לך להזרים מידע ישירות לגליון האקסל שלך או לבנות אפליקציה יעודית לצרכים שלך
@@ -38,7 +38,18 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-xs-6  text-center">
+            <div class="col-md-4 col-xs-6 text-center">
+                <div class="feature-big-ico "><img src="<%= "/assets/website/030-briefcase.svg" %>" width="100px"/> </div>
+                <div class="feature-content">
+                    <h3> <a href="#thebrokersdashboard"> Dalore Trading Station</a></h3>
+                    <p class="text-left">
+                        מערכות מסחר מותאמת לפי דרישת הלקוח למסחר במניות, פורקס ומטבעות וירטואליים 
+הכוללת ביצוע הוראות מורכבות בין חשבונות. וניהול תיקי נוסטרו 
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-xs-6  text-center">
                 <div class="feature-big-ico"><img src="<%= "/assets/website/019-handshake.svg" %>" width="100px"/> </div>
                 <div class="feature-content">
                     <h3><a href="#crm">  The Brokers CRM</a></h3>
@@ -48,23 +59,31 @@
                     </p>
                 </div>
             </div>
-
-            <div class="col-md-3 col-xs-6 text-center">
-                <div class="feature-big-ico "><img src="<%= "/assets/website/hierarchical-structure-1.svg" %>" width="100px"/> </div>
+            </div>
+            <br/>
+            <div class="row">
+            <div class="col-md-4 col-xs-6  text-center">
+                <div class="feature-big-ico "><img src="<%= "/assets/website/088-analytics.svg" %>" width="100px"/> </div>
                 <div class="feature-content">
-                    <h3> <a href="#thebrokersdashboard">דשבורד למנהלים</a></h3>
+                    <h3> <a href="#tradingmachine"> Dalore Analytics</a></h3>
                     <p class="text-left">
-                        קבל תמונה עדכנית של מצב החשבון והפוציזיות לנייד או למחשב
-                        פרוט מצב כל החשבונות המנוהלים מכל תחנות המסחר והבנקים.
-
+                        מערכת המנתחת את תיק ההשקעות לפי חוקים ותרחישים בזמן אמת. כולל התרעות בזמן אמת .
                     </p>
                 </div>
             </div>
-            
-            <div class="col-md-3 col-xs-6  text-center">
+            <div class="col-md-4 col-xs-6  text-center">
+                <div class="feature-big-ico "><img src="<%= "/assets/website/101-archives.svg" %>" width="100px"/> </div>
+                <div class="feature-content">
+                    <h3> <a href="#tradingmachine"> Dalore Archives </a></h3>
+                    <p class="text-left">
+                        פתרון להקלטת נתוני שוק, נרות היסטורים ונתונים פנדמנטלים על נכסים וחברות.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4 col-xs-6  text-center">
                 <div class="feature-big-ico "><img src="<%= "/assets/website/stats2.svg" %>" width="100px"/> </div>
                 <div class="feature-content">
-                    <h3> <a href="#tradingmachine"> רובטים למסחר</a></h3>
+                    <h3> <a href="#tradingmachine"> The Trading Machine</a></h3>
                     <p class="text-left">
                         מערכת לפיתוח ובדיקת אסטרטגיות מסחר אוטומטיות ורובטים למסחר אוטומטי,
                         כולל בדיקות מול נתונים הסטוריים, תמיכה במסחר טכני זיהוי נרות ושימוש באינדיקטורים
@@ -85,7 +104,7 @@
 
 <%= render :partial => "pages/server" %>
 <%= render :partial => "pages/crm" %>
-<%= render :partial => "pages/dashboard" %>
+<%= render :partial => "pages/analytics" %>
 <%= render :partial => "pages/trading_machine" %>
 <%= render :partial => "pages/archive" %>
 <%= render :partial => "pages/trader" %>
